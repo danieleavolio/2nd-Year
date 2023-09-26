@@ -31,6 +31,21 @@
     tabsize=2
 }
 
+%make link clickable
+\usepackage{hyperref}
+\usepackage{pgfplots}
+
+%use asmath
+\usepackage{amsmath}
+
+%color link orange
+\hypersetup{
+    colorlinks=true,
+    linkcolor=purple,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
 % Define title and author
 \begin{titlepage}
     \title{Deep Learning}
@@ -41,6 +56,9 @@
 
 \maketitle
 \newpage
+
+
+
 \tableofcontents
 \newpage
 \section{Introduzione}
