@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1695726565 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1695726569 0
+["pdflatex"] 1695745290 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1695745294 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -197,12 +197,12 @@
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/refcount/refcount.sty" 1576437552 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "chapters/01.tex" 1695718263 3287 350f0a0e2ee7652c691968de72ea2ae3 ""
-  "chapters/02.tex" 1695726565 19187 eab46f1340129ea85d6380c89e8734fd ""
+  "chapters/02.tex" 1695745289 20786 e7f5a6664da39e04698bcebbefd99867 ""
   "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1695726330 1483 b9427f83fc8f59fad4152bc0fd921082 ""
-  "main.aux" 1695726568 4235 1800951c11ce7eeabce52c6746ab074e "pdflatex"
-  "main.out" 1695726568 4714 3893a72018fd6a2e58d4e1367ce2ee36 "pdflatex"
+  "main.aux" 1695745293 4235 aeab55f45e53687c8a221d7cc6419077 "pdflatex"
+  "main.out" 1695745293 4714 3893a72018fd6a2e58d4e1367ce2ee36 "pdflatex"
   "main.tex" 1695726330 1483 b9427f83fc8f59fad4152bc0fd921082 ""
-  "main.toc" 1695726568 2262 e025c5c82d18474d0980ed27739013d7 "pdflatex"
+  "main.toc" 1695745293 2262 e2d3f1a2f16e06929a5ec61ee73c6baa "pdflatex"
   (generated)
   "main.aux"
   "main.log"

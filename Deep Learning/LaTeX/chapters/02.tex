@@ -356,8 +356,9 @@ Viene usata se $y_i \in \{0,1\}, g(\vec{x}|W,B) \in [0,1]$.
 \end{equation}
 
 \textbf{Categorical Cross Entropy [CCE]}
-Da scrivere.
-
+\begin{equation}
+    CCE = -\frac{1}{n} \sum_{i=1}^n \sum_{j=1}^m y_{i,j} \log(g(\vec{x_i}|W,B))_j
+\end{equation}
 \subsection{L'ottimizzatore o}
 Come risolviamo il problema di:
 \begin{equation}
@@ -367,6 +368,10 @@ Come risolviamo il problema di:
 Il problema lo risolviamo calcolando il \textbf{gradiante} della funzione loss,
 lo poniamo uugale a 0 e controlliamo se siamo in un punto di \textbf{massimo,
     minimo o punto di sella}.
+
+\begin{equation}
+    \frac{\partial loss}{\partial W} = 0
+\end{equation}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -387,13 +392,36 @@ lo poniamo uugale a 0 e controlliamo se siamo in un punto di \textbf{massimo,
             yticklabels={$f_{\text{min}}$, $f_{\text{max}}$},
         ]
 
-        \addplot[blue,thick,domain=-1.5:1.5] {x^4 - 2*x^3 - 2*x^2 + 3*x + 1};
+        \addplot[blue,thick,domain=-1.5:1.5] {x^4 - 2*x^ - 2*x^2 + 3*x + 1};
     \end{axis}
 \end{tikzpicture}
 
 Abbiamo bisogno di un metodo iterativo per trovare una soluzione. Ci vuole
 un'\textbf{euristica}. Tipicamente, siamo soddisfatti di un \textbf{minimo
     locale}, e si utilizza, appunto, il \textbf{metodo di discesa del gradiente}.
+
+\textbf{Differenza minimo locale e globale}
+
+\begin{figure}[H]
+    \begin{center}
+
+        \begin{tikzpicture}
+            \begin{axis}[
+                    xlabel=$x$,
+                    ylabel=$f(x)$,
+                    domain=-2:2,
+                    samples=400,
+                    axis lines=middle,
+                    grid
+                ]
+                \addplot[blue,thick]{x^4 - 4*x^2 + x};
+                \node[red,circle,fill,inner sep=1.5pt,label={90:Globale}] at (axis cs:  -1.5,-5) {};
+                \node[green,circle,fill,inner sep=1.5pt,label={90: Locale}] at (axis cs:1.3,-2.5) {};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+\end{figure}
 
 \subsubsection{Il metodo di discesa del gradiente}
 Sia $F(\vec{x})$ una funzione differenziabile.
@@ -407,36 +435,40 @@ Sia $F(\vec{x})$ una funzione differenziabile.
 \end{equation}
 
 Il parametro $\eta$ viene chiamato \textbf{learning rate} e determina il
-comportamento del'ottimizzazione.
-\begin{tikzpicture}
-    \begin{axis}[
-            xlabel=$x$,
-            ylabel=$f(x)$,
-            domain=-2:2,
-            samples=200,
-            axis lines=middle,
-            width=10cm,
-            height=6cm,
-            xmin=-2,
-            xmax=2,
-            ymin=-1,
-            ymax=5,
-            xtick={-1, 0, 1},
-            xticklabels={$-1$, $0$, $1$},
-            ytick={1, 3},
-            yticklabels={$f_{\text{min}}$, $f_{\text{max}}$},
-        ]
+comportamento del'ottimizzazione. Da notare che e' l'unico \textbf{parametro}.
+\begin{figure}[H]
+    \begin{center}
 
-        \addplot[blue,thick,domain=-1.5:1.5] {x^4 - 2*x^3 - 2*x^2 + 3*x + 1};
+        \begin{tikzpicture}[]
+            \begin{axis}[
+                    xlabel=$x$,
+                    ylabel=$f(x)$,
+                    domain=-2:2,
+                    samples=200,
+                    axis lines=middle,
+                    width=10cm,
+                    height=6cm,
+                    xmin=-2,
+                    xmax=2,
+                    ymin=-4,
+                    ymax=5,
+                    xtick={-1, 0, 1},
+                    xticklabels={$-1$, $0$, $1$},
+                    ytick={1, 3},
+                    yticklabels={$f_{\text{min}}$, $f_{\text{max}}$},
+                ]
 
-        % Frecce verso il minimo
-        \draw[->, red, thick] (axis cs:-1.5,4) -- (axis cs:-1.3,3);
-        \draw[->, red, thick] (axis cs:-0.5,3.5) -- (axis cs:-0.3,2.8);
-        \draw[->, red, thick] (axis cs:0.5,2.8) -- (axis cs:0.3,2.1);
-        \draw[->, red, thick] (axis cs:1.5,2.2) -- (axis cs:1.3,1.8);
+                \addplot[blue,thick,domain=-1.5:1.5] {x^4 - 2*x^3 - 2*x^2 + 3*x + 1};
 
-    \end{axis}
-\end{tikzpicture}
+                % Frecce verso il minimo
+                \draw[->, red, thick] (axis cs:-1.5,4) -- (axis cs:-1.3,3);
+                \draw[->, red, thick] (axis cs:-1.3,3) -- (axis cs:-1.2,1.8);
+                \draw[->, red, thick] (axis cs:-1.2,2) -- (axis cs:-1.1,1.1);
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+\end{figure}
 
 \textbf{Ci sono ancora problemi:} Questo metodo non è esente da problemi, quindi abbiamo:
 \begin{itemize}
@@ -444,6 +476,9 @@ comportamento del'ottimizzazione.
           capire che, giustamente, se ci accontentiamo di un minimo locale, non avremo
           quasi mai lo stesso minimo per ogni allenamento della rete.
 \end{itemize}
+
+\textbf{Nota:} con \textbf{topologia} intendiamo il numero di layer e il numero
+di neuroni per layer.
 
 Diciamo che in generale, gli steps per allenare una rete sono:
 \lstset{mathescape}
@@ -507,15 +542,25 @@ Il \textit{workflow} allora cambia in: \lstset{mathescape}
     \end{axis}
 \end{tikzpicture}
 
+Analisi dei learning rate:
+\begin{itemize}
+    \item learning rate basso: troppo lento!
+    \item learning rate alto: fermo con un minimo locale immediatamente
+    \item learning rate MOLTO alto: non converge mai
+    \item learning rate buono: decresce sempre e eventualmente converge
+\end{itemize}
+
 \textbf{Nota:} Il learning rate è un parametro che va \textbf{tunato}.
 \begin{itemize}
-    \item Se il learning rate è troppo alto, non si riesce a convergere poiché si
-          salta il minimo
+    \item Se il learning rate è troppo alto, non si riesce a convergere poiché si salta
+          il minimo
     \item Se il learning rate è troppo basso, si rischia di non convergere mai
 \end{itemize}
 
-Il nostro obiettivo è quello di avere un learning rate che sia \textbf{giusto} e che permetta di avere un andamento della funzione di loss come quello in rosso, cioé avere una buona
-diminuizione della loss andando avanti con le epoche. Sempre decrescente e con la distanza minore dall'asse delle x.
+Il nostro obiettivo è quello di avere un learning rate che sia \textbf{giusto}
+e che permetta di avere un andamento della funzione di loss come quello in
+rosso, cioé avere una buona diminuizione della loss andando avanti con le
+epoche. Sempre decrescente e con la distanza minore dall'asse delle x.
 
 \textbf{Domanda:} Vogliamo sempre la loss uguale a 0? \textbf{No.}
 Perché? Perché a differenza che in statistica dove vogliamo avere un errore il minimo.
@@ -523,27 +568,29 @@ In deep learning non è così. Se la loss è 0, allora vuol dire che la rete ha
 imparato a memoria i dati, e non è quello che vogliamo. Vogliamo che la rete
 sia capace di generalizzare.
 
-In particolare, noi \textbf{vogliamo fare predizioni}, sopratutto su \textbf{istanze ancora non viste.} Se avessimo una loss uguale a 0, probabilmente non 
-saremmo in grado di avere delle predizioni decenti, poiché la rete non è in grado di generalizzare.
-Avendo la loss non a 0 rendiamo la rete capace di poter introdurre istanze ancora non viste in futuro.
+In particolare, noi \textbf{vogliamo fare predizioni}, sopratutto su
+\textbf{istanze ancora non viste.} Se avessimo una loss uguale a 0,
+probabilmente non saremmo in grado di avere delle predizioni decenti, poiché la
+rete non è in grado di generalizzare. Avendo la loss non a 0 rendiamo la rete
+capace di poter introdurre istanze ancora non viste in futuro.
 
-Quindi, per statistica \textbf{loss = 0 : nice}, per \textbf{deep learning: insomma}.
-
+Quindi, per statistica \textbf{loss = 0 : nice}, per \textbf{deep learning:
+    insomma}.
 
 \begin{tikzpicture}
     \begin{axis}[
-        xlabel=$x$,
-        ylabel=$y$,
-        width=12cm, % Larghezza maggiore
-        height=6cm,
-        xmin=0,
-        xmax=10,
-        ymin=0,
-        ymax=1,
-        xtick={0, 2, 4, 6, 8, 10},
-        ytick={0, 0.2, 0.4, 0.6, 0.8, 1},
-    ]
-    
-    \addplot[thick, blue, smooth] coordinates {(0, 1) (2, 0.5) (4, 0.3) (8, 0)};
+            xlabel=$x$,
+            ylabel=$y$,
+            width=12cm, % Larghezza maggiore
+            height=6cm,
+            xmin=0,
+            xmax=10,
+            ymin=0,
+            ymax=1,
+            xtick={0, 2, 4, 6, 8, 10},
+            ytick={0, 0.2, 0.4, 0.6, 0.8, 1},
+        ]
+
+        \addplot[thick, blue, smooth] coordinates {(0, 1) (2, 0.5) (4, 0.3) (8, 0)};
     \end{axis}
-    \end{tikzpicture}
+\end{tikzpicture}
