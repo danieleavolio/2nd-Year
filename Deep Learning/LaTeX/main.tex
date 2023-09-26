@@ -1,0 +1,53 @@
+\documentclass{article}
+
+% Packages for code, figures, and automata
+\usepackage{listings} % For code listings
+\usepackage{graphicx} % For including figures
+\usepackage{tikz}     % For drawing automata
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{float}
+
+%import all important packages 
+
+
+% Define code listing styles
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{green},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{purple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+% Define title and author
+\begin{titlepage}
+    \title{Deep Learning}
+    \author{Daniele Avolio}
+\end{titlepage}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Introduzione}
+Appunti 
+
+
+\input{chapters/01.tex}
+\input{chapters/02.tex}
+
+\end{document}
