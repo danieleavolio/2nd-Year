@@ -373,29 +373,6 @@ lo poniamo uugale a 0 e controlliamo se siamo in un punto di \textbf{massimo,
     \frac{\partial loss}{\partial W} = 0
 \end{equation}
 
-\begin{tikzpicture}
-    \begin{axis}[
-            xlabel=$x$,
-            ylabel=$f(x)$,
-            domain=-2:2,
-            samples=200,
-            axis lines=middle,
-            width=10cm,
-            height=6cm,
-            xmin=-2,
-            xmax=2,
-            ymin=-4,
-            ymax=5,
-            xtick={-1, 0, 1},
-            xticklabels={$-1$, $0$, $1$},
-            ytick={1, 3},
-            yticklabels={$f_{\text{min}}$, $f_{\text{max}}$},
-        ]
-
-        \addplot[blue,thick,domain=-1.5:1.5] {x^4 - 2*x^ - 2*x^2 + 3*x + 1};
-    \end{axis}
-\end{tikzpicture}
-
 Abbiamo bisogno di un metodo iterativo per trovare una soluzione. Ci vuole
 un'\textbf{euristica}. Tipicamente, siamo soddisfatti di un \textbf{minimo
     locale}, e si utilizza, appunto, il \textbf{metodo di discesa del gradiente}.
@@ -419,6 +396,7 @@ un'\textbf{euristica}. Tipicamente, siamo soddisfatti di un \textbf{minimo
                 \node[green,circle,fill,inner sep=1.5pt,label={90: Locale}] at (axis cs:1.3,-2.5) {};
             \end{axis}
         \end{tikzpicture}
+        \caption{Differenza tra minimo locale e globale}
     \end{center}
 
 \end{figure}
@@ -467,7 +445,7 @@ comportamento del'ottimizzazione. Da notare che e' l'unico \textbf{parametro}.
             \end{axis}
         \end{tikzpicture}
     \end{center}
-
+    \caption{Discesa del gradiente}
 \end{figure}
 
 \textbf{Ci sono ancora problemi:} Questo metodo non è esente da problemi, quindi abbiamo:
@@ -517,30 +495,34 @@ Il \textit{workflow} allora cambia in: \lstset{mathescape}
 \subsubsection{Linee guida sul learning rate}
 
 \textbf{Epoca}: Un'epoca è un passaggio dell'approssimazione della funzione
+\begin{figure}[H]
+    \begin{center}
 
-\begin{tikzpicture}
-    \begin{axis}[
-            xlabel=Epoche,
-            ylabel=Loss,
-            width=10cm,
-            height=6cm,
-            xmin=0,
-            xmax=10,
-            ymin=0,
-            ymax=1,
-            xtick={0, 2, 4, 6, 8, 10},
-            ytick={0, 0.2, 0.4, 0.6, 0.8, 1},
-            legend style={at={(0.5,-0.3)},anchor=north},
-            legend entries={Learning rate MOLTO alto, Learning rate buono, Learning rate basso, Learning rate alto},
-        ]
+        \begin{tikzpicture}
+            \begin{axis}[
+                    xlabel=Epoche,
+                    ylabel=Loss,
+                    width=10cm,
+                    height=6cm,
+                    xmin=0,
+                    xmax=10,
+                    ymin=0,
+                    ymax=1,
+                    xtick={0, 2, 4, 6, 8, 10},
+                    ytick={0, 0.2, 0.4, 0.6, 0.8, 1},
+                    legend style={at={(0.5,-0.3)},anchor=north},
+                    legend entries={Learning rate MOLTO alto, Learning rate buono, Learning rate basso, Learning rate alto},
+                ]
 
-        \addplot[thick, yellow] coordinates {(0, 0.6) (10, 1.3)};
-        \addplot[thick, red] coordinates {(0, 0.6) (2, 0.3) (4, 0.15) (6, 0.05) (8, 0.03) (10, 0.02)};
-        \addplot[thick, blue] coordinates {(0, 0.6) (2, 0.55) (4, 0.35) (6, 0.22) (8, 0.14) (10, 0.09)};
-        \addplot[thick, green] coordinates {(0, 0.4) (2, 0.2) (4, 0.15) (6, 0.15) (8, 0.15) (10, 0.15)};
-
-    \end{axis}
-\end{tikzpicture}
+                \addplot[thick, yellow] coordinates {(0, 0.6) (10, 1.3)};
+                \addplot[thick, red] coordinates {(0, 0.6) (2, 0.3) (4, 0.15) (6, 0.05) (8, 0.03) (10, 0.02)};
+                \addplot[thick, blue] coordinates {(0, 0.6) (2, 0.55) (4, 0.35) (6, 0.22) (8, 0.14) (10, 0.09)};
+                \addplot[thick, green] coordinates {(0, 0.4) (2, 0.2) (4, 0.15) (6, 0.15) (8, 0.15) (10, 0.15)};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \caption{Esempio di andamento della funzione di loss in base al learning rate}
+\end{figure}
 
 Analisi dei learning rate:
 \begin{itemize}
