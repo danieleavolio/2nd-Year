@@ -1,29 +1,42 @@
-\contentsline {section}{\numberline {1}Introduzione}{3}{section.1}%
-\contentsline {section}{\numberline {2}Deep Learning 101}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Architetture e strumenti nel deep learning}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Libri utili}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Strumenti che useremo}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Schema generale di un problema di deep learning}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Perché si usa il termine "Tensore"?}{4}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}AI vs DL}{5}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Introduzione alle Reti Neurali}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Il modello di McCulloch-Pitts}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Modello di Rosenblatt}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Esempio con 2 neuroni}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Rappresentazione le funzioni logiche}{7}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}AND}{7}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Il problema dello XOR}{8}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Gli ingredienti di una rete neurale}{9}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Il grafo g}{9}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}La funzione di loss}{10}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Funzione di loss per Regressione}{11}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Funzione di loss per classificazione}{11}{subsubsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.6}L'ottimizzatore o}{11}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Il metodo di discesa del gradiente}{12}{subsubsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Il metodo di discesa del gradiente stocastico}{13}{subsubsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.3}Linee guida sul learning rate}{14}{subsubsection.3.6.3}%
-\contentsline {section}{\numberline {4}Lab: Introduzione Python}{16}{section.4}%
-\contentsline {subsection}{\numberline {4.1}MatPlotLib}{16}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Plots}{16}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Sub-plots}{16}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}NumPy}{17}{subsection.4.2}%
+\contentsline {section}{\numberline {1}Introduzione}{4}{section.1}%
+\contentsline {section}{\numberline {2}Deep Learning 101}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Architetture e strumenti nel deep learning}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Libri utili}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Strumenti che useremo}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Schema generale di un problema di deep learning}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Perché si usa il termine "Tensore"?}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}AI vs DL}{6}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Introduzione alle Reti Neurali}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Il modello di McCulloch-Pitts}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Modello di Rosenblatt}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Esempio con 2 neuroni}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Rappresentazione le funzioni logiche}{9}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}AND}{9}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Il problema dello XOR}{10}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Gli ingredienti di una rete neurale}{11}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Il grafo g}{11}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}La funzione di loss}{12}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Funzione di loss per Regressione}{13}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Funzione di loss per classificazione}{13}{subsubsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.6}L'ottimizzatore o}{13}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Il metodo di discesa del gradiente}{14}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Il metodo di discesa del gradiente stocastico}{15}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}Linee guida sul learning rate}{16}{subsubsection.3.6.3}%
+\contentsline {section}{\numberline {4}Classificazione Binaria}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Caricamento e gestione del Dataset}{19}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Definizione della Rete Neurale}{20}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Plotting del modello}{22}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Training del modello e valutazione}{23}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Validation Set}{23}{subsubsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.5}Prediction}{27}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Come risolvere problemi di accuracy bassa?}{27}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Early Stopping}{28}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Classificazione Multiclasse}{28}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Descrizione del dataset - Reuters}{28}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Come processiamo l'output?}{28}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Softmax activation function}{29}{subsubsection.5.1.2}%
+\contentsline {section}{\numberline {6}Lab: Introduzione Python}{31}{section.6}%
+\contentsline {subsection}{\numberline {6.1}MatPlotLib}{31}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Plots}{31}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Sub-plots}{31}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}NumPy}{32}{subsection.6.2}%

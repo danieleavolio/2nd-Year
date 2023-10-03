@@ -9,6 +9,9 @@
 \usepackage{amssymb} % Pacchetto per simboli matematici
 \usepackage{float}
 
+\usepackage{pgfplots}
+\usepackage{amsmath}
+
 %colorize lstlisting with language
 \usepackage{xcolor}
 
@@ -20,7 +23,7 @@
 \lstset{
     basicstyle=\ttfamily,
     keywordstyle=\color{blue},
-    commentstyle=\color{green},
+    commentstyle=\color{purple},
     stringstyle=\color{red},
     % Altre opzioni
     breaklines=true, showstringspaces=false,
@@ -32,7 +35,7 @@
 % Stile globale per tutti i linguaggi
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{white},
-    commentstyle=\color{green},
+    commentstyle=\color{purple},
     keywordstyle=\color{blue},
     numberstyle=\tiny\color{gray},
     stringstyle=\color{red},
@@ -118,7 +121,10 @@
 Appunti
 
 \input{chapters/01.tex}
+\newpage
 \input{chapters/02.tex}
+\newpage
+\input{chapters/03.tex}
 \newpage
 \section*{Capitoli di laboratorio}
 \input{chapters/lab01.tex}

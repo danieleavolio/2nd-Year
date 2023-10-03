@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1696261488 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1696261492 0
+["pdflatex"] 1696331610 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1696331615 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -30,6 +30,7 @@
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1247596666 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
@@ -219,13 +220,17 @@
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1625497667 48833 3b7b4cfab1a3d15596bfd3772a77ab65 ""
   "chapters/01.tex" 1695718263 3287 350f0a0e2ee7652c691968de72ea2ae3 ""
-  "chapters/02.tex" 1695745828 20595 e41c193a97d07dce7cce69b65cfdd853 ""
+  "chapters/02.tex" 1696322919 20128 3877254b35d74752cdcbaa9bf4168eb4 ""
+  "chapters/03.tex" 1696331608 25352 bd58761706c442913202d1f93fdd5486 ""
   "chapters/lab01.tex" 1696261183 2933 4cc4db92a498e91896f1187e987cf481 ""
-  "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1696261488 2993 26cd35576accd1cb1826ad8803fb8eed ""
-  "main.aux" 1696261491 5303 d7365052480a0e77581fb8e7e5a87f4d "pdflatex"
-  "main.out" 1696261491 5281 bee1c027e6f8824cfbece80a692ffc67 "pdflatex"
-  "main.tex" 1696261488 2993 26cd35576accd1cb1826ad8803fb8eed ""
-  "main.toc" 1696261491 2661 3f0e210b05872a95375855aa50ab4331 "pdflatex"
+  "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1696328912 3087 3b705bbbe464806eabbf9107b6a6b5de ""
+  "images/overfitting.png" 1696328824 116711 0e4716abf5bc774dfa3624c6bbde0c84 ""
+  "images/plot res.png" 1696327009 61824 02429a0b1e4fb1d03cc20b23703b9ec6 ""
+  "images/wrong network.png" 1696328743 152862 babdc143f3fa6ed0f86c559593fbd79b ""
+  "main.aux" 1696331615 9060 db7d618a83657bb1c5e7695348fff4a6 "pdflatex"
+  "main.out" 1696331615 7797 ebe5e78d65e7bc65de32d73ac772898c "pdflatex"
+  "main.tex" 1696328912 3087 3b705bbbe464806eabbf9107b6a6b5de ""
+  "main.toc" 1696331615 3879 c040265484a8667211395c1f10a8b893 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
