@@ -9,9 +9,6 @@
 \usepackage{amssymb} % Pacchetto per simboli matematici
 \usepackage{float}
 
-\usepackage{pgfplots}
-\usepackage{amsmath}
-
 %colorize lstlisting with language
 \usepackage{xcolor}
 
@@ -23,7 +20,7 @@
 \lstset{
     basicstyle=\ttfamily,
     keywordstyle=\color{blue},
-    commentstyle=\color{purple},
+    commentstyle=\color{green},
     stringstyle=\color{red},
     % Altre opzioni
     breaklines=true, showstringspaces=false,
@@ -35,7 +32,7 @@
 % Stile globale per tutti i linguaggi
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{white},
-    commentstyle=\color{purple},
+    commentstyle=\color{green},
     keywordstyle=\color{blue},
     numberstyle=\tiny\color{gray},
     stringstyle=\color{red},
@@ -91,7 +88,7 @@
 \fancyhead[R]{\nouppercase{\rightmark}}
 \fancyfoot[C]{\thepage}
 
-\usepackage{listings}
+\usepackage{l   istings}
 \usepackage{tabularx}
 
 %color link orange
@@ -104,11 +101,12 @@
 
 \definecolor{custompurple}{HTML}{8b3fff}
 
-% Define title and author
-\begin{titlepage}
-    \title{\color{custompurple}\Huge Deep Learning}
-    \author{\textbf{Daniele Avolio}}
-\end{titlepage}
+
+% Titolo e autore del documento
+\title{Algorithmic Game Theory}
+\author{Daniele Avolio}
+\date {A.A. 2023/2024}
+
 
 \begin{document}
 
@@ -117,18 +115,13 @@
 
 \tableofcontents
 \newpage
+
+% Includi qui i tuoi capitoli o sezioni
 \section{Introduzione}
-Info esame: Tecnicamente, per ora rimane un progetto e potrebbe essere di gruppo. Ancora non ci sono informazioni precisissime.
-
-
+Appunti 
+\newpage
 
 \input{chapters/01.tex}
-\newpage
-\input{chapters/02.tex}
-\newpage
-\input{chapters/03.tex}
-\newpage
-\section*{Capitoli di laboratorio}
-\input{chapters/lab01.tex}
+
 
 \end{document}
