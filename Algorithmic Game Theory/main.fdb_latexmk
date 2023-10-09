@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1696411018 "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" "main.pdf" "main" 1696411020 0
+["pdflatex"] 1696499267 "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" "main.pdf" "main" 1696499269 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -30,7 +30,9 @@
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "C:/Program Files/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Program Files/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575574700 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Program Files/MiKTeX/tex/generic/iftex/iftex.sty" 1644000708 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -143,6 +145,7 @@
   "C:/Program Files/MiKTeX/tex/latex/base/article.cls" 1687174146 20144 fbcf51733730d8f1a62143512ff5b1fe ""
   "C:/Program Files/MiKTeX/tex/latex/base/atbegshi-ltx.sty" 1687174146 3045 909ba7bc518ac6e8e7ef69971d52f389 ""
   "C:/Program Files/MiKTeX/tex/latex/base/atveryend-ltx.sty" 1687174146 2462 91a1cb69153367feea29040eef0c27f4 ""
+  "C:/Program Files/MiKTeX/tex/latex/base/omscmr.fd" 1687174146 2469 7cf25c0dd8ba984c37b877b83027725f ""
   "C:/Program Files/MiKTeX/tex/latex/base/size10.clo" 1687174146 8448 74078c4a887f2cdcd57c3ec111622740 ""
   "C:/Program Files/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Program Files/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1601897756 46845 3b58f70c6e861a13d927bff09d35ecbc ""
@@ -203,11 +206,12 @@
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1625497667 48833 3b7b4cfab1a3d15596bfd3772a77ab65 ""
   "chapters/01.tex" 1696411018 5939 355c10ce67bb7126a6f9086c90914b3f ""
-  "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" 1696409122 2920 b6b760500f04d547babcf0557010978c ""
-  "main.aux" 1696411020 2898 537230cd497ac4aa457d7bed0543ac38 "pdflatex"
-  "main.out" 1696411020 1795 16302896dabc0a93fbb75a9a24703f5d "pdflatex"
-  "main.tex" 1696409122 2920 b6b760500f04d547babcf0557010978c ""
-  "main.toc" 1696411020 877 da2a711da14aa1012d5915ffd54cfcb7 "pdflatex"
+  "chapters/l1.tex" 1696499226 620 3c386bffa7227a84a83f323747579672 ""
+  "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" 1696499267 2992 2e28b150cf3afef1a6fd49cb6094f320 ""
+  "main.aux" 1696499269 3429 b686271b663aae19332aa4a5801c751d "pdflatex"
+  "main.out" 1696499269 2520 84c6f949127a64657693a4552d3734f4 "pdflatex"
+  "main.tex" 1696499267 2992 2e28b150cf3afef1a6fd49cb6094f320 ""
+  "main.toc" 1696499269 1244 8681f7106d44415b43e05bc57d1b6703 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
