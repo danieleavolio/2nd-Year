@@ -74,7 +74,12 @@
   {0pt}
   {}
 
-
+\newtheorem{definition}{Definizione}[section] % Crea un nuovo ambiente "definition"
+\newtheorem{theorem}{Teorema}[section] % Crea un nuovo ambiente "theorem"
+\newtheorem{corollary}{Corollario}[theorem] % Crea un nuovo ambiente "corollary"
+\newtheorem{lemma}[theorem]{Lemma} % Crea un nuovo ambiente "lemma"
+\newtheorem{domanda}{Domanda}[section] % Crea un nuovo ambiente "domanda"
+\newtheorem{osservazione}{Osservazione}[section] % Crea un nuovo ambiente "osservazione"
 
 %make link clickable
 \usepackage{hyperref}
@@ -82,6 +87,7 @@
 
 %use asmath
 \usepackage{amsmath}
+
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -119,11 +125,17 @@
 
 % Includi qui i tuoi capitoli o sezioni
 \section{Introduzione}
-Appunti 
+\textbf{Definizione esame}: Solitamente lo schema delle lezioni sarà
+\begin{equation}
+  Lezione Teoria \implies Lezione Laboratorio
+\end{equation}
+
+La lezione di Lab sarà fatta praticamente spesso in \textit{Python}.
 \newpage
 
 \input{chapters/01.tex}
-
+\newpage
+\input{chapters/02.tex}
 \newpage
 \section*{Appunti di Laboratorio}
 \input{chapters/l1.tex}
