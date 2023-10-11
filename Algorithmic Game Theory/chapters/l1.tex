@@ -1,8 +1,10 @@
 \section{Introduzione alla teoria dell'utilità e decision making}
 \subsection{Concetti di base}
 \subsubsection{ALTERNATIVE}
-Parliamo di \textit{agenti} che devono scegliere un'\textit{alternativa} da un'insieme $\mathcal{X}$ di alternative. 
-Questo insieme di alternative ha degli elementi che possono essere \textbf{esaustivi} o \textbf{mutualmente esclusivi}.
+Parliamo di \textit{agenti} che devono scegliere un'\textit{alternativa} da
+un'insieme $\mathcal{X}$ di alternative. Questo insieme di alternative ha degli
+elementi che possono essere \textbf{esaustivi} o \textbf{mutualmente
+    esclusivi}.
 
 \textbf{Esepmio}: $\mathcal{x}$ \{
 \begin{itemize}
@@ -14,3 +16,84 @@ Questo insieme di alternative ha degli elementi che possono essere \textbf{esaus
 \}
 
 \subsubsection{PREFERENZE}
+
+Con il termine \textbf{preferenze} identifichiamo una relazione $\succcurlyeq$
+su $\mathcal{X}$, che è un sottoinsieme di $\mathcal{X} \times \mathcal{X}$. Le
+preferenze possono essere:
+\begin{itemize}
+    \item \textbf{complete} se $\forall x,y \in \mathcal{X}$ vale $x \succcurlyeq y$ oppure $y \succcurlyeq x$
+    \item \textbf{transitive} se $\forall x,y,z \in \mathcal{X}$ vale $x \succcurlyeq y$ e $y \succcurlyeq z$ allora $x \succcurlyeq z$
+\end{itemize}
+
+\subsubsection{Relazione di Preferenza}
+
+Una preferenze è una \textbf{relazione di preferenza} se è sia
+\textbf{completa} che \textbf{transitiva}.
+
+Si chiama preferenza \textbf{stretta} se $x \succ y \iff x \succcurlyeq y$ e $x
+    \nsucceq y$.
+
+Si chiama \textbf{indifferenza} se $x \sim y \iff x \succcurlyeq y$ e $x
+    \preccurlyeq y$.
+
+\subsubsection{Rappresentare le preferenze come \textbf{utilità}}
+
+Una relazione di preferenza puà essere tradotta in una funzione di utilità del
+tipo $u: \mathcal{X} \rightarrow \mathbb{R}$. Si può fare in questo modo:
+
+\begin{equation}
+    x \succcurlyeq y \iff u(x) \geq u(y) \quad \forall x,y \in \mathcal{X}
+\end{equation}
+
+\textit{Esempio:} Se un agente dovesse trovare \textit{x} almeno buono quanto \textit{y}, allora la funzione di utilità $u(x)$ deve essere almeno
+alta quanto $u(y)$. Cioè l'agente è come se stesse \textbf{massimizzando} il valore di $u(var)$.
+
+\textbf{Rappresentazione ordinale}
+\textbf{Teorema 1}: Sia $\mathcal{X}$ un insieme finito di alternative e sia $\succcurlyeq$ una relazione di preferenza su $\mathcal{X}$.
+Allora una preferenza può essere rappresentata come una funzione di utilità $u: \mathcal{X} \rightarrow \mathbb{R}$ se e solo se è \textbf{completa} e \textbf{transitiva}.
+In più, se $f:\mathcal{R} \rightarrow \mathcal{R}$ è una funzione monotona crescente, allora $f \circ u$ rappresenta la stessa preferenza di $u \succcurlyeq$
+
+\textbf{Nota}: dall'ultimo statement, l'ordine ha rilevanza.
+
+Per essere valido ci sono 2 condizioni necessarie:
+\begin{itemize}
+    \item Transitività: Cioè, dato $\mathcal{X} = \{a,b,c\}$, suponiamo che $a \succ b
+              \succ c \succ a \implies u(a) > u(b) > u(c) > u(a)$. Questo sarebbe
+          \textbf{assurdo}.
+    \item Completezza: Se abbiamo preferenze incomplete, allora al massimo possiamo
+          costruire un ordine per un sottoinsieme di $\mathcal{X}$.
+\end{itemize}
+
+\textbf{Dimostrazione}
+
+La transitività e la completezza sono necessarie e sufficienti. Supponiamo di
+avere l'insieme $X = \{X_1, \ldots, X_n\}$. Possiamo suddividere gli elementi
+di $X$ in $k$ classi di indifferenza $C_1, \ldots, C_k$ tali che $C_1 \succ C_2
+    \succ \ldots \succ C_k$. In questo modo, possiamo definire la funzione di
+utilità $u$ in modo che:
+
+\[
+    u(x) = k \quad \forall x \in C_1,
+\]
+\[
+    u(x) = k-1 \quad \forall x \in C_2,
+\]
+\[
+    \ldots
+\]
+\[
+    u(x) = 1 \quad \forall x \in C_k.
+\]
+
+In questo contesto, $\succ$ rappresenta la relazione di preferenza.
+
+\subsection{Le lotterie}
+
+Una lotteria è una tupla $\mathcal{L} = (p_1,x_1;p_2,x_2 \ldots, p_n,x_n)$.
+
+\begin{itemize}
+    \item Con prezzo monetario $x_1,x_2, \dots, x_n \in X \subseteq R$.
+    \item Distribuzione di probabilità $(p_1, p_2, \dots, p_n)$.
+\end{itemize}
+
+Quindi con $\mathcal{L}$ viene definito l'insieme delle lotterie semplici.
