@@ -64,3 +64,11 @@
 \contentsline {subsection}{\numberline {8.5}ReLu}{43}{subsection.8.5}%
 \contentsline {subsection}{\numberline {8.6}Scalare i valori}{44}{subsection.8.6}%
 \contentsline {subsection}{\numberline {8.7}Plottare la loss}{45}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Importante cosa su Gradient Descent}{46}{subsection.8.8}%
+\contentsline {section}{\numberline {9}TensorFlow e Keras}{47}{section.9}%
+\contentsline {subsection}{\numberline {9.1}One Hot Encoding}{47}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Variabili correlate}{47}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Accuracy come loss}{47}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Epoche e batch size}{47}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Overfitting e come evitarlo}{48}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Migliorare le performance di un modello}{48}{subsection.9.6}%

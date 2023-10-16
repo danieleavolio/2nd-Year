@@ -419,6 +419,9 @@ INPUT chapters\lab01.tex
 INPUT .\chapters\lab02.tex
 INPUT .\chapters\lab02.tex
 INPUT chapters\lab02.tex
+INPUT .\chapters\lab03.tex
+INPUT .\chapters\lab03.tex
+INPUT chapters\lab03.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

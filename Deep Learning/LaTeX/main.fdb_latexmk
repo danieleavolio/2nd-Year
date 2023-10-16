@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1697445305 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1697445311 0
+["pdflatex"] 1697475044 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1697475050 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -226,19 +226,20 @@
   "chapters/03.tex" 1696331608 25352 bd58761706c442913202d1f93fdd5486 ""
   "chapters/04.tex" 1696931812 9185 fd521c95f57d062c35b5972c4aa4d6f0 ""
   "chapters/lab01.tex" 1696261183 2933 4cc4db92a498e91896f1187e987cf481 ""
-  "chapters/lab02.tex" 1696870767 13203 21d4f9c8c791d962eed990c76e0bb6a1 ""
+  "chapters/lab02.tex" 1697470485 13534 447f409a64cbf5df3ce9a66877d2c558 ""
+  "chapters/lab03.tex" 1697475043 3643 3e1bb7a4f30d73703cd4888a9a7d28e1 ""
   "common.tex" 1697445289 3258 789fafb6c3bc1e41f72f445803793746 ""
-  "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1697445304 1158 7241c409b2f3d8fe4f3549ed98a6b213 ""
+  "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1697470591 1186 dce4047eb860c71f51b7c0f8642f7258 ""
   "images/dropout.png" 1696931664 28561 a69059554c853258a760c2b1a23f0e75 ""
   "images/l2reg.png" 1696931194 72072 7bb75b27a633f9d765e9591f02d89ffb ""
   "images/mae.png" 1696930353 140915 bb112a54b6fbf9516d2724711120ff7d ""
   "images/overfitting.png" 1696328824 116711 0e4716abf5bc774dfa3624c6bbde0c84 ""
   "images/plot res.png" 1696327009 61824 02429a0b1e4fb1d03cc20b23703b9ec6 ""
   "images/wrong network.png" 1696328743 152862 babdc143f3fa6ed0f86c559593fbd79b ""
-  "main.aux" 1697445311 14286 5a86e9770c7eb9880db6b078aacd858b "pdflatex"
-  "main.out" 1697445311 11393 421458fccd9d154169ce5a8cda638e93 "pdflatex"
-  "main.tex" 1697445304 1158 7241c409b2f3d8fe4f3549ed98a6b213 ""
-  "main.toc" 1697445311 5989 4353b835c30658b8182444d18086f323 "pdflatex"
+  "main.aux" 1697475050 15331 9f6be8bad02813f42ffa774bc94f9bdc "pdflatex"
+  "main.out" 1697475050 12864 28a876b4a1310a66cae99724281f2b4a "pdflatex"
+  "main.tex" 1697470591 1186 dce4047eb860c71f51b7c0f8642f7258 ""
+  "main.toc" 1697475050 6706 f4a903ac489eebdef4d6c784c51d7118 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
