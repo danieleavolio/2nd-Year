@@ -14,96 +14,10 @@
 
 %colorize lstlisting with language
 \usepackage{xcolor}
-
 \usepackage{titlesec}
 
 %import all important packages 
-
-% Configurazione degli stili per tutti i linguaggi
-\lstset{
-    basicstyle=\ttfamily,
-    keywordstyle=\color{blue},
-    commentstyle=\color{purple},
-    stringstyle=\color{red},
-    % Altre opzioni
-    breaklines=true, showstringspaces=false,
-    emph={label},
-    emphstyle={\color{custompurple}},
-    escapeinside={(*}{*)}
-    }
-
-% Stile globale per tutti i linguaggi
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{white},
-    commentstyle=\color{purple},
-    keywordstyle=\color{blue},
-    numberstyle=\tiny\color{gray},
-    stringstyle=\color{red},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-
-% Impostazioni per tutti i linguaggi
-\lstset{style=mystyle}
-% Definizione di simboli per subsection e subsubsection
-\newcommand{\subsecsymbol}{\textcolor{custompurple}{\rule[0pt]{10pt}{10pt}\hspace{10pt}}}
-\newcommand{\subsubsecsymbol}{\textcolor{custompurple}{\textbf{$\blacklozenge$}\hspace{4pt}}}
-
-\titleformat{\section}[block]
-  {\Huge\bfseries}
-  {\llap{\textcolor{custompurple}{\rule[-4pt]{10pt}{18pt}\hspace{10pt}}\thesection\hskip 12pt}}
-  {0pt}
-  {}
-% Definizione di uno stile per \subsection
-\titleformat{\subsection}[block]
-  {\Large\bfseries\color{black}}
-  {\llap{\subsecsymbol}\thesubsection\hskip 12pt}
-  {0pt}
-  {}
-
-% Definizione di uno stile per \subsubsection
-\titleformat{\subsubsection}[block]
-  {\large\bfseries\color{black}}
-  {\llap{\subsubsecsymbol}\thesubsubsection\hskip 12pt}
-  {0pt}
-  {}
-
-
-%make link clickable
-\usepackage{hyperref}
-\usepackage{pgfplots}
-
-%use asmath
-\usepackage{amsmath}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[R]{\nouppercase{\rightmark}}
-\fancyfoot[C]{\thepage}
-
-\usepackage{listings}
-\usepackage{tabularx}
-
-%color link orange
-\hypersetup{
-    colorlinks=true,
-    linkcolor=custompurple,
-    filecolor=magenta,
-    urlcolor=cyan,
-}
-
-\definecolor{custompurple}{HTML}{8b3fff}
-
+\input{common.tex}
 % Define title and author
 \begin{titlepage}
     \title{\color{custompurple}\Huge Deep Learning}

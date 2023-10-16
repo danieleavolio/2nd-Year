@@ -213,6 +213,11 @@ INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT .\common.tex
+INPUT .\common.tex
+INPUT common.tex
+INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\amscls\amsthm.sty
+INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\amscls\amsthm.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty

@@ -1,0 +1,162 @@
+\section{Domande: GoodBye SQL}
+\begin{domanda}
+    Differenza tra Scale Up e Scale Out
+\end{domanda}
+
+Scale Up o scalare verticalmente significa \textit{aggiungere risorse ad una
+    macchina sola}. Ad esempio, significa potenziare una macchina tale da poter
+gestire piu carico di lavoro. Questo e' un approccio che e' stato utilizzato
+per molto tempo e che ha portato a creare macchine sempre piu potenti. Il
+problema e' che questo approccio ha un limite fisico, ovvero non si puo' andare
+avanti all'infinito. Inoltre, questo approccio e' molto costoso.
+
+Scale Out o scalare orizzontalmente e' una cosa piu economicamente sostenibile,
+poiche' si basa sul concetto di \textit{aggiugnere piu macchine che lavorano
+    tra loro per gestire il carico di lavoro}. Questo e' notevolmente piu economico
+perche' i costi di una macchina sono molto piu bassi rispetto a quelli di una
+macchina potenziata.
+
+\begin{domanda}
+    Quali sono stati i primi tentativi di scalare orizzontalmente
+\end{domanda}
+
+I primi tentativi furono quelli di costruire dei \textbf{Memcached server}, in
+cui gli utenti potessero effettuare letture senza andare a toccare i database
+principali. Un'altra tecnica era quella della \textbf{replicazione dei dati} su
+piu' databases.
+
+\textbf{Quando va bene questo?} Quando le letture sono notevolmente maggiori rispetto alle scritture.
+Questo perche' se ci fossero tante scritture, ci sarebbe un bottleneck architetturale, dato che
+il database su cui vengono effettuate le scritture continua a rimanere 1 e 1 soltanto.
+
+\begin{domanda}
+    Cosa significa Sharding e come viene usato?
+\end{domanda}
+
+Sharding significa \textbf{tagliare orizzontalmente un database} per splittarlo
+su diverse macchine. Questo comporta un aumento delle performance sopratutto in
+scrittura, poiche' aumenta il numero di macchine dove si puo' scrivere, ma
+aumenta anche la \textbf{complessita' di gestione del sistema.}
+
+Bisogna anche effettuare il taglio con un criterio, poiche' poi quando i dati
+devono essere recuperati si vuole un tempo di accesso comunque accettabile
+senza dover effettuare una ricerca su tutti e $n$ i database.
+
+\textbf{Problemoni:}
+\begin{itemize}
+    \item Complessita': Come gia' detto, gestire un sistema del genere diventa complesso
+          e richiede una conoscenza elevata
+    \item SQL: Non si puo usare SQL su diverse shard, quindi ci vuole un meccanismo
+          dietro le quinte che gestisca il tutto
+    \item ACID LOSS: Si perdono le transizioni ACID perche' su piu macchine non esiste,
+          poiche' si ritornerebbe ad avere un bottleneck
+\end{itemize}
+
+\begin{domanda}
+    Spiega il teorema di CAP
+\end{domanda}
+
+Il teorema di CAP che sta per \textbf{Consistentcy, Availability e Partition
+    Tolerance} dice che \textbf{non si possono avere tutti e 3 i requisiti} in un
+sistema distribuito. Provando ad ottenere tutti e 3 contemporaneamente, si
+andra' comunque a perdere 1 dei 3.
+\begin{itemize}
+    \item Consistentcy: Ogni utente deve avere la stessa visualizzazione del contenuto in
+          qualsiasi istante
+    \item Availability: Ogni richiesta deve essere servita
+    \item Partition Tolerance: Il sistema deve funzionare anche se alcune macchine non
+          sono disponibili
+\end{itemize}
+
+Un esempio pratico: \textit{Immagina di avere un servizio di database
+    distribuito per un'applicazione di shopping online. In questo sistema, hai
+    utenti che effettuano ordini e aggiornano il proprio carrello degli acquisti in
+    tempo reale. Il database è distribuito su più server in diverse località
+    geografiche per garantire la ridondanza e la tolleranza ai guasti.}
+
+Coerenza (Consistency): Supponiamo che tu abbia implementato una forte coerenza
+dei dati, il che significa che ogni aggiornamento del carrello degli acquisti
+di un utente deve essere immediatamente riflesso su tutti i server. Questo
+assicura che tutti i server abbiano sempre una vista coerente dei dati.
+Tuttavia, quando si verifica una partizione di rete tra due gruppi di server,
+il sistema deve scegliere tra attendere la risoluzione della partizione
+(rendendo il servizio non disponibile per un certo periodo) o accettare il
+rischio di avere carrelli degli acquisti temporaneamente non coerenti tra le
+due parti del sistema.
+
+Disponibilità (Availability): Se desideri massimizzare la disponibilità, il
+sistema dovrebbe continuare a permettere agli utenti di aggiornare i propri
+carrelli degli acquisti, anche se si verifica una partizione di rete tra i
+server. Tuttavia, ciò può comportare il rischio di avere dati non coerenti tra
+i due lati della partizione durante il periodo di separazione.
+
+Tolleranza alla partizione (Partition Tolerance): Il sistema deve essere in
+grado di tollerare le partizioni di rete. Questo significa che il servizio
+dovrebbe funzionare in presenza di guasti di rete o partizioni geografiche, ma
+potrebbe comportare una temporanea mancanza di coerenza o disponibilità in
+situazioni di partizione.
+
+Quindi, in questo esempio, puoi vedere che il teorema CAP si applica. Quando si
+verifica una partizione di rete, devi fare una scelta tra coerenza e
+disponibilità. Non è possibile garantire contemporaneamente entrambe le
+proprietà. Il sistema deve tollerare la partizione ma potrebbe sacrificare la
+coerenza o la disponibilità a seconda delle decisioni di progettazione prese.
+
+\begin{domanda}
+    Spiega: No Go Zone, Eventual Consistentcy, Strict Consistentcy
+\end{domanda}
+
+\begin{itemize}
+    \item No Go Zone: $$\text{Consistentcy} \cap \text{Availability} \cap \text{Partition
+                  Tolerance}$$
+    \item Strict Consistentcy: $$\text{Consistentcy} \cap \text{Partition Tolerance}$$
+    \item Eventual Consistentcy: $$\text{Availability} \cap \text{Partition Tolerance}$$
+\end{itemize}
+
+\begin{domanda}
+    Come funziona Amazon Dynamo?
+\end{domanda}
+
+\begin{itemize}
+    \item Database non relazionale alternativo.
+    \item Accesso basato su chiave primaria.
+    \item Dati recuperati da una chiave sono oggetti binari non strutturati.
+    \item La maggior parte degli oggetti è piccola, sotto 1 MB.
+    \item Dynamo permette di sacrificare la coerenza per garantire disponibilità e
+          tolleranza alle partizioni.
+\end{itemize}
+
+\textbf{Caratteristiche architetturali chiave}
+\begin{itemize}
+    \item Consistent hashing: usa l'hash della chiave primaria per distribuire i dati tra
+          i nodi del cluster in modo efficiente.
+    \item Coerenza regolabile: l'applicazione può bilanciare la coerenza, le prestazioni
+          di lettura e scrittura.
+    \item Versionamento dei dati: permette la gestione di più versioni di oggetti nel
+          sistema, richiedendo la risoluzione delle versioni duplici da parte
+          dell'applicazione o dell'utente.
+\end{itemize}
+
+\textbf{Principali caratteristiche di Dynamo}
+\begin{itemize}
+    \item Hashing consistente: assegna le chiavi ai nodi in modo efficiente, consentendo
+          l'aggiunta o la rimozione di nodi con minimo riassestamento.
+    \item Coerenza regolabile: permette di scegliere tra coerenza, prestazioni di lettura
+          e scrittura.
+    \item Versionamento dei dati: gestisce più versioni di oggetti, richiedendo la
+          risoluzione delle versioni duplici da parte dell'applicazione o dell'utente.
+\end{itemize}
+
+\begin{domanda}
+    Qual e' la differenza tra SQL e NOSQL
+\end{domanda}
+
+Nei database NOSQL si perde la strictness del modello relazionale e si parla piu' 
+di \textbf{modello a documenti}. Questo significa che i dati sono salvati con una
+struttura diversa tra loro, non obbligatoriamente. Il formato con cui si 
+salvano e' spesso \textbf{xml} o \textbf{json}.
+
+Ogni documento possiamo dire che rappresenti una riga di un database relazionale. All'interno
+del documento ci potrebbero essere anche documenti innestati e liste.
+
+\newpage

@@ -18,7 +18,6 @@
 
 %package for theorem
 \usepackage{amsthm}
-\newtheorem*{theorem}{theorem}
 
 %import all important packages 
 
@@ -55,6 +54,14 @@
     tabsize=2
 }
 
+%package for theorem
+\usepackage{amsthm}
+
+\usepackage{pgfplots}
+\usepackage{amsmath}
+
+
+
 % Impostazioni per tutti i linguaggi
 \lstset{style=mystyle}
 % Definizione di simboli per subsection e subsubsection
@@ -79,6 +86,16 @@
   {\llap{\subsubsecsymbol}\thesubsubsection\hskip 12pt}
   {0pt}
   {}
+
+\newtheorem{definition}{Definizione}[section] % Crea un nuovo ambiente "definition"
+\newtheorem{theorem}{Teorema}[section] % Crea un nuovo ambiente "theorem"
+\newtheorem{corollary}{Corollario}[theorem] % Crea un nuovo ambiente "corollary"
+\newtheorem{lemma}[theorem]{Lemma} % Crea un nuovo ambiente "lemma"
+\newtheorem{domanda}{Domanda}[section] % Crea un nuovo ambiente "domanda"
+\newtheorem{osservazione}{Osservazione}[section] % Crea un nuovo ambiente "osservazione"
+
+\usepackage{listings}
+
 
 
 %make link clickable
