@@ -143,6 +143,24 @@ INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\nicematrix\nicematrix.sty
+INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\nicematrix\nicematrix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgfplots\pgfplots.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgfplots\pgfplots.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
@@ -201,16 +219,6 @@ INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT .\common.tex
@@ -281,8 +289,6 @@ INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
@@ -413,6 +419,16 @@ INPUT .\images\dropout.png
 INPUT .\images\dropout.png
 INPUT .\images\dropout.png
 INPUT .\images\dropout.png
+INPUT .\chapters\05.tex
+INPUT .\chapters\05.tex
+INPUT chapters\05.tex
+INPUT .\images\conv.png
+INPUT .\images\conv.png
+INPUT .\images\conv.png
+INPUT .\images\conv.png
+INPUT .\images\conv.png
+INPUT .\images\conv.png
+INPUT .\images\conv.png
 INPUT .\chapters\lab01.tex
 INPUT .\chapters\lab01.tex
 INPUT chapters\lab01.tex
