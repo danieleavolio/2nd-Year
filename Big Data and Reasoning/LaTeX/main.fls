@@ -364,6 +364,27 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
+INPUT .\chapters\q4.tex
+INPUT .\chapters\q4.tex
+INPUT chapters\q4.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang2.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang2.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang2.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang3.sty
+INPUT .\chapters\q5.tex
+INPUT .\chapters\q5.tex
+INPUT chapters\q5.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT .\chapters\q6.tex
+INPUT .\chapters\q6.tex
+INPUT chapters\q6.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

@@ -168,7 +168,7 @@ basa sull'aggiungere hardware comodo ed economico per scalare.
     \node [below=4cm of client] (dummy) {}; % Dummy node for spacing
 
     % Resource Manager
-    \node [draw, rectangle, right=2cm of client] (rm) {Resource Manager};
+    \node [draw, rectangle, right=5cm of client] (rm) {Resource Manager};
     \node [below=2cm of rm] (dummy2) {}; % Dummy node for spacing
 
     % Nodi
@@ -180,9 +180,11 @@ basa sull'aggiungere hardware comodo ed economico per scalare.
     \draw[->] (client.east) -- (rm.west) node[midway, above] {Richiesta di Lavoro};
 
     % Freccia da Resource Manager a Nodi
-    \draw[->] (rm.north) -- (node1.south) node[midway, left] {Task};
-    \draw[->] (rm.north) -- (node2.south) node[midway, left] {Task};
-    \draw[->] (rm.north) -- (node3.south) node[midway, left] {Task};
+    \draw[->] (rm.south) -- (node1.north) node[midway, left] {Task};
+    \draw[->] (rm.south) -- (node2.north) node[midway, left] {Task};
+    \draw[->] (rm.south) -- (node3.north) node[midway, left] {Task};
 
 \end{tikzpicture}
+
+\newpage
 
