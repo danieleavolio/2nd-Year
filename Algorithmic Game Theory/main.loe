@@ -1,0 +1,36 @@
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.1\else \numberline {3.1}Definizione\fi \thmtformatoptarg {Gioco non cooperativo}}{8}{definition.3.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.2\else \numberline {3.2}Definizione\fi \thmtformatoptarg {Gioco cooperativo}}{8}{definition.3.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.3\else \numberline {3.3}Definizione\fi \thmtformatoptarg {Transferable Utility Games}}{9}{definition.3.3}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.4\else \numberline {3.4}Definizione\fi \thmtformatoptarg {Non Transferable Utility Games }}{9}{definition.3.4}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.5\else \numberline {3.5}Definizione\fi \thmtformatoptarg {Outcome}}{10}{definition.3.5}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.6\else \numberline {3.6}Definizione\fi \thmtformatoptarg {Giochi superaddittivi}}{11}{definition.3.6}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.7\else \numberline {3.7}Definizione\fi \thmtformatoptarg {Core O Nucleo}}{12}{definition.3.7}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.8\else \numberline {3.8}Definizione\fi \thmtformatoptarg {Giochi con nucleo vuoto}}{12}{definition.3.8}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.9\else \numberline {3.9}Definizione\fi \thmtformatoptarg {Nucleo minimo}}{13}{definition.3.9}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.10\else \numberline {3.10}Definizione\fi \thmtformatoptarg {Eccesso}}{14}{definition.3.10}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.11\else \numberline {3.11}Definizione\fi \thmtformatoptarg {Proprietà 1}}{16}{definition.3.11}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.12\else \numberline {3.12}Definizione\fi \thmtformatoptarg {Proprietà 2}}{17}{definition.3.12}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.13\else \numberline {3.13}Definizione\fi \thmtformatoptarg {Proprietà 3}}{17}{definition.3.13}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}3.14\else \numberline {3.14}Definizione\fi \thmtformatoptarg {Proprietà 4}}{17}{definition.3.14}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}4.1\else \numberline {4.1}Teorema\fi \thmtformatoptarg {Rappresentazione Ordinale}}{19}{theorem.4.1}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}4.1\else \numberline {4.1}Dimostrazione\fi \thmtformatoptarg {Rappresentazione Ordinale}}{19}{dimostrazione.4.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}4.1\else \numberline {4.1}Definizione\fi \thmtformatoptarg {Utilità attesa}}{20}{definition.4.1}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}4.2\else \numberline {4.2}Teorema\fi \thmtformatoptarg {Teorema di VNM}}{20}{theorem.4.2}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}4.2\else \numberline {4.2}Dimostrazione\fi \thmtformatoptarg {Parte 1 VNM}}{21}{dimostrazione.4.2}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}4.3\else \numberline {4.3}Dimostrazione\fi \thmtformatoptarg {Parte 2 VNM}}{21}{dimostrazione.4.3}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}5.1\else \numberline {5.1}Definizione\fi \thmtformatoptarg {Giochi coalizionali}}{23}{definition.5.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}5.2\else \numberline {5.2}Definizione\fi \thmtformatoptarg {Funzione caratteristica}}{23}{definition.5.2}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}5.1\else \numberline {5.1}Esempio\fi \thmtformatoptarg {Gelati}}{23}{esempio.5.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}5.3\else \numberline {5.3}Definizione\fi \thmtformatoptarg {Superadditività}}{24}{definition.5.3}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}5.2\else \numberline {5.2}Esempio\fi \thmtformatoptarg {Shapley value con giocatore A}}{25}{esempio.5.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}6.1\else \numberline {6.1}Definizione\fi \thmtformatoptarg {Airport game}}{27}{definition.6.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.1\else \numberline {6.1}Esempio\fi \thmtformatoptarg {Airport game}}{27}{esempio.6.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}6.2\else \numberline {6.2}Definizione\fi \thmtformatoptarg {Approssimazione di montercarlo}}{28}{definition.6.2}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.2\else \numberline {6.2}Esempio\fi \thmtformatoptarg {Pseudo codice Shapley Value con Montecarlo}}{29}{esempio.6.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}6.3\else \numberline {6.3}Definizione\fi \thmtformatoptarg {Gioco del grafo indotto (ISG)}}{30}{definition.6.3}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.3\else \numberline {6.3}Esempio\fi \thmtformatoptarg {Coalizioni nel grafo indotto}}{30}{esempio.6.3}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}6.4\else \numberline {6.4}Definizione\fi \thmtformatoptarg {MC-Nets}}{32}{definition.6.4}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.4\else \numberline {6.4}Esempio\fi \thmtformatoptarg {MC-Nets}}{32}{esempio.6.4}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.5\else \numberline {6.5}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a\}}}{32}{esempio.6.5}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.6\else \numberline {6.6}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{33}{esempio.6.6}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}6.7\else \numberline {6.7}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{34}{esempio.6.7}%

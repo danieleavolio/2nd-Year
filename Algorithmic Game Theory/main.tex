@@ -14,13 +14,15 @@
 
 \usepackage{titlesec}
 
+\usepackage{thmtools}
+
 %import all important packages 
 
 % Configurazione degli stili per tutti i linguaggi
 \lstset{
     basicstyle=\ttfamily,
     keywordstyle=\color{blue},
-    commentstyle=\color{green},
+    commentstyle=\color{purple},
     stringstyle=\color{red},
     % Altre opzioni
     breaklines=true, showstringspaces=false,
@@ -32,7 +34,7 @@
 % Stile globale per tutti i linguaggi
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{white},
-    commentstyle=\color{green},
+    commentstyle=\color{purple},
     keywordstyle=\color{blue},
     numberstyle=\tiny\color{gray},
     stringstyle=\color{red},
@@ -86,6 +88,13 @@
 \usepackage{hyperref}
 \usepackage{pgfplots}
 
+\usepackage{tocloft}
+
+
+\newcommand{\listofdefinitions}{\listof{definition}{Elenco di Teoremi e Definizioni}}
+\newcommand{\shapleyval}{\phi(i,\nu) = \frac{1}{|N|!} \sum_{\pi \in \prod_N} \nu(B(\pi, i)) \cup \{i\} - \nu(B(\pi, i))}
+
+
 %use asmath
 \usepackage{amsmath}
 
@@ -122,6 +131,7 @@
 \newpage
 
 \tableofcontents
+\listoftheorems
 \newpage
 
 % Includi qui i tuoi capitoli o sezioni
@@ -141,5 +151,6 @@ La lezione di Lab sarà fatta praticamente spesso in \textit{Python}.
 \section*{Appunti di Laboratorio}
 \input{chapters/l1.tex}
 \input{chapters/l2.tex}
+\input{chapters/l3.tex}
 
 \end{document}

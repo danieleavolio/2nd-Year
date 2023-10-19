@@ -1,6 +1,6 @@
 \section{Teoria dei giochi coalizionali}
 
-\begin{definition}(Giochi coalizionali)
+\begin{definition}[Giochi coalizionali]
 
 \end{definition}
 Un gioco coalizionale (cioè con utilità trasferibile) è una coppia
@@ -13,13 +13,13 @@ del tipo $G = (N,v)$ con:
 Per ogni sotto-insieme di giocatori $C$, $\nu(C)$ è la quantità che i membri di
 $C$ possono ottenere se \textit{lavorassero insieme}.
 
-\begin{definition}(Funzione caratteristica)
+\begin{definition}[Funzione caratteristica]
 \end{definition}
 
 La funzione caratteristica è un mapping tra \textit{ogni coalizione} $C
     \subseteq N$ o il suo rispettivo valore (\textit{cioè l'utilità}).
 
-\begin{esempio}(Gelati)
+\begin{esempio}[Gelati]
 \end{esempio}
 
 Insieme dei giocatori $N$:
@@ -54,7 +54,7 @@ se soddisfa:
 
 Cioè, in italiano, significa che,
 
-\begin{definition}(Superadditività)
+\begin{definition}[Superadditività]
     Dato un gruppo di giocatori $C_1$ e un gruppo di giocatori $C_2$, se dovessero unirsi, il
     valore della coalizione risultante è maggiore o uguale alla somma dei valori
     delle due coalizioni.
@@ -96,6 +96,7 @@ Il core o nucleo è definito come:
     \end{cases}
 \end{equation}
 
+
 \subsection{Shapley Value}
 
 Lo shapleu value di un giocatore $i$ è la contribuzione marginale media del
@@ -111,7 +112,7 @@ con:
     \item $B(\pi, i)$ è l'insieme di tutti i predecessori di $i$ nella perutazione $\pi$.
 \end{itemize}
 
-\begin{esempio}(Shapley value con giocatore A)
+\begin{esempio}[Shapley value con giocatore A]
 \end{esempio}
 
 \begin{itemize}
@@ -133,11 +134,13 @@ Ora, calcoliamo le computazioni per \textbf{A}.
 
 In totale, allora, abbiamo:
 \[
-\phi(A,\nu) = \frac{1}{6}(0+0+750+1000+750+1000) = 583.\overline{33}
+    \phi(A,\nu) = \frac{1}{6}(0+0+750+1000+750+1000) = 583.\overline{33}
 \]
 
 \textbf{Nota:} Lo shapley value può essere anche calcolato utilizzando questa formula:
 
 \[
-    \phi(i, \nu) = \sum_{C \subseteq N} \frac{(|N|-|C|)! \times (|C| -1)!}{|N|!}(\nu(C) - \nu(C\setminus \{i\}))   
+    \shapleyval
 \]
+
+\newpage

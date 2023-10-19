@@ -48,7 +48,7 @@ tipo $u: \mathcal{X} \rightarrow \mathbb{R}$. Si può fare in questo modo:
 \textit{Esempio:} Se un agente dovesse trovare \textit{x} almeno buono quanto \textit{y}, allora la funzione di utilità $u(x)$ deve essere almeno
 alta quanto $u(y)$. Cioè l'agente è come se stesse \textbf{massimizzando} il valore di $u(var)$.
 
-\begin{theorem}(Rappresentazione Ordinale)
+\begin{theorem}[Rappresentazione Ordinale]
 
     Sia $\mathcal{X}$ un insieme finito di alternative e sia $\succcurlyeq$ una
     relazione di preferenza su $\mathcal{X}$. Allora una preferenza può essere
@@ -69,7 +69,8 @@ alta quanto $u(y)$. Cioè l'agente è come se stesse \textbf{massimizzando} il v
     \end{itemize}
 \end{theorem}
 
-\textbf{Dimostrazione}
+\begin{dimostrazione}[Rappresentazione Ordinale]
+\end{dimostrazione}
 
 La transitività e la completezza sono necessarie e sufficienti. Supponiamo di
 avere l'insieme $X = \{X_1, \ldots, X_n\}$. Possiamo suddividere gli elementi
@@ -114,7 +115,7 @@ Possiamo calcolare il valore atteso per la lotteria come:
     \mathbb{E} = 0.3 \times 10 + 0.2 \times 5 + 0.1 \times 0 + 0.4 \times (-5) = 2
 \]
 
-\begin{definition}(Utilità attesa)
+\begin{definition}[Utilità attesa]
     Data una relazione di preferenza $\succcurlyeq$ su $\mathcal{L}$, una funzione di utilità $U: \mathcal{L} \rightarrow \mathbb{R}$ è
     funzione di utilità attesa se può ssere scritta come:
 \end{definition}
@@ -140,7 +141,7 @@ proprietà, allora può essere rappresentata come una funzione di utilità:
     \item \textbf{Assioma 3} ( Indipendenza): Per una qualsiasi lotteria $N$ e $p \in [0,1], L \succcurlyeq M \iff pL + (1-p)N \succcurlyeq pM + (1-p)N$
 \end{itemize}
 
-\begin{theorem}(Teorema di VNM)
+\begin{theorem}[Teorema di VNM]
     Una relazione binaria $\succ$ su $\mathcal{L}$ ha una rappresentazione utilità attesa se e solo se soddisfa gli assiomi da 1 a 3. Ancora, se $U$ e $V$ sono
     rappresentazioni di utilità attesa di $\succ$, allora esistono delle costanti $a,b \in \mathbb{R}$ tale che $U(\cdot) = aV(\cdot)+b$.
 \end{theorem}
@@ -155,7 +156,7 @@ Andremo a fare la \textbf{dimostrazione} in due fasi:
     \item Dimostriamo che $L \succ M \iff U(L) \succ U(M)$ con $L,M \in \mathcal{L}$
 \end{enumerate}
 
-\begin{dimostrazione}(Parte 1)
+\begin{dimostrazione}[Parte 1 VNM]
 \end{dimostrazione}
 Supponiamo di avere $n$ risultati $o_1, \dots, o_n$.
 
@@ -179,7 +180,7 @@ atteso di $u$.
     u(M) = u(\sum_i p_i o_i) = \sum_i p_i u(o_i) = \sum_i p_i q_i
 \]
 
-\begin{dimostrazione}(Parte 2)
+\begin{dimostrazione}[Parte 2 VNM]
 \end{dimostrazione}
 
 Supponiamo che $L `succ M$, possiamo definire $L'$ e $M'$ come segue:
@@ -245,24 +246,26 @@ probabilità del 50\% di avere 50. Quindi la media è 75 e la radice è 6.
 
 \subsection{Applicazione: Assicurazione}
 
-Supponiamo di avere un giocatore $A$ che è \textit{avverso al rischio} con $u(x) = \sqrt(x)$ e un 
-asset $A = (0.5, 100; 0.5, 0)$. 
+Supponiamo di avere un giocatore $A$ che è \textit{avverso al rischio} con
+$u(x) = \sqrt(x)$ e un asset $A = (0.5, 100; 0.5, 0)$.
 
-Immaginiamo di avere una compagnia di assicurazione neutrale al rischio con tantissimi soldoni.
+Immaginiamo di avere una compagnia di assicurazione neutrale al rischio con
+tantissimi soldoni.
 
 Quale premium $P$ pagherebbe il giocatore per assicurare il suo asset?
 
 \[\
-  u(100-P) \geq 0.5 \times u(100) + 0.5 \times u(0) \rightarrow \sqrt(100-P) \geq 5 \rightarrow 100-P \geq 25 \rightarrow -P \geq -100+25 \rightarrow P \geq 75  
+    u(100-P) \geq 0.5 \times u(100) + 0.5 \times u(0) \rightarrow \sqrt(100-P) \geq 5 \rightarrow 100-P \geq 25 \rightarrow -P \geq -100+25 \rightarrow P \geq 75
 \]
 
-Quale premium pagherebbe la compagnia assicurativa per assicurarsi l'asset del giocatore?
+Quale premium pagherebbe la compagnia assicurativa per assicurarsi l'asset del
+giocatore?
 
 \[
-  P \geq 0.5 \times 100 + 0.5 \times 0 \rightarrow P \geq 50  
+    P \geq 0.5 \times 100 + 0.5 \times 0 \rightarrow P \geq 50
 \]
 
-Allora, entrambi guadagnerebbero soldi se la compagnia assicurasse l'asset del player 
-per un premium $P \in [50,75]$.
+Allora, entrambi guadagnerebbero soldi se la compagnia assicurasse l'asset del
+player per un premium $P \in [50,75]$.
 
 \newpage
