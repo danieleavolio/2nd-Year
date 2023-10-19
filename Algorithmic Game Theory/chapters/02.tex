@@ -385,15 +385,17 @@ Minimizzare la insoddisfazione di ogni possibile coalizione. Applichiamo
     \item x = (1,2,0) $\implies e(\{1,2\}, x) = v(\{1,2\}) - (x_1+x_2) = 1-3=-2$
 \end{itemize}
 
-\textbf{RIVEDERE PARTE SUL Nucleolus} pagina 68 circa
-
 Ritorniamo alla definizione di Nucleolus.
 
 \textbf{Definizione da Schmeidler}: Il nucleolus $\mathcal{N}(\mathcal{G})$ di un gioco $\mathcal{G}$ è l'insieme:
 
 \[
-    \mathcal{N}(\mathcal{G}) = \{x \in \mathcal{X}(\mathcal{G})|\nexists y \in \mathcal{X}(\mathcal{G}) \ t.c\ \theta(y) \lessapprox DA CMABIARE \theta(X) \}
+    \mathcal{N}(\mathcal{G}) = \{x \in \mathcal{X}(\mathcal{G})|\nexists y \in \mathcal{X}(\mathcal{G}) \ t.c\ \theta(y) \prec  \theta(X) \}
 \]
+
+Che significa proprio che non esiste un altro vettore di pagamento che è
+preferito da tutti i giocatori rispetto a $x$. Quindi, il nucleolus è un
+concetto di soluzione che è \textbf{stabile}.
 
 \subsection{Shapley Value}
 
@@ -417,8 +419,8 @@ contesto di gioco può essere soggettiva e dipendere dalle aspettative e dagli
 accordi tra i giocatori. Quindi, se l'allocazione è considerata equa o meno
 potrebbe variare in base al contesto e alle aspettative dei giocatori.
 
-No! Since 1 and 2 are symmetric Outcomes in the core may be unfair! How do we
-divide payoffs in a fair way?
+No! Poiché 1 e 2 sono risultati simmetrici nel core possono essere ingiusti!
+Come facciamo a dividere i pagamenti in modo equo?
 
 \textit{Pensiamo a questo.} Un risultato equo dovrebbe premiare ciascun agente in base al loro contributo.
 Nel primo tentativo, dato un gioco $G = (N, v)$, impostiamo $x_i = v(\{1,
@@ -526,4 +528,7 @@ giocatore $i$ alla coalizione dei suoi predecessori.
 
 \textbf{Teorema:} Il valore di Shapley è l'unico schema di distribuzione dei pagamenti che soddisfa le proprietà 1-4.
 
-E' possibile scrivere la formula anche in questo modo: \textit{da copiare dalle slide}
+E' possibile scrivere la formula anche in questo modo:
+\[
+    \phi(i, \nu) = \sum_{C \subseteq N} \frac{(|N|-|C|)! \times (|C| -1)!}{|N|!}(\nu(C) - \nu(C\setminus \{i\}))
+\]

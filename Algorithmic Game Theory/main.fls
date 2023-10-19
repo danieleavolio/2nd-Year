@@ -362,6 +362,16 @@ INPUT C:\Program Files\MiKTeX\tex\latex\base\omscmr.fd
 INPUT .\chapters\l1.tex
 INPUT .\chapters\l1.tex
 INPUT chapters\l1.tex
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\images\rishio.png
+INPUT .\chapters\l2.tex
+INPUT .\chapters\l2.tex
+INPUT chapters\l2.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
@@ -375,8 +385,12 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
