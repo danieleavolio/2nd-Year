@@ -84,3 +84,7 @@
 \contentsline {subsection}{\numberline {10.4}Epoche e batch size}{54}{subsection.10.4}%
 \contentsline {subsection}{\numberline {10.5}Overfitting e come evitarlo}{55}{subsection.10.5}%
 \contentsline {subsection}{\numberline {10.6}Migliorare le performance di un modello}{55}{subsection.10.6}%
+\contentsline {section}{\numberline {11}Lab: Convolutional Neural Networks}{56}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Cross Entropy vs Accuracy}{56}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Workflow per image classification}{57}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Bilanciare le classi}{57}{subsubsection.11.2.1}%
