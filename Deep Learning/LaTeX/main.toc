@@ -56,35 +56,42 @@
 \contentsline {subsubsection}{\numberline {7.8.1}Max Pooling}{40}{subsubsection.7.8.1}%
 \contentsline {subsection}{\numberline {7.9}Multiclass Classification Example}{41}{subsection.7.9}%
 \contentsline {subsection}{\numberline {7.10}Nozioni alla lavagna}{42}{subsection.7.10}%
-\contentsline {section}{\numberline {8}Lab: Introduzione Python}{43}{section.8}%
-\contentsline {subsection}{\numberline {8.1}MatPlotLib}{43}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Plots}{43}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}Sub-plots}{43}{subsubsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.2}NumPy}{44}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Lab: Reti Neurali da zero}{46}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Introduzione}{46}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Esempio pratico}{46}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Il grafo}{47}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}La funnzione loss}{47}{subsubsection.9.2.2}%
-\contentsline {subsubsection}{\numberline {9.2.3}L'ottimizzatore}{48}{subsubsection.9.2.3}%
-\contentsline {subsubsection}{\numberline {9.2.4}Discesa del gradiente}{48}{subsubsection.9.2.4}%
-\contentsline {subsubsection}{\numberline {9.2.5}Inizializzatore}{48}{subsubsection.9.2.5}%
-\contentsline {subsubsection}{\numberline {9.2.6}Fix Point Procedure}{48}{subsubsection.9.2.6}%
-\contentsline {subsection}{\numberline {9.3}Esempio da zero}{48}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}La funzione Sigmoid}{48}{subsubsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.4}Tangente Iperbolica TanH}{49}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}ReLu}{50}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Scalare i valori}{51}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Plottare la loss}{52}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Importante cosa su Gradient Descent}{53}{subsection.9.8}%
-\contentsline {section}{\numberline {10}TensorFlow e Keras}{54}{section.10}%
-\contentsline {subsection}{\numberline {10.1}One Hot Encoding}{54}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Variabili correlate}{54}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Accuracy come loss}{54}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Epoche e batch size}{54}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Overfitting e come evitarlo}{55}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Migliorare le performance di un modello}{55}{subsection.10.6}%
-\contentsline {section}{\numberline {11}Lab: Convolutional Neural Networks}{56}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Cross Entropy vs Accuracy}{56}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Workflow per image classification}{57}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}Bilanciare le classi}{57}{subsubsection.11.2.1}%
+\contentsline {section}{\numberline {8}Reti Neurali Convoluzionali Pre-allenate}{43}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Come si usa il transfer learning?}{43}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Oltre il modello sequenziale}{45}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Multi input e multi output}{45}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Functional API}{45}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Adanvced Keras}{47}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Subclassing}{47}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Lab: Introduzione Python}{48}{section.11}%
+\contentsline {subsection}{\numberline {11.1}MatPlotLib}{48}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Plots}{48}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Sub-plots}{48}{subsubsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.2}NumPy}{49}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Lab: Reti Neurali da zero}{51}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Introduzione}{51}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Esempio pratico}{51}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}Il grafo}{52}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}La funnzione loss}{52}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}L'ottimizzatore}{53}{subsubsection.12.2.3}%
+\contentsline {subsubsection}{\numberline {12.2.4}Discesa del gradiente}{53}{subsubsection.12.2.4}%
+\contentsline {subsubsection}{\numberline {12.2.5}Inizializzatore}{53}{subsubsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.6}Fix Point Procedure}{53}{subsubsection.12.2.6}%
+\contentsline {subsection}{\numberline {12.3}Esempio da zero}{53}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.3.1}La funzione Sigmoid}{53}{subsubsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.4}Tangente Iperbolica TanH}{54}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}ReLu}{55}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Scalare i valori}{56}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Plottare la loss}{57}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Importante cosa su Gradient Descent}{58}{subsection.12.8}%
+\contentsline {section}{\numberline {13}TensorFlow e Keras}{59}{section.13}%
+\contentsline {subsection}{\numberline {13.1}One Hot Encoding}{59}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Variabili correlate}{59}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Accuracy come loss}{59}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Epoche e batch size}{59}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Overfitting e come evitarlo}{60}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Migliorare le performance di un modello}{60}{subsection.13.6}%
+\contentsline {section}{\numberline {14}Lab: Convolutional Neural Networks}{61}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Cross Entropy vs Accuracy}{61}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Workflow per image classification}{62}{subsection.14.2}%
+\contentsline {subsubsection}{\numberline {14.2.1}Bilanciare le classi}{62}{subsubsection.14.2.1}%

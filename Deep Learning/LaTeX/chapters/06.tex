@@ -1,0 +1,217 @@
+\section{Reti Neurali Convoluzionali Pre-allenate}
+
+\textbf{Motivazione principale:} E' quello di ridurre il modello e riutilizzarlo in altri contesti, senza dover effettuare ancora un allenamento della rete.
+
+Prendiamo l'esempio di \textbf{VCG-16} che è una rete allenata su un dataset di
+immagini di una vecchia competizione. La cosa da capire è che quando vogliamo
+utilizzare la rete \textbf{bisogna preparare l'input} per essere inserito nella
+rete. Ad esempio, le immagini sono in $224x224$.
+
+\begin{lstlisting}[language=Python]
+# prebuild model with pre-trained weights on imagenet
+model = VGG16(weights='imagenet'
+, include_top=True)
+model.compile(optimizer='sgd'
+, loss='categorical_crossentropy')
+
+# resize into VGG16 trained images' format
+# add a dummy iniziatl axis
+im = cv2.resize(img, (224, 224))
+plt.imshow(im)
+im = np.expand_dims(im, axis=0)
+im.astype(np.float32)
+print(im.shape)
+\end{lstlisting}
+
+\begin{domanda}(Come usiamo la rete?)
+\end{domanda}
+
+Se volessimo, ad esempio, classificare \textit{modelli di laptop}, questa rete
+può tornare utile nella classificazione? Come facciamo? La risposta \textbf{non
+    è banale.}
+
+La risposta è \textbf{si}. Il nucleo della questione è quello di utilizzare
+\textbf{il primo layer} della rete già allenata. Questa è l'idea principale del
+\textbf{transfer learning}. La motivazione è quella che i livelli dopo i primi
+sono troppo specifici per il nostro scopo, mentre i primi layer sono più
+generici e sono quellli che si occupano di estrarre le features.
+
+\subsection{Come si usa il transfer learning?}
+
+\begin{definition}(Feature extraction)
+\end{definition}
+Il concetto principale è quello di \textbf{utilizzare i primi layer} della rete,
+prendendo solamente l'output che si ottiene ,circa, a metà della rete. Questo
+significa che per ogni immagine del nostro dataset si estraggono le
+\textbf{features} e le si salvano, creando cosi un dataset alternativo formato
+dalle features.
+
+Successivamente si utilizzano queste feature nel quale viene fatto
+l'allenamento, e quindi il task sarà quello di \textbf{classificare le
+    features} nella task che ci interessa.
+
+\begin{definition}(Fine Tuning)
+\end{definition}
+
+Il concetto di \textbf{fine tuning} è quello di utilizzare i primi layer della
+rete regolarmente, come se fossero sempre funzionanti, e successivamente
+utilizzare una nuova rete collegata con gli ultimi nodi utilizzati fino a quel
+punto e allenarla con il nostro dataset. In questo caso diciamo che
+\textbf{congeliamo} i primi layer della rete.
+
+Per unire un modello con un altro, in Keras è molto semplice perché si possono
+trattare i modelli come layer.
+
+\begin{lstlisting}
+
+    model = VGG16(weights='imagenet', include_top=True)
+
+    new_model = Sequential()
+    new_model.add(model)
+    new_model.add(Dense(2, activation='softmax'))
+
+    new_model.compile(optimizer='sgd', loss='categorical_crossentropy')
+
+\end{lstlisting}
+In Keras, un modello può essere congelato impostando il parametro
+\textbf{trainable} su \textbf{False}.
+
+\begin{lstlisting}[language=Python]
+    model.trainable = False
+\end{lstlisting}
+
+\newpage
+
+\section{Oltre il modello sequenziale}
+
+Il modello sequenziale in Keras è un'implementazione semplice e intuitiva di
+una rete neurale, ma ha dei limiti in termini di flessibilità e complessità. In
+particolare, il modello sequenziale è limitato a reti neurali feedforward,
+ovvero reti neurali in cui l'informazione fluisce in una sola direzione, senza
+cicli o connessioni ricorrenti.
+
+Ci sono molti problemi di deep learning che richiedono reti neurali più
+complesse, come ad esempio le reti neurali convoluzionali per l'elaborazione di
+immagini o le reti neurali ricorrenti per l'elaborazione di sequenze. In questi
+casi, il modello sequenziale può essere troppo limitato per modellare
+efficacemente i dati.
+
+Inoltre, il modello sequenziale non supporta la condivisione di pesi tra i
+layer, il che può essere un'importante tecnica di regolarizzazione e può
+aiutare a ridurre il numero di parametri del modello. Infine, il modello
+sequenziale non supporta la definizione di grafi di calcolo arbitrari, il che
+può essere necessario per alcune applicazioni avanzate di deep learning.
+
+Un'alternativa è quella del \textbf{multi input}.
+
+\subsection{Multi input e multi output}
+
+Quando abbiamo più input, non possiamo utilizzare il modello sequenziale. Ad
+esempio, abbiamo dati eterogenei che hanno bisogno di essere elaborati in modi
+diversi tra loro. Ci possono essere vari approcci che permettono di gestire
+questi casi:
+
+\begin{itemize}
+    \item Il merging dei moduli, quando più input che sono eterogenei
+    \item Concatenate, quando gli input sono omogenei
+    \item Multiple Output: In questo caso abbiamo un solo input ma più output, e quindi
+          ci saranno regressori diversi in base alla feature da predire.
+    \item Inception: L'architettura a inception è una rete neurale convoluzionale
+          profonda che è stata introdotta per la prima volta nel 2014. L'idea principale
+          è quella di utilizzare filtri di dimensioni diverse per estrarre le features e
+          poi \textbf{concatenare} le features estratte per avere un output finale.
+    \item Residual: E' un archiettura che sfrutta il concetto di \textbf{residual
+              learning}, ovvero l'idea di aggiungere un layer che è un'identità rispetto
+          all'input.
+\end{itemize}
+
+\subsection{Functional API}
+
+Se ci pensiamo, un modello è un qualcosa che \textit{prende in input qualcosa}
+e ritorna fuori \textit{un output}. Concettualmente, è la stessa cosa di una
+\textbf{funzione}. Possiamo, quindi, considerare dei moduli come delle
+funzioni.
+
+\begin{equation}
+    \begin{aligned}
+        \mathcal{O}_1 = M_1(I_1)                        \\
+        \mathcal{O}_2 = M_2(I_2)                        \\
+        \mathcal{O}_3 = Q(\mathcal{O}_1, \mathcal{O}_2) \\
+    \end{aligned}
+\end{equation}
+
+dove $Q$ è una funzione che prende in input due moduli e ritorna un output.
+
+Vediamo un esempio di come funzionano e come usare queste \textit{functional
+    API}
+
+\begin{esempio}(Functional API)
+\end{esempio}
+
+\begin{lstlisting}[language=Python]
+
+#Vogliamo avere questa rete 
+# (input: 784-dimensional vectors)
+# [Dense (64 units, relu activation)]
+# [Dense (64 units, relu activation)]
+# [Dense (10 units, softmax activation)]
+# (output: logits of a probability distribution over 10 classes)
+    
+inputs = keras.Input(shape=(784,))
+
+# Qui, invece di sequenzializzare i layer, li colleghiamo
+dense = layers.Dense(64, activation="relu")
+x = dense(inputs)
+
+#Abbiamo passato l'input a questo layer e otteniamo x come output
+#Aggiungiamo altri layer alla rete
+
+x = layers.Dense(64, activation="relu")(x)
+outputs = layers.Dense(10)(x)
+
+#Possiamo specificare, ora, il modello 
+model = keras.Model(inputs=inputs, outputs=outputs, name="Modello funzionale")
+\end{lstlisting}
+
+\textbf{Nota:} In questo momento stiamo solamende creando la struttura
+della rete, ma non stiamo ancora definendo i pesi.
+
+\newpage
+
+\section{Adanvced Keras}
+
+\subsection{Subclassing}
+
+\begin{definition}(Subclassing)
+\end{definition}
+
+Il subclassing in Keras è una tecnica avanzata per la creazione di modelli di
+deep learning personalizzati. Consiste nell'estendere la classe
+"tf.keras.Model" e definire il modello all'interno del metodo "init" e il
+passaggio in avanti all'interno del metodo "call". In questo modo, è possibile
+creare modelli di deep learning altamente personalizzati e flessibili, con la
+possibilità di definire qualsiasi tipo di struttura di rete e di utilizzare
+qualsiasi tipo di operazione di calcolo.
+
+In soldoni, il subclassing ci permette di definire:
+\begin{itemize}
+    \item Loss personalizzate
+    \item Layer personalizzati
+    \item Metriche personalizzate
+    \item Modelli personalizzati
+\end{itemize}
+
+Chiaramente questo aumenta la complessità del codice, ma aumenta la
+flessibilità e la possibilità di avere un controllo maggiore di quello che ci
+fornisce di base Keras.
+
+Ad esempio nelle \textbf{Generative Adversarial Networks - GAN} il concetto di
+training viene fatto in modo diverso, poiché non si usa la \textbf{stochastic
+    gradient descent}. Nelle GAN anche l'ordine di apprendimento delle reti è
+importante; allenare contemporaneamente potrebbe portare a risultati strani e
+non convenienti. Ci sono tecniche e scenari specifici che hanno apprendimenti
+anch'essi specifici. Ovviamente, come detto prima, aumenta la complessità ma
+aumenta anche la flessibilità.
+
+\newpage
+

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1698080175 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1698080182 0
+["pdflatex"] 1698145308 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1698145315 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -231,12 +231,13 @@
   "chapters/03.tex" 1696331608 25352 bd58761706c442913202d1f93fdd5486 ""
   "chapters/04.tex" 1697524563 9193 b0a97f29605762b5950e6d3c107e13cd ""
   "chapters/05.tex" 1697530135 11919 73df4eeffcd364323320b59719a72101 ""
+  "chapters/06.tex" 1698145307 8740 9bc8e4166f68ee4d039d8bfe16d2bfc9 ""
   "chapters/lab01.tex" 1696261183 2933 4cc4db92a498e91896f1187e987cf481 ""
   "chapters/lab02.tex" 1697470485 13534 447f409a64cbf5df3ce9a66877d2c558 ""
   "chapters/lab03.tex" 1698075531 3655 86201b13921bb57990c6168fce0c7f52 ""
   "chapters/lab04.tex" 1698080174 7080 9c2266e7d2174230cab66519132ba8f8 ""
-  "common.tex" 1697445289 3258 789fafb6c3bc1e41f72f445803793746 ""
-  "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1698075562 1258 82b200b668730f9a24a08710f7a80e95 ""
+  "common.tex" 1698142947 3331 0681da50c28ea40ca6a3331402c578ed ""
+  "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1698137671 1283 7f791388a131bb1c384d418efc44b48b ""
   "images/conv.png" 1697527150 151422 134bfcab9a4211876bdf6f2e1ce4e806 ""
   "images/dropout.png" 1696931664 28561 a69059554c853258a760c2b1a23f0e75 ""
   "images/l2reg.png" 1696931194 72072 7bb75b27a633f9d765e9591f02d89ffb ""
@@ -244,10 +245,10 @@
   "images/overfitting.png" 1696328824 116711 0e4716abf5bc774dfa3624c6bbde0c84 ""
   "images/plot res.png" 1696327009 61824 02429a0b1e4fb1d03cc20b23703b9ec6 ""
   "images/wrong network.png" 1696328743 152862 babdc143f3fa6ed0f86c559593fbd79b ""
-  "main.aux" 1698080181 18081 9c7a2c79845fc19a1273bf3e2b5e769a "pdflatex"
-  "main.out" 1698080181 15594 8f34a32eb3a4b67707944764da9bd323 "pdflatex"
-  "main.tex" 1698075562 1258 82b200b668730f9a24a08710f7a80e95 ""
-  "main.toc" 1698080181 8142 272ade7f69bdff0e341d5ca3150f7ce5 "pdflatex"
+  "main.aux" 1698145314 19019 ed15398d6f8ede11ea1946082a730ecd "pdflatex"
+  "main.out" 1698145314 16882 c0367fd4b6dce1467c9983ec08e68828 "pdflatex"
+  "main.tex" 1698137671 1283 7f791388a131bb1c384d418efc44b48b ""
+  "main.toc" 1698145314 8793 23ea3bebc60759d122adb388fe6bc7d6 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
