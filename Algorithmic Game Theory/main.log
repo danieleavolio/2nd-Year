@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  19 OCT 2023 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  25 OCT 2023 13:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -669,25 +669,25 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 131.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/danie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc)
+{C:/Users/danie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] (main.loe
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 34.
+ (main.loe [3]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 39.
  (C:\Program Files\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
-) [3] [4] (chapters/01.tex
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+) [4] [5] (chapters/01.tex
 Overfull \hbox (14.18771pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 Cos'^^Re la Game The-ory | Teo-
  []
 
-[5] [6]) [7] (chapters/02.tex
+[6] [7]) [8] (chapters/02.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 11.
- [8]
+ [9]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 61.
@@ -702,7 +702,7 @@ Overfull \hbox (15.57205pt too wide) in paragraph at lines 97--98
 []$\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; n\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 ^^Re l'insieme dei gio-ca-tori (an-che chiam-ato coal-izione grandiosa). 
  []
 
-[9]
+[10]
 
 LaTeX Warning: Command \texteuro invalid in math mode on input line 114.
 
@@ -745,38 +745,78 @@ LaTeX Warning: Command \texteuro invalid in math mode on input line 123.
 LaTeX Warning: Command \texteuro invalid in math mode on input line 123.
 
 Missing character: There is no ¿ in font cmr10!
-[10] [11]
+[11] [12]
 Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-[12] [13] [14] [15] [16]) [17] (chapters/l1.tex
+[13] [14] [15] [16] [17]) [18] (chapters/03.tex [19] [20] [21]
+Package hyperref Info: bookmark level for unknown esempio defaults to 0 on input line 207.
+ [22]
+Package hyperref Info: bookmark level for unknown domanda defaults to 0 on input line 253.
+ [23]
+Overfull \hbox (32.36404pt too wide) in paragraph at lines 264--264
+|[]\OT1/cmr/bx/n/24.88 Classi di comp-p-lessit^^Ra dei prob-
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 307.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.0123pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.0123pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.0123pt}.
+
+[25]
+Overfull \hbox (29.66574pt too wide) in paragraph at lines 429--429
+|[]\OT1/cmr/bx/n/24.88 Giochi con in-ter-azione ristretta| 
+ []
+
+[26] [27] [28]) (chapters/l1.tex
 Overfull \hbox (68.70197pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 Introduzione alla teo-ria dell'utilit^^Ra
  []
 
-[18]
+[29]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 51.
 Package hyperref Info: bookmark level for unknown dimostrazione defaults to 0 on input line 72.
- [19] [20]
-<chapters/images/rishio.png, id=413, 301.8778pt x 195.73125pt>
+ [30] [31]
+<chapters/images/rishio.png, id=555, 301.8778pt x 195.73125pt>
 File: chapters/images/rishio.png Graphic file (type png)
 <use chapters/images/rishio.png>
 Package pdftex.def Info: chapters/images/rishio.png  used on input line 220.
 (pdftex.def)             Requested size: 211.31302pt x 137.01093pt.
- [21]
+ [32]
 Overfull \hbox (93.9964pt too wide) detected at line 259
  \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (100 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (100) + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (0) \OMS/cmsy/m/n/10 ! []\OT1/cmr/m/n/10 100 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 100 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 25 \OMS/cmsy/m/n/10 ! ^^@\OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 ^^U ^^@\OT1/cmr/m/n/10 100 + 25 \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 75
  []
 
-[22 <./chapters/images/rishio.png>]) (chapters/l2.tex
-Package hyperref Info: bookmark level for unknown esempio defaults to 0 on input line 22.
-
+[33 <./chapters/images/rishio.png>]) (chapters/l2.tex
 Overfull \hbox (8.25215pt too wide) in paragraph at lines 58--61
 [][]\OT1/cmr/m/it/10 Dato un gruppo di gio-ca-tori $\OML/cmm/m/it/10 C[]$ \OT1/cmr/m/it/10 e un gruppo
  []
 
-[23] [24] [25]) (chapters/l3.tex
+[34] [35] [36]) (chapters/l3.tex
 Overfull \hbox (20.92892pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 Problemi com-putazion-ali nella
  []
@@ -785,25 +825,25 @@ Overfull \hbox (20.92892pt too wide) in paragraph at lines 1--1
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 23.
- [26]
+ [37]
 Overfull \hbox (47.1064pt too wide) in paragraph at lines 105--120
  [] 
  []
 
-[27]
+[38]
 Overfull \hbox (0.95367pt too wide) in paragraph at lines 135--137
 [][]\OT1/cmr/m/it/10 L'approssimazione di
  []
 
-[28]
+[39]
 Overfull \hbox (4.04517pt too wide) in paragraph at lines 197--202
 \OT1/cmr/m/n/10 ap-prossi-mati me-di-ante il metodo del cam-pi-ona-mento Monte Carlo (MC[]Shapley).
  []
 
-[29] [30] [31]
+[40] [41] [42]
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 401.
- [32] [33] [34]) [35]
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 403.
+ [43] [44] [45]) [46]
 \tf@loe=\write6
 \openout6 = `main.loe'.
 
@@ -813,20 +853,20 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3A110D50391C6D6B622FB93A1B8A7551;8027.
+(rerunfilecheck)             Checksum: DE61DC1EFF8BAA7CFB1D228ACF85E12E;10848.
  ) 
 Here is how much of TeX's memory you used:
- 33945 strings out of 475503
- 767008 string characters out of 5771650
+ 34025 strings out of 475503
+ 768221 string characters out of 5771650
  2174248 words of memory out of 5000000
- 54441 multiletter control sequences out of 15000+600000
- 569486 words of font info for 79 fonts, out of 8000000 for 9000
+ 54481 multiletter control sequences out of 15000+600000
+ 570733 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,89p,757b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (35 pages, 505408 bytes).
+Output written on main.pdf (46 pages, 550043 bytes).
 PDF statistics:
- 721 PDF objects out of 1000 (max. 8388607)
- 219 named destinations out of 1000 (max. 500000)
- 338 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 872 PDF objects out of 1000 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 466 words of extra memory for PDF output out of 10000 (max. 10000000)
 

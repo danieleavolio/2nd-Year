@@ -1,40 +1,56 @@
-\contentsline {section}{\numberline {1}Introduzione}{4}{section.1}%
-\contentsline {section}{\numberline {2}Cos'è la Game Theory | Teoria dei giochi}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}E cosa significa Algorithmic Game Theory?}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Coalition Games}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Non-Cooperative Games}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Tree Decomposition}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Computational Social Choice}{6}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Mechanism Design}{7}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Fair Division of Indivisible Goods}{7}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Cake Cutting}{7}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Giochi di Coalizione e Concetti di Soluzione}{8}{section.3}%
-\contentsline {subsubsection}{\numberline {3.0.1}Tassonomia dei giochi cooperativi}{9}{subsubsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.1}Concetti di soluzione}{11}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Cosa fare quando il nucleo è vuoto?}{13}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Concetti di soluzione avanzati}{14}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Nucleolus}{14}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Shapley Value}{15}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Proprietà del valore di Shapley}{16}{subsubsection.3.3.1}%
-\contentsline {section}{\numberline {4}Introduzione alla teoria dell'utilità e decision making}{18}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Concetti di base}{18}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}ALTERNATIVE}{18}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}PREFERENZE}{18}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Relazione di Preferenza}{18}{subsubsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Rappresentare le preferenze come \textbf {utilità}}{19}{subsubsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.2}Le lotterie}{19}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Utilità di Von Neumann-Morgenstern}{20}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Atteggiamento verso il rischio}{21}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Applicazioni: Condivisione del rischio}{22}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Applicazione: Assicurazione}{22}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Teoria dei giochi coalizionali}{23}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Superadditività}{24}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Core o Nucleo}{24}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Shapley Value}{24}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Problemi computazionali nella teoria dei giochi coalizionali}{26}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Limitazioni dell'approccio Naive}{26}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Strategie per i problemi di computazione}{27}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Gioco del'aereoporto | Airport Game}{27}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Approssimazione di Montecarlo}{28}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Rappresentazioni compatte}{29}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Reti di contribuzione marginale |MC-Nets}{32}{subsection.6.6}%
+\contentsline {section}{\numberline {1}Introduzione}{5}{section.1}%
+\contentsline {section}{\numberline {2}Cos'è la Game Theory | Teoria dei giochi}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}E cosa significa Algorithmic Game Theory?}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Coalition Games}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Non-Cooperative Games}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Tree Decomposition}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Computational Social Choice}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Mechanism Design}{8}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Fair Division of Indivisible Goods}{8}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Cake Cutting}{8}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Giochi di Coalizione e Concetti di Soluzione}{9}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Tassonomia dei giochi cooperativi}{10}{subsubsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.1}Concetti di soluzione}{12}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Cosa fare quando il nucleo è vuoto?}{14}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Concetti di soluzione avanzati}{15}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Nucleolus}{15}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Shapley Value}{16}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Proprietà del valore di Shapley}{17}{subsubsection.3.3.1}%
+\contentsline {section}{\numberline {4}Problemi con giochi cooperativi}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Il problema dell'esponenzialità}{19}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Le soluzioni compatte}{19}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Giochi sui grafi}{19}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Giochi con contribuzione marginale}{20}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Giochi di allocazione}{21}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Giochi a voto pesato}{22}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Classi di compplessità dei problemi}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Problemi in NP}{24}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Problemi in CO-NP}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}La classe $\Sigma _2^P$}{25}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Oltre la gerarchia}{25}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Core e Hardness}{25}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Nucleolus e Hardness}{26}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Nucleolus e Membership}{26}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Giochi con interazione ristretta}{27}{section.6}%
+\contentsline {section}{\numberline {7}Introduzione alla teoria dell'utilità e decision making}{29}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Concetti di base}{29}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}ALTERNATIVE}{29}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}PREFERENZE}{29}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Relazione di Preferenza}{29}{subsubsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.4}Rappresentare le preferenze come \textbf {utilità}}{30}{subsubsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.2}Le lotterie}{30}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Utilità di Von Neumann-Morgenstern}{31}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Atteggiamento verso il rischio}{32}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Applicazioni: Condivisione del rischio}{33}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Applicazione: Assicurazione}{33}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Teoria dei giochi coalizionali}{34}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Superadditività}{35}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Core o Nucleo}{35}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Shapley Value}{35}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Problemi computazionali nella teoria dei giochi coalizionali}{37}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Limitazioni dell'approccio Naive}{37}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Strategie per i problemi di computazione}{38}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Gioco del'aereoporto | Airport Game}{38}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Approssimazione di Montecarlo}{39}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Rappresentazioni compatte}{40}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Reti di contribuzione marginale |MC-Nets}{43}{subsection.9.6}%
