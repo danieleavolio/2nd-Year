@@ -44,11 +44,11 @@ giochi cooperativi. Immaginiamo di avere questo grafo:
     \begin{center}
         % BEGIN: 8d4x7b5f9j3p
         \begin{tikzpicture}
-            \node[circle,draw] (1) at (0,0) {1};
-            \node[circle,draw] (2) at (2,0) {2};
-            \node[circle,draw] (3) at (0,-2) {3};
-            \node[circle,draw] (4) at (4,0) {4};
-            \node[circle,draw] (5) at (4,-2) {5};
+            \node[circle,draw, fill=red!20] (1) at (0,0) {1};
+            \node[circle,draw, fill=red!20] (2) at (2,0) {2};
+            \node[circle,draw, fill=red!20] (3) at (0,-2) {3};
+            \node[circle,draw, fill=red!20] (4) at (4,0) {4};
+            \node[circle,draw, fill=red!20] (5) at (4,-2) {5};
 
             \draw (1) -- (2);
             \draw (1) -- (3);
@@ -77,9 +77,9 @@ Con un grafo cosi:
     \begin{center}
         % BEGIN: 8d4x7b5f9j3p
         \begin{tikzpicture}
-            \node[circle,draw] (1) at (0,0) {1};
-            \node[circle,draw] (2) at (2,0) {2};
-            \node[circle,draw] (3) at (0,-2) {3};
+            \node[circle,draw, fill=red!30] (1) at (0,0) {1};
+            \node[circle,draw, fill=red!30] (2) at (2,0) {2};
+            \node[circle,draw, fill=red!30] (3) at (0,-2) {3};
 
             \draw (1) -- (2) node [midway, above] {20};
             \draw (1) -- (3) node [midway, left] {10};
@@ -112,8 +112,8 @@ E possiamo rappresentarlo come:
 \begin{figure}[H]
     \begin{center}
         \begin{tikzpicture}
-            \node[circle,draw] (1) at (0,0) {1};
-            \node[circle,draw] (2) at (2,0) {2};
+            \node[circle,draw, fill=red!50] (1) at (0,0) {1};
+            \node[circle,draw, fill=red!50] (2) at (2,0) {2};
 
             \draw (1) -- (2) node [midway, above] {20};
         \end{tikzpicture}
@@ -194,7 +194,7 @@ Siamo in questa situazione:
           \begin{itemize}
               \item Solitamente $q \geq | \sum_{i=1}^n w_i|/2$; maggioranza stretta
           \end{itemize}
-    \item La notazoien è $w(C) = \sum_{i \in c} w_i$
+    \item La notazione è $w(C) = \sum_{i \in c} w_i$
 \end{itemize}
 
 Questo può essere descritto come un gioco $G (N,v)$ dove:
@@ -323,6 +323,26 @@ Un esempio è \textit{contrare il numero di assegnamenti di verità che
 
 PAGINA 121 DA COPIARE
 
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline \textbf{Problema} & \textbf{Classe di complessità} \\
+            \hline \
+            CORE & coNP-Complete
+            \\
+            \hline \
+            BARGAINING SET & $\prod_2^P$-Complete
+            \\
+            \hline \
+            NUCLEOLUS & $\Delta_2^P$-Complete
+            \\
+            \hline \
+            SHAPLEY VALUE & $\#P$-Complete \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
 \subsection{Core e Hardness}
 
 Prendiamo un esempio di grafo:
@@ -423,7 +443,7 @@ Definiamo un \textbf{problema lineare}:
     \forall S \subset N, S \notin W_0 = \{\emptyset\}
 \]
 
-Non ho capito un cazzo onestamente e dalle slides non lo capiso. Vedremo come
+Non ho capito un cazzo onestamente e dalle slides non lo capisco. Vedremo come
 fare, dai..
 
 \section{Giochi con interazione ristretta}
@@ -431,7 +451,48 @@ fare, dai..
 Pensiamo ad un problema di grafi ma con dei vincoli che non permettono delle
 coalizioni tra giocatori.
 
-RIFARE PAGINA 179 E 180 Qui
+%Grafico di un alber
+\begin{figure}[H]
+    \begin{center}
+        %Grafico di un albero
+        \begin{tikzpicture}
+            %nodo centrato 
+            \node[circle,draw, fill=blue!20] (1) at (0,0) {1};
+
+            %due nodi 2 e 3 uno a sinistra uno a destra come figli 
+            \node[circle,draw, fill=red!20] (2) at (-2,-1) {2};
+            \node[circle,draw, fill=red!20] (3) at (2,-1) {3};
+
+            %4 5 6 7 figli di 2
+            \node[circle,draw, fill=purple!40] (4) at (-3,-2) {4};
+            \node[circle,draw, fill=purple!40] (5) at (-2,-2) {5};
+            \node[circle,draw, fill=purple!40] (6) at (-1,-2) {6};
+            \node[circle,draw, fill=purple!40] (7) at (0,-2) {7};
+
+            %8 e 9 figli di 3
+            \node[circle,draw, fill=green!20] (8) at (1,-2) {8};
+            \node[circle,draw, fill=green!20] (9) at (3,-2) {9};
+
+            %10 e 11 figli di 9
+            \node[circle,draw, fill=pink!50] (10) at (2,-3) {10};
+            \node[circle,draw, fill=pink!50] (11) at (3,-3) {11};
+
+            %Archi 
+            \draw (1) -- (2);
+            \draw (1) -- (3);
+            \draw (2) -- (4);
+            \draw (2) -- (5);
+            \draw (2) -- (6);
+            \draw (2) -- (7);
+            \draw (3) -- (8);
+            \draw (3) -- (9);
+            \draw (9) -- (10);
+            \draw (9) -- (11);
+
+        \end{tikzpicture}
+    \end{center}
+    \caption{Esempio di albero}
+\end{figure}
 
 Pensiamola cosi. Gli agenti sono ordinati su una linea.
 
@@ -452,6 +513,7 @@ Pensiamola cosi. Gli agenti sono ordinati su una linea.
         \end{tikzpicture}
 
     \end{center}
+    \caption{Esempio di linea}
 \end{figure}
 Il numero di coalizioni massimo che possiamo formare è \textbf{polinomiale} $\mathcal{O}(n^2)$.
 
@@ -462,17 +524,18 @@ E se invece di una linea avessimo un \textbf{ciclo?}
 
         \begin{tikzpicture}
             %disegna un cerchio 
-            \draw (0,0) circle (4cm);
+            \draw (0,0) circle (3cm);
 
             %disegna sul cerchio x1 a x5
-            \node[circle,fill=red!20,draw] (1) at (0,4) {$x_1$};
-            \node[circle,fill=red!20,draw] (2) at (3.464,2) {$x_2$};
-            \node[circle,fill=red!20,draw] (3) at (3.464,-2) {$x_3$};
-            \node[circle,fill=red!20,draw] (4) at (0,-4) {$x_4$};
-            \node[circle,fill=red!20,draw] (5) at (-3.464,-2) {$x_5$};
+            \node[circle,fill=red!20,draw] (1) at (0,3) {$x_1$};
+            \node[circle,fill=red!20,draw] (2) at (2.464,2) {$x_2$};
+            \node[circle,fill=red!20,draw] (3) at (2.464,-2) {$x_3$};
+            \node[circle,fill=red!20,draw] (4) at (0,-3) {$x_4$};
+            \node[circle,fill=red!20,draw] (5) at (-2.464,-2) {$x_5$};
         \end{tikzpicture}
 
     \end{center}
+    \caption{Esempio di ciclo}
 \end{figure}
 
 Dobbiamo contare il numero di coalizioni. Se cancelliamo l'arco $x_1 x_5$,
