@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  31 OCT 2023 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  31 OCT 2023 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -809,21 +809,54 @@ Overfull \hbox (16.36172pt too wide) in paragraph at lines 204--207
 []\OT1/cmr/m/n/10 Chiaramente questo au-menta la com-p-lessit^^Ra del codice, ma au-menta la flessibilit^^Ra
  []
 
-[47]) (chapters/07.tex [48] [49]
-Overfull \hbox (7.45024pt too wide) in paragraph at lines 148--150
+[47]) (chapters/07.tex [48]
+<images/RNN.png, id=1121, 402.75468pt x 192.72pt>
+File: images/RNN.png Graphic file (type png)
+<use images/RNN.png>
+Package pdftex.def Info: images/RNN.png  used on input line 109.
+(pdftex.def)             Requested size: 322.20418pt x 154.1762pt.
+ [49 <./images/RNN.png>] [50]
+Overfull \hbox (7.45024pt too wide) in paragraph at lines 203--207
 \OT1/cmr/m/n/10 lungo ter-mine. In pati-co-lare, sono state pro-get-tate per \OT1/cmr/bx/n/10 con-trol-lare la sparizione
  []
 
-[50] [51]) (chapters/lab01.tex [52] [53]) [54] (chapters/lab02.tex
+<images/LSTM.png, id=1171, 394.47375pt x 200.24812pt>
+File: images/LSTM.png Graphic file (type png)
+<use images/LSTM.png>
+Package pdftex.def Info: images/LSTM.png  used on input line 211.
+(pdftex.def)             Requested size: 315.57942pt x 160.19872pt.
+<images/forgetgate.png, id=1172, 345.54094pt x 234.1247pt>
+File: images/forgetgate.png Graphic file (type png)
+<use images/forgetgate.png>
+Package pdftex.def Info: images/forgetgate.png  used on input line 228.
+(pdftex.def)             Requested size: 276.43312pt x 187.3pt.
+[51 <./images/LSTM.png>]
+<images/inputgate.png, id=1179, 341.77687pt x 239.39438pt>
+File: images/inputgate.png Graphic file (type png)
+<use images/inputgate.png>
+Package pdftex.def Info: images/inputgate.png  used on input line 241.
+(pdftex.def)             Requested size: 273.42186pt x 191.51575pt.
+ [52 <./images/forgetgate.png> <./images/inputgate.png>]
+<images/update.png, id=1189, 336.50719pt x 240.9pt>
+File: images/update.png Graphic file (type png)
+<use images/update.png>
+Package pdftex.def Info: images/update.png  used on input line 250.
+(pdftex.def)             Requested size: 269.2061pt x 192.72025pt.
+<images/outputgate.png, id=1190, 356.0803pt x 231.11343pt>
+File: images/outputgate.png Graphic file (type png)
+<use images/outputgate.png>
+Package pdftex.def Info: images/outputgate.png  used on input line 263.
+(pdftex.def)             Requested size: 284.86462pt x 184.89099pt.
+ [53 <./images/update.png>] [54 <./images/outputgate.png>]) (chapters/lab01.tex [55] [56]) [57] (chapters/lab02.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[55] [56] [57]
+[58] [59] [60]
 Overfull \hbox (25.85649pt too wide) in paragraph at lines 196--201
 []\OT1/cmr/m/n/10 Detto questo, \OT1/cmr/bx/n/10 per quale mo-tivo ^^Re im-por-tante? \OT1/cmr/m/n/10 Se pen-si-amo all'\OT1/cmr/m/it/10 inizializzazione\OT1/cmr/m/n/10 ,
  []
 
-[58] [59] [60] [61] [62]) (chapters/lab03.tex [63] [64]) (chapters/lab04.tex [65] [66] [67]) [68] (main.aux)
+[61] [62] [63] [64] [65]) (chapters/lab03.tex [66] [67]) (chapters/lab04.tex [68] [69] [70]) [71] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -836,17 +869,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 94BD31C466FEFAF935E787953F942656;17694.
  ) 
 Here is how much of TeX's memory you used:
- 37499 strings out of 475503
- 866643 string characters out of 5771650
+ 37636 strings out of 475503
+ 868954 string characters out of 5771650
  2184248 words of memory out of 5000000
- 57469 multiletter control sequences out of 15000+600000
+ 57593 multiletter control sequences out of 15000+600000
  568612 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,93p,773b,2240s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (68 pages, 1272684 bytes).
+Output written on main.pdf (71 pages, 1413833 bytes).
 PDF statistics:
- 1657 PDF objects out of 1728 (max. 8388607)
- 744 named destinations out of 1000 (max. 500000)
- 856 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1695 PDF objects out of 1728 (max. 8388607)
+ 757 named destinations out of 1000 (max. 500000)
+ 886 words of extra memory for PDF output out of 10000 (max. 10000000)
 

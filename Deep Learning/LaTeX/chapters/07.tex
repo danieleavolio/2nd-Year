@@ -25,36 +25,91 @@ un percettrone al tempo $t+1$.
 \begin{figure}[H]
     \begin{center}
         \begin{tikzpicture}
-            \node[draw,circle] (x) at (0,0) {$x$};
-            \node[draw,rectangle] (A) at (2,0) {$A$};
-            \node[draw,circle] (y) at (4,0) {$y$};
+            \node[fill=blue!20, draw,circle] (x) at (0,0) {$x$};
+            \node[fill=green!20, draw,rectangle] (A) at (2,0) {$A$};
+            \node[fill=purple!20, draw,circle] (y) at (4,0) {$y$};
             \draw[->] (x) -- (A);
             \draw[->] (A) -- (y);
             \draw[->] (A) to [out=45,in=135,looseness=8] (A);
         \end{tikzpicture}
     \end{center}
+    \caption{RNN}
 \end{figure}
 
 %figura da fare
 \begin{figure}[H]
     \begin{center}
         \begin{tikzpicture}
-            \node[draw,circle] (x) at (0,0) {$x_0$};
-            \node[draw,rectangle] (A) at (0,2) {$A$};
-            \node[draw,circle] (y) at (0,4) {$h_0$};
-            \draw[->] (x) -- (A);
-            \draw[->] (A) -- (y);
-            \draw[->] (A) to [out=45,in=135,looseness=8] (A);
+            \node[fill=blue!20, draw,circle] (x_1) at (0,0) {$x_1$};
+            \node[fill=green!20, draw,rectangle] (A_1) at (0,2) {$A_1$};
+            \node[fill=purple!20,draw,circle] (y_1) at (0,4) {$h_1$};
+
+            \node[fill=blue!20, draw,circle] (x_2) at (2,0) {$x_2$};
+            \node[fill=green!20, draw,rectangle] (A_2) at (2,2) {$A_2$};
+            \node[fill=purple!20,draw,circle] (y_2) at (2,4) {$h_2$};
+
+            \node[fill=blue!20, draw,circle] (x_3) at (4,0) {$x_3$};
+            \node[fill=green!20, draw,rectangle] (A_3) at (4,2) {$A_3$};
+            \node[fill=purple!20,draw,circle] (y_3) at (4,4) {$h_3$};
+
+            \node[fill=blue!20, draw,circle] (x_4) at (6,0) {$x_4$};
+            \node[fill=green!20, draw,rectangle] (A_4) at (6,2) {$A_4$};
+            \node[fill=purple!20,draw,circle] (y_4) at (6,4) {$h_4$};
+
+            \draw[->] (x_1) -- (A_1);
+            \draw[->] (A_1) -- (y_1);
+
+            \draw[->] (x_2) -- (A_2);
+            \draw[->] (A_2) -- (y_2);
+
+            \draw[->] (x_3) -- (A_3);
+            \draw[->] (A_3) -- (y_3);
+
+            \draw[->] (x_4) -- (A_4);
+            \draw[->] (A_4) -- (y_4);
+
+            \draw[->] (A_1) -- (A_2);
+            \draw[->] (A_2) -- (A_3);
+            \draw[->] (A_3) -- (A_4);
         \end{tikzpicture}
     \end{center}
+    \caption{Unfolded RNN}
 \end{figure}
 
-Scrivere equazione di pagina 5
+\textbf{Ci sono 2 equazioni da tenere a mente}:
 
-Un esempio di codice è il seguente
-\begin{lstlisting}[language=Python]
-    Da copiar 
-\end{lstlisting}
+\textbf{Rete Elman:}
+\begin{equation}
+    \begin{aligned}
+        h_t = \sigma(W_h x_t + U_h \textcolor{green}{h_{t-1}}+b_h) \\
+        y_t = \sigma(W_y h_t + b_y)
+    \end{aligned}
+\end{equation}
+
+\textbf{Rete Jordan:}
+\begin{equation}
+    \begin{aligned}
+        h_t = \sigma(W_h x_t + U_h \textcolor{purple}{y_{t-1}}+b_h) \\
+        y_t = \sigma(W_y h_t + b_y)
+    \end{aligned}
+\end{equation}
+
+Dove:
+\begin{itemize}
+    \item $x_t$ = Vettore di input
+    \item $y_t$ = Vettore di output
+    \item $h_t$ = Vettore di layer nascosto
+    \item $W,U,b$ = Pesi e Bias
+    \item $\sigma_h, \sigma_y$ = Funzioni di attivazione
+\end{itemize}
+
+%inserisci foto
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.8]{images/RNN.png}
+    \end{center}
+    \caption{RNN}
+\end{figure}
 
 \subsubsection{L'utilizzo delle RNN}
 
@@ -145,24 +200,80 @@ Una proposta di soluzione è quella di \textbf{cambiare la funzione di
 
 \subsection{Long Short Term Memory (LSTM)}
 
-Queste RNN speciali sono reti capaci di risolvere il problema delle dipendenze a lungo termine. In paticolare, 
-sono state progettate per \textbf{controllare la sparizione del gradiente} e \textbf{evitare proprio il problema della dipendenza a lungo termine}
+Queste RNN speciali sono reti capaci di risolvere il problema delle dipendenze
+a lungo termine. In paticolare, sono state progettate per \textbf{controllare
+    la sparizione del gradiente} e \textbf{evitare proprio il problema della
+    dipendenza a lungo termine}
 
-rifare figura a pagina 21
-
+%inserisci foto
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.8]{images/LSTM.png}
+    \end{center}
+    \caption{LSTM}
+\end{figure}
 Riguardo l'archiettura, parliamo di una cosa importante.
 
 \textbf{Lo stato della cella} salva un'informazione interna della catena \textbf{Storico interno}. Questa informazione,
-se rilevante, può essere \textbf{propagata}. Per controllare il flow di queste informazioni si una un \textbf{gate}. Servono, appunto, 
+se rilevante, può essere \textbf{propagata}. Per controllare il flow di queste informazioni si una un \textbf{gate}. Servono, appunto,
 per decidere quali informazioni far passare.
-
 
 \textbf{Ci sono formule da ricopiare}
 \begin{itemize}
     \item \textbf{Forget Gate}: decide quali informazioni scartare e quali tenere
+          \[
+              f_t = \sigma(W_f \cdot[h_{t-1}, x_t] + b_f)\]
+          \begin{figure}[H]
+              \begin{center}
+                  \includegraphics[scale=0.8]{images/forgetgate.png}
+              \end{center}
+              \caption{Forget Gate}
+          \end{figure}
     \item \textbf{Input Gate}: decide quali informazioni passare e quanto devono influenzare lo storico interno
+          \begin{equation}
+              \begin{aligned}
+                  i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_1)       \\
+                  \tilde{C}_t = tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\
+              \end{aligned}
+          \end{equation}
+          \begin{figure}[H]
+              \begin{center}
+                  \includegraphics[scale=0.8]{images/inputgate.png}
+              \end{center}
+              \caption{Input Gate}
+          \end{figure}
     \item \textbf{Aggiornamento dello stato interno}: Gate che risolvono il problema della dipendenza a lungo termine e del gradiente che svanisce
+          \[
+              C_t = f_t * C_{t-1} + i_t * \tilde{C_t}\]
+          \begin{figure}[H]
+              \begin{center}
+                  \includegraphics[scale=0.8]{images/update.png}
+              \end{center}
+              \caption{Update State}
+          \end{figure}
     \item \textbf{Output Gate}: L'output dipende dallo stato interno della cella. La LSTM controlla quanto l'output deve essere influenzato dallo storico interno
+          \begin{equation}
+              \begin{aligned}
+                  o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+                  h_t = o_t * tanh(C_t)
+              \end{aligned}
+          \end{equation}
+          \begin{figure}[H]
+              \begin{center}
+                  \includegraphics[scale=0.8]{images/outputgate.png}
+              \end{center}
+              \caption{Output Gate}
+          \end{figure}
+
+\end{itemize}
+
+Ricordiamo che gli elementi sono:
+\begin{itemize}
+    \item $x_t$ = Vettore di input
+    \item $y_t$ = Vettore di output
+    \item $h_t$ = Vettore di layer nascosto
+    \item $W,U,b$ = Pesi e Bias
+    \item $\sigma_h, \sigma_y$ = Funzioni di attivazione
 \end{itemize}
 
 \begin{lstlisting}[language=python]
