@@ -432,6 +432,9 @@ INPUT .\images\conv.png
 INPUT .\chapters\06.tex
 INPUT .\chapters\06.tex
 INPUT chapters\06.tex
+INPUT .\chapters\07.tex
+INPUT .\chapters\07.tex
+INPUT chapters\07.tex
 INPUT .\chapters\lab01.tex
 INPUT .\chapters\lab01.tex
 INPUT chapters\lab01.tex
