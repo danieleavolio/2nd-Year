@@ -388,6 +388,9 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT .\chapters\04.tex
+INPUT .\chapters\04.tex
+INPUT chapters\04.tex
 INPUT .\chapters\l1.tex
 INPUT .\chapters\l1.tex
 INPUT chapters\l1.tex

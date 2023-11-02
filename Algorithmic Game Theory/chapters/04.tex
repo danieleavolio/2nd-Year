@@ -1,0 +1,189 @@
+\section{Giochi Competitivi o Non Cooperativi}
+
+I giochi competitivi o non cooperativi sono i più studiati. Si assume che un
+numero di agenti agisca strategicamente e sia interessato solo al proprio
+guadagno, senza collaborare. Cosa succede quando ogni agente ha un obiettivo e
+alcuni interessi, e forse alcuni di essi sono in contrasto?
+
+Abbiamo un insieme di agenti che chiamiamo $N$ (per esempio $N =
+    \{1,2,\ldots\}$). Ognuno di essi ha alcune azioni possibili tra cui scegliere,
+quindi abbiamo un insieme di azioni $A_i$ che è un sottoinsieme di tutte le
+possibili azioni $A_i \subset A$ (per esempio $A_i = \{p, q, \ldots\}$). Quando
+scegliamo un'azione, otteniamo un valore per questa azione, e c'è un premio
+associato che è un numero reale. Questo premio dipende non solo dalle nostre
+azioni ma anche dalle azioni degli altri giocatori, quindi il valore dipende da
+noi e dagli altri agenti.
+
+Ciascun agente è associato a un'utilità $u_i$ che dipende da tutte le
+strategie:
+\[u_i : A_1 \times A_2 \times A_3 \times \ldots \times A_n \to \mathbb{R}\]
+
+Il nostro obiettivo è massimizzare la nostra utilità, ma non possiamo
+ottimizzare completamente poiché non possiamo controllare le variabili degli
+altri giocatori. Dobbiamo anche considerare cosa giocheranno gli altri
+giocatori.
+
+Consideriamo un gioco con due giocatori, Bob e John. Le azioni disponibili sono
+$\{HOME, OUT\}$. Cosa succede quando eseguono queste azioni? Di solito,
+mettiamo l'utilità di entrambi gli agenti in una matrice:
+
+\[
+    \begin{array}{ccc}
+                    & \text{HOME} & \text{OUT} \\
+        \text{HOME} & (1, 2)      & (1, 0)     \\
+        \text{OUT}  & (2, 0)      & (-1, 3)    \\
+    \end{array}
+\]
+
+In questo esempio, i numeri rappresentano le preferenze mappate su numeri
+reali.
+
+Cosa significa questo? Sono una mappatura delle preferenze in numeri reali.
+Quale sarebbe l'esito? Di solito non è facile capire cosa accadrà.
+
+\[
+    \begin{array}{ccc}
+                    & \text{HOME} & \text{OUT} \\
+        \text{HOME} & (2, 2)      & (1, 1)     \\
+        \text{OUT}  & (1, 0)      & (0, 0)     \\
+    \end{array}
+\]
+
+In questo esempio, l'equilibrio di Nash è \{HOME, HOME\}, poiché questo esito è
+fortemente preferito tra gli scenari. Ma cosa succede in questo caso?
+
+\[
+    \begin{array}{ccc}
+                    & \text{HOME} & \text{OUT} \\
+        \text{HOME} & (2, 2)      & (1, 3)     \\
+        \text{OUT}  & (1, 0)      & (0, 0)     \\
+    \end{array}
+\]
+
+(1,3) è un equilibrio di Nash. (2,0) è un equilibrio di Nash.
+
+\subsection{Equilibrio di Nash in Giochi Puri}
+
+Una strategia $s_i$ per un agente è un'azione, in cui scegliamo una delle
+azioni disponibili. Un profilo di strategia congiunta o $\sigma$ è una
+strategia per ciascun agente del gioco. $\sigma$ è un equilibrio di Nash se,
+per ciascun agente possibile, l'utilità dell'agente ($u(\sigma)$) ottenuta per
+una particolare strategia che decide di giocare dovrebbe essere almeno uguale o
+maggiore dell'utilità che potrebbe ottenere se gli altri giocassero la stessa
+strategia, ma lui prova una nuova strategia. In altre parole, giocando una
+strategia diversa mentre gli altri mantengono le stesse strategie, dovrebbe
+ottenere lo stesso valore o un valore maggiore. $\sigma = (\sigma_i$ che è
+$s_i$, $\sigma_{-i}$ è la strategia degli altri).
+
+Questo tipo di equilibrio e impostazione è chiamato "puro". Un esempio può
+aiutare a capire il concetto:
+
+\[
+    \begin{array}{ccc}
+                    & \text{HOME} & \text{OUT} \\
+        \text{HOME} & (1, 2)      & (1, 0)     \\
+        \text{OUT}  & (2, 0)      & (-1, 3)    \\
+    \end{array}
+\]
+
+In questo caso, non esiste un equilibrio di Nash, nessuno è davvero felice, e
+c'è una situazione ciclica. Quando ci concentriamo sull'equilibrio di Nash,
+possiamo avere uno, più di uno o nessuno.
+
+Per calcolare un equilibrio di Nash, è necessario iterare tra le strategie
+degli agenti e tra le strategie di ciascun agente. Il limite è dominato dalla
+dimensione del prodotto cartesiano: $|A_1 \times A_2 \ldots \times A_n| \times
+    |N| \times \max|A_i| \geq 2^n$. Ciò rende difficile rappresentare matrici
+quando il numero di agenti è grande, poiché la dimensione della
+rappresentazione è esponenziale rispetto al numero di agenti.
+
+\subsection{Equilibrio di Nash in Giochi Grafici}
+
+Ma cosa succede con l'equilibrio di Nash in giochi non puri? Supponiamo di
+avere un grande gioco di popolazione, interagirai davvero con tutti i
+partecipanti al gioco? Invece, interagirai con i tuoi vicini (amici e nemici),
+quindi creerai un grafo con nodi che corrispondono esattamente agli agenti.
+L'utilità dipende dalle tue azioni e dalle azioni dei tuoi vicini. Questo è
+noto come "giochi grafici". I tuoi vicini sono un sottoinsieme di $N$ e sono i
+nodi adiacenti. La funzione di utilità è $u_i : A_i \times \prod_{j \in
+        \text{neigh}_i} A_j \to \mathbb{R}$. Se hai al massimo $k$ agenti intorno a te,
+allora sappiamo che la dimensione (la matrice, l'utilità) è di circa $O(2^k)$,
+ma poiché $k$ è limitato, questa rappresentazione è ragionevole.
+
+Tuttavia, è importante notare che anche se non sei direttamente connesso, gli
+altri influenzano comunque i tuoi vicini, quindi alla fine è necessario
+considerare tutti i giochi e tutti gli agenti.
+
+\subsection{Complessità Computazionale}
+
+Consideriamo il problema: esiste un equilibrio di Nash in un gioco grafico
+(IMPOSTAZIONE PURA)? Siamo in NP? - Dobbiamo indovinare un profilo di
+strategia, il che richiede tempo polinomiale, quindi la dimensione di $\sigma$
+è polinomiale rispetto alle dimensioni dei giochi. - Verifica se il profilo di
+strategia è un equilibrio di Nash: dobbiamo iterare su tutti gli agenti
+possibili e su tutte le possibili azioni $|N| \times |A_i|$, il che è anch'esso
+polinomiale.
+
+Quindi sappiamo che questo problema è in NP. Ma è anche NP-hard?
+
+Supponiamo di avere due agenti e tre azioni:
+
+\[
+    \begin{array}{cccc}
+          & R     & G     & B     \\
+        R & (0,0) & (1,1) & (1,1) \\
+        G & (1,1) & (0,0) & (1,1) \\
+        B & (1,1) & (1,1) & (0,0) \\
+    \end{array}
+\]
+
+\subsection{Esempio di Equilibrio di Nash}
+
+In questo esempio, cerchiamo di capire come ottenere un equilibrio di Nash in
+un gioco usando un esempio di colorazione di grafo. Supponiamo che vogliamo che
+due agenti, a e b, siano felici solo se scelgono colori diversi. Abbiamo tre
+colori: Rosso (R), Verde (G) e Blu (B).
+
+\[
+    \begin{array}{cccccccc}
+          &   &       & a     &       &            &       & \\
+          &   & R     &       & G     &            & B     & \\
+        a & R & (0,0) & (1,1) & (1,1) & (1/2, 1/2)           \\
+          & G & (1,1) & (0,0) & (1,1)                        \\
+          & B & (1,1) & (1,1) & (0,0)                        \\
+          & U &       &       &       &            & (2,2)   \\
+          &   & R     &       & G     &            & B     & \\
+          &   &       & b     &       &            &       & \\
+    \end{array}
+\]
+
+In questo modo, possiamo sempre far sì che gli agenti siano felici quando
+scelgono colori diversi. Supponiamo che il grafo sia 3-colorabile, il che
+significa che è possibile colorare i nodi in modo che nessun nodo adiacente
+abbia lo stesso colore. In questo caso, esiste un equilibrio di Nash.
+
+Supponiamo ora che il grafo non sia 3-colorabile, il che significa che ci
+saranno sempre due nodi che sceglieranno lo stesso colore, ma per uno di loro
+non sarà conveniente cambiarlo. Questo "ingranaggio" potrebbe non funzionare,
+ma potrebbe sempre esistere un equilibrio di Nash.
+
+Inoltre, aggiungiamo un'ulteriore variabile, $U$, che rappresenta la situazione
+in cui non è possibile ottenere un colore diverso e quindi giochiamo $U$. In
+questa situazione, se un vicino sta giocando $U$, vogliamo anche noi giocare
+$U. Ma in questo modo potremmo finire in un equilibrio di Nash in cui tutti
+    giocano $U, il che non vogliamo. Per affrontare questa situazione, aggiungiamo
+un giocatore fittizio, detto anche "dummy player", che non è felice a giocare
+$U, ma si preoccupa solo se qualcun altro sta giocando $U. Abbiamo quindi due
+giocatori, $\alpha$ e $\beta$, che giocheranno come segue:
+
+\[
+    \begin{array}{ccc}
+               & \alpha & \beta  \\
+        \alpha & (1,-1) & (-1,1) \\
+        \beta  & (-1,1) & (1,-1) \\
+    \end{array}
+\]
+In questo modo, otteniamo un'utilità che non scatena una situazione di
+soddisfacibilità. Pertanto, assumendo che il grafo non sia 3-colorabile,
+potrebbe non esistere un equilibrio di Nash.
+
