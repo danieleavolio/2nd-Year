@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  2 NOV 2023 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  7 NOV 2023 17:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,17 +802,7 @@ Overfull \hbox (2.55577pt too wide) in paragraph at lines 8--16
 []\OT1/cmr/m/n/10 Abbiamo un in-sieme di agenti che chi-ami-amo $\OML/cmm/m/it/10 N$ \OT1/cmr/m/n/10 (per es-em-pio $\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 ).
  []
 
-[29] [30]
-Overfull \hbox (0.23375pt too wide) in paragraph at lines 170--178
-\OML/cmm/m/it/10 U:MainquestomodopotremmofinireinunequilibriodiNashincuituttigiocano$\OT1/cmr/m/n/10 U,
- []
-
-
-Overfull \hbox (147.11128pt too wide) in paragraph at lines 170--178
-\OT1/cmr/m/n/10 fit-tizio, detto an-che "dummy player", che non ^^Re fe-lice a gio-care $\OML/cmm/m/it/10 U; masipreoccupasolosequalcunaltrostagiocando$\OT1/cmr/m/n/10 U.
- []
-
-[31]) (chapters/l1.tex
+[29] [30] [31]) (chapters/l1.tex
 Overfull \hbox (68.70197pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 Introduzione alla teo-ria dell'utilit^^Ra
  []
@@ -820,23 +810,23 @@ Overfull \hbox (68.70197pt too wide) in paragraph at lines 1--1
 [32]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 51.
 Package hyperref Info: bookmark level for unknown dimostrazione defaults to 0 on input line 72.
- [33] [34]
-<chapters/images/rishio.png, id=596, 301.8778pt x 195.73125pt>
+ [33] [34] [35]
+<chapters/images/rishio.png, id=604, 301.8778pt x 195.73125pt>
 File: chapters/images/rishio.png Graphic file (type png)
 <use chapters/images/rishio.png>
 Package pdftex.def Info: chapters/images/rishio.png  used on input line 220.
 (pdftex.def)             Requested size: 211.31302pt x 137.01093pt.
- [35]
+ [36 <./chapters/images/rishio.png>]
 Overfull \hbox (93.9964pt too wide) detected at line 259
  \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (100 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (100) + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (0) \OMS/cmsy/m/n/10 ! []\OT1/cmr/m/n/10 100 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 100 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 25 \OMS/cmsy/m/n/10 ! ^^@\OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 ^^U ^^@\OT1/cmr/m/n/10 100 + 25 \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 75
  []
 
-[36 <./chapters/images/rishio.png>]) (chapters/l2.tex
+[37]) (chapters/l2.tex
 Overfull \hbox (8.25215pt too wide) in paragraph at lines 58--61
 [][]\OT1/cmr/m/it/10 Dato un gruppo di gio-ca-tori $\OML/cmm/m/it/10 C[]$ \OT1/cmr/m/it/10 e un gruppo
  []
 
-[37] [38] [39]) (chapters/l3.tex
+[38] [39] [40]) (chapters/l3.tex
 Overfull \hbox (20.92892pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 Problemi com-putazion-ali nella
  []
@@ -845,29 +835,29 @@ Overfull \hbox (20.92892pt too wide) in paragraph at lines 1--1
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 23.
- [40]
+ [41]
 Overfull \hbox (47.1064pt too wide) in paragraph at lines 105--120
  [] 
  []
 
-[41]
+[42]
 Overfull \hbox (6.70364pt too wide) in paragraph at lines 135--137
 [][]\OT1/cmr/m/it/10 L'approssimazione di
  []
 
-[42]
+[43]
 Overfull \hbox (4.04517pt too wide) in paragraph at lines 197--202
 \OT1/cmr/m/n/10 ap-prossi-mati me-di-ante il metodo del cam-pi-ona-mento Monte Carlo (MC[]Shapley).
  []
 
-[43] [44] [45]
+[44] [45] [46]
 Overfull \hbox (0.20631pt too wide) in paragraph at lines 350--350
 |[]\OT1/cmr/bx/n/14.4 10.6 Reti di con-tribuzione marginale |MC-Nets| 
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 403.
-[46] [47] [48]) [49]
+[47] [48] [49]) [50]
 \tf@loe=\write6
 \openout6 = `main.loe'.
 
@@ -880,17 +870,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E13ED0E693A4218A5D3532C0077CB513;11997.
  ) 
 Here is how much of TeX's memory you used:
- 34100 strings out of 475503
- 769265 string characters out of 5771650
+ 34101 strings out of 475503
+ 769272 string characters out of 5771650
  2174248 words of memory out of 5000000
  54542 multiletter control sequences out of 15000+600000
  570733 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,89p,757b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (49 pages, 569913 bytes).
+Output written on main.pdf (50 pages, 570321 bytes).
 PDF statistics:
- 915 PDF objects out of 1000 (max. 8388607)
- 267 named destinations out of 1000 (max. 500000)
+ 919 PDF objects out of 1000 (max. 8388607)
+ 268 named destinations out of 1000 (max. 500000)
  506 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1698945501 "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" "main.pdf" "main" 1698945504 0
+["pdflatex"] 1699376321 "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" "main.pdf" "main" 1699376324 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993058908 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -241,17 +241,17 @@
   "chapters/01.tex" 1697035315 5939 355c10ce67bb7126a6f9086c90914b3f ""
   "chapters/02.tex" 1698220401 21961 5117e2f83b2b6a3e3453d5152e93e9ce ""
   "chapters/03.tex" 1698238763 19297 81d1a863c0d89f6e48384f612b6b4760 ""
-  "chapters/04.tex" 1698945497 8736 6650241b4a40bb68a8ea9903e8066e73 ""
+  "chapters/04.tex" 1699376317 8744 cad8c6d21226e2a1249f88eed323d80c ""
   "chapters/images/rishio.png" 1697722529 26979 c8a4e91c2499a558f7a7f5735382f469 ""
   "chapters/l1.tex" 1697727399 10350 beccb116c399ad262a10909743897001 ""
   "chapters/l2.tex" 1697730168 4476 e7da726b94c0651565b7fb8a33539a70 ""
   "chapters/l3.tex" 1698221925 18637 4aa6d0f650c8d54dd84f4b2b94e5a538 ""
   "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" 1698923912 4266 7e4160ac43462c024dbb0b5ed19ef786 ""
-  "main.aux" 1698945504 19904 14b97ed9a4af3d993e874a0bff7b0e58 "pdflatex"
-  "main.loe" 1698945504 6799 3bd9967967ef7e76309844905feb43f5 "pdflatex"
-  "main.out" 1698945504 11997 e13ed0e693a4218a5d3532c0077cb513 "pdflatex"
+  "main.aux" 1699376324 19904 ced5f882d49752e6c952180ef56208c7 "pdflatex"
+  "main.loe" 1699376324 6799 a671f8822f18d370eb785f1d8eae9ee6 "pdflatex"
+  "main.out" 1699376324 11997 e13ed0e693a4218a5d3532c0077cb513 "pdflatex"
   "main.tex" 1698923912 4266 7e4160ac43462c024dbb0b5ed19ef786 ""
-  "main.toc" 1698945504 5719 ddbef100cbc727e45b3aeab1ce44bcae "pdflatex"
+  "main.toc" 1699376324 5719 a75961bfe09781c71d36771d9dd389d8 "pdflatex"
   (generated)
   "main.aux"
   "main.loe"
