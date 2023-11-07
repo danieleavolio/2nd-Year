@@ -99,3 +99,16 @@
 \contentsline {subsection}{\numberline {15.1}Cross Entropy vs Accuracy}{68}{subsection.15.1}%
 \contentsline {subsection}{\numberline {15.2}Workflow per image classification}{69}{subsection.15.2}%
 \contentsline {subsubsection}{\numberline {15.2.1}Bilanciare le classi}{69}{subsubsection.15.2.1}%
+\contentsline {section}{\numberline {16}Autoencoders}{71}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Nota su PCA}{71}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Autoencoders}{71}{subsection.16.2}%
+\contentsline {subsubsection}{\numberline {16.2.1}Gli steps}{72}{subsubsection.16.2.1}%
+\contentsline {subsubsection}{\numberline {16.2.2}Applicazioni}{72}{subsubsection.16.2.2}%
+\contentsline {subsection}{\numberline {16.3}Autoencoders e Convolution}{73}{subsection.16.3}%
+\contentsline {section}{\numberline {17}VAE (Variational Autoencoder)}{74}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Regularization term e Reparametrization trick}{75}{subsection.17.1}%
+\contentsline {section}{\numberline {18}Recurrent Neural Network e Natural Language Processing (RNN e NLP)}{78}{section.18}%
+\contentsline {subsection}{\numberline {18.1}RNN e LSTM}{78}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}NLP}{80}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}Come si lavora con i Word Embedding?}{80}{subsection.18.3}%
+\contentsline {subsubsection}{\numberline {18.3.1}Encoder}{80}{subsubsection.18.3.1}%
