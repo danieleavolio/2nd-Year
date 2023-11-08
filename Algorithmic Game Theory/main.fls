@@ -413,6 +413,9 @@ INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT .\chapters\l4.tex
+INPUT .\chapters\l4.tex
+INPUT chapters\l4.tex
 OUTPUT main.loe
 INPUT main.aux
 INPUT .\main.out

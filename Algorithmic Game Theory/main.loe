@@ -17,12 +17,12 @@
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}5.1\else \numberline {5.1}Definizione\fi }{24}{definition.5.1}%
 \contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}5.1\else \numberline {5.1}Esempio\fi }{24}{esempio.5.1}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}5.2\else \numberline {5.2}Definizione\fi }{26}{definition.5.2}%
-\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}8.1\else \numberline {8.1}Teorema\fi \thmtformatoptarg {Rappresentazione Ordinale}}{33}{theorem.8.1}%
-\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}8.1\else \numberline {8.1}Dimostrazione\fi \thmtformatoptarg {Rappresentazione Ordinale}}{33}{dimostrazione.8.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}8.1\else \numberline {8.1}Definizione\fi \thmtformatoptarg {Utilità attesa}}{34}{definition.8.1}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}8.1\else \numberline {8.1}Teorema\fi \thmtformatoptarg {Rappresentazione Ordinale}}{34}{theorem.8.1}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}8.1\else \numberline {8.1}Dimostrazione\fi \thmtformatoptarg {Rappresentazione Ordinale}}{34}{dimostrazione.8.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}8.1\else \numberline {8.1}Definizione\fi \thmtformatoptarg {Utilità attesa}}{35}{definition.8.1}%
 \contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}8.2\else \numberline {8.2}Teorema\fi \thmtformatoptarg {Teorema di VNM}}{35}{theorem.8.2}%
-\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}8.2\else \numberline {8.2}Dimostrazione\fi \thmtformatoptarg {Parte 1 VNM}}{35}{dimostrazione.8.2}%
-\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}8.3\else \numberline {8.3}Dimostrazione\fi \thmtformatoptarg {Parte 2 VNM}}{35}{dimostrazione.8.3}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}8.2\else \numberline {8.2}Dimostrazione\fi \thmtformatoptarg {Parte 1 VNM}}{36}{dimostrazione.8.2}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}8.3\else \numberline {8.3}Dimostrazione\fi \thmtformatoptarg {Parte 2 VNM}}{36}{dimostrazione.8.3}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}9.1\else \numberline {9.1}Definizione\fi \thmtformatoptarg {Giochi coalizionali}}{38}{definition.9.1}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}9.2\else \numberline {9.2}Definizione\fi \thmtformatoptarg {Funzione caratteristica}}{38}{definition.9.2}%
 \contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}9.1\else \numberline {9.1}Esempio\fi \thmtformatoptarg {Gelati}}{38}{esempio.9.1}%
@@ -39,3 +39,13 @@
 \contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}10.5\else \numberline {10.5}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a\}}}{47}{esempio.10.5}%
 \contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}10.6\else \numberline {10.6}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{48}{esempio.10.6}%
 \contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}10.7\else \numberline {10.7}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{49}{esempio.10.7}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.1\else \numberline {11.1}Definizione\fi }{50}{definition.11.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.2\else \numberline {11.2}Definizione\fi }{51}{definition.11.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.3\else \numberline {11.3}Definizione\fi }{52}{definition.11.3}%
+\contentsline {domanda}{\ifthmt@listswap Domanda\nobreakspace {}11.1\else \numberline {11.1}Domanda\fi }{52}{domanda.11.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.1\else \numberline {11.1}Esempio\fi }{53}{esempio.11.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.4\else \numberline {11.4}Definizione\fi }{53}{definition.11.4}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.5\else \numberline {11.5}Definizione\fi }{53}{definition.11.5}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.2\else \numberline {11.2}Esempio\fi }{54}{esempio.11.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.6\else \numberline {11.6}Definizione\fi }{54}{definition.11.6}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.3\else \numberline {11.3}Esempio\fi }{55}{esempio.11.3}%
