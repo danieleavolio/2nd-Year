@@ -231,15 +231,85 @@ Considernado che ogni posizione della matrice ha una possibilità 0.5.
 \textbf{Condizione per migliore risposta}: Siano A e B le matrici di payoff for la riga e la colonna per players, rispettivamente.
 Una strategia $s_r^*$ per la \textbf{giocatore riga} è la migliore risposta alla\textbf{ strategia della giocatore colonna} $s_c$ se e solo se:
 \[
-    s_{r,i}^* > 0 \implies (As_c^T) = \max_{k\in A_2}(As_c^T)_k \forall i \in A_1
+    s_{r,i}^* > 0 \implies (As_c^T)_i = \max(As_c^T) \forall i \in A_1
 \]
 \textbf{Nota:} $A_1$ è l'insieme di azioni del giocatore riga e $A_2$ è l'insieme di azioni del giocatore colonna.
 
 Praticamente, ci dice che la \textbf{strategia migliore per il giocatore riga}
-è quella che \textbf{massimizza} il \textbf{payoff} per ogni strategia (quindi
-il $k$) del giocatore\textbf{colonna}.
+è quella che \textbf{massimizza} il \textbf{payoff} per ogni strategia del
+giocatore\textbf{colonna}.
+
+\begin{esempio} Sassa, carta o forbice
+\end{esempio}
+
+%matrice con 0 -1 1
+%   1 0 -1
+%  -1 1 0
+
+%matrice matematica
+$A = \begin{bmatrix}
+        0  & -1 & 1  \\
+        1  & 0  & -1 \\
+        -1 & 1  & 0  \\
+    \end{bmatrix}$
+
+
+$s_c = \begin{bmatrix}
+        \frac{1}{2} \\
+        \frac{1}{2} \\
+        0
+    \end{bmatrix}$
+
+%insert vector 1/2, 1/2, 0
+$As_c^T = \begin{bmatrix}
+        0  & -1 & 1  \\
+        1  & 0  & -1 \\
+        -1 & 1  & 0
+    \end{bmatrix} \begin{bmatrix}
+        \frac{1}{2} \\
+        \frac{1}{2} \\
+        0
+    \end{bmatrix} = \begin{bmatrix}
+        -\frac{1}{2} \\
+        \frac{1}{2}  \\
+        \frac{1}{2}
+    \end{bmatrix}$
 
 \textbf{Nota:} $As_c^T$ è il prodotto tra la matrice di payoff del giocatore riga e la strategia del giocatore colonna.
+
+
+\begin{esempio}(Battle of Sexes)
+\end{esempio}
+
+$A = \begin{bmatrix}
+    2 & 0 \\
+    0 & 1 
+\end{bmatrix} B = \begin{bmatrix}
+    1 & 0 \\
+    0 & 2 
+\end{bmatrix} s_c = \begin{bmatrix}
+    \frac{1}{2} \\
+    \frac{2}{2} 
+\end{bmatrix}
+$
+
+\textbf{Utilità giocatore colonna:} 
+$
+As_c^T = \begin{bmatrix}
+    \frac{2}{3} & \frac{2}{3} 
+\end{bmatrix}
+$
+
+\textbf{Migliore risposta:}
+
+$s_r^* = \begin{bmatrix}
+    1 \\
+    0
+\end{bmatrix}$
+
+
+
+
 
 \begin{esempio}(Esempio con matrice)
 \end{esempio}
@@ -323,9 +393,82 @@ Formalizzazione sotto forma di \textbf{problema lineare}:
     \end{itemize}
 \end{minipage}
 
-\textbf{Forma standard per giocatore colonna:}
+\begin{esempio}(Esempio con Sasso Carta o Forbice)
+\end{esempio}
 
-Pagina 23 e 24 da riscrivere.
+\begin{equation}
+    \begin{aligned}
+        \max_{u,x} u \\
+        s.t.         \\
+        xA \geq \vec{1}u \\
+        x \in S_1\\
+    \end{aligned}
+\end{equation}
+
+\begin{center}
+    
+    $A = \begin{bmatrix}
+        0 & -1 & 1 \\
+        1 & 0  & -1 \\
+        -1 & 1 & 0
+    \end{bmatrix}
+    $
+\end{center}
+
+\begin{equation}
+    \begin{aligned}
+        \max_{u,x} u \\
+        0x_1 + 1x_2 - 1x_3 & \geq u \\
+        -1x_1 + 0x_2 + 1x_3 & \geq u \\
+        1x_1 - 1x_2 + 0x_3 & \geq u \\
+        x_1 + x_2 + x_3 & = 1 \\
+    \end{aligned}
+\end{equation}
+
+\textbf{Portare in forma normale}
+
+\begin{equation}
+    \begin{aligned}
+        \min_{x} cx \\
+        s.t.     \\
+        M_{ub} x \leq b_{ub} \\
+        M_{eq} x = b_{eq} \\
+        x \geq 0 \\
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    \begin{aligned}
+        \min_{x} cx \\
+        0x_1 - 1x_2 + 1x_3 1x_4 & \leq 0 \\
+        1x_1 - 0x_2 - 1x_3 + 1x_4 & \leq 0 \\
+        -1x_1 + 1x_2 + 0x_3 + 1x_4 & \leq 0 \\
+        1x_1 + 1x_2 + 1x_3 + 0x_4 & = 1 \\
+    \end{aligned}
+\end{equation}
+
+\begin{center}
+    
+    $M_{ub} = \begin{bmatrix}
+        0 & -1 & 1 & 1 \\
+        1 & 0 & -1 & 1 \\
+        -1 & 1 & 0 & 1 \\
+    \end{bmatrix}, b_{ub} = \begin{bmatrix}
+        0 \\
+        0 \\
+        0 \\
+    \end{bmatrix}
+    $
+
+    $M_{eq} = \begin{bmatrix}
+        1 & 1 & 1 & 0 \\
+    \end{bmatrix}, b_{eq} = 1, c = (0,0,0,1)$
+\end{center}
+    
+    
+
+
+
 
 \begin{esempio}(Equilibrio Misto con 2 giocatori)
 \end{esempio}
@@ -369,7 +512,7 @@ Il giocatore 2 cerca di rispondere al meglio al giocatore 1.
 \begin{equation}
     \begin{aligned}
         u_2(A)      & = u_2(C)      \\
-        1q + 0(1-q) & = 0q + 2(1p) \\
+        1q + 0(1-q) & = 0q + 2(1p)  \\
         q           & = \frac{2}{3}
     \end{aligned}
 \end{equation}

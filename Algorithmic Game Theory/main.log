@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  8 NOV 2023 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  9 NOV 2023 12:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,7 +811,7 @@ Overfull \hbox (68.70197pt too wide) in paragraph at lines 1--1
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 51.
 Package hyperref Info: bookmark level for unknown dimostrazione defaults to 0 on input line 72.
  [34] [35]
-<chapters/images/rishio.png, id=665, 301.8778pt x 195.73125pt>
+<chapters/images/rishio.png, id=671, 301.8778pt x 195.73125pt>
 File: chapters/images/rishio.png Graphic file (type png)
 <use chapters/images/rishio.png>
 Package pdftex.def Info: chapters/images/rishio.png  used on input line 220.
@@ -858,21 +858,21 @@ Overfull \hbox (0.20631pt too wide) in paragraph at lines 350--350
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 403.
 [47] [48] [49]) (chapters/l4.tex [50] [51] [52] [53]
-Overfull \hbox (17.79439pt too wide) in paragraph at lines 264--266
+Overfull \hbox (17.79439pt too wide) in paragraph at lines 334--336
 []\OT1/cmr/bx/n/10 Spiegazione\OT1/cmr/m/n/10 : Prati-ca-mente, se il gio-ca-tore us-asse la strate-gia di $\OML/cmm/m/it/10 R[]$\OT1/cmr/m/n/10 , sceglierebbe
  []
 
-
-Overfull \hbox (17.22221pt too wide) in paragraph at lines 284--304
+[54]
+Overfull \hbox (17.22221pt too wide) in paragraph at lines 354--374
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (17.22221pt too wide) in paragraph at lines 305--325
+Overfull \hbox (17.22221pt too wide) in paragraph at lines 375--395
 []$[]$ $[]$ 
  []
 
-[54]) [55]
+[55] [56]) [57]
 \tf@loe=\write6
 \openout6 = `main.loe'.
 
@@ -885,17 +885,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FC83E3FF37E233655CA401F1DA1F8C1E;13510.
  ) 
 Here is how much of TeX's memory you used:
- 34220 strings out of 475503
- 771546 string characters out of 5771650
+ 34234 strings out of 475503
+ 771776 string characters out of 5771650
  2174248 words of memory out of 5000000
- 54619 multiletter control sequences out of 15000+600000
+ 54621 multiletter control sequences out of 15000+600000
  570733 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,89p,757b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (55 pages, 604475 bytes).
+Output written on main.pdf (57 pages, 610974 bytes).
 PDF statistics:
- 1028 PDF objects out of 1200 (max. 8388607)
- 307 named destinations out of 1000 (max. 500000)
+ 1051 PDF objects out of 1200 (max. 8388607)
+ 319 named destinations out of 1000 (max. 500000)
  578 words of extra memory for PDF output out of 10000 (max. 10000000)
 
