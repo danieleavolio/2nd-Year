@@ -84,7 +84,7 @@ create external table orders(
 ```sql
 create external table items(
     id string,
-    order_id string,
+    item_id string,
     product_id string,
     seller_id string,
     shipping_limit_date string,
