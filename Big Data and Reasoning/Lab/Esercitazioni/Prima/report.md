@@ -83,8 +83,8 @@ create external table orders(
 
 ```sql
 create external table items(
+    order_id string,
     id string,
-    item_id string,
     product_id string,
     seller_id string,
     shipping_limit_date string,
@@ -173,3 +173,36 @@ select count(*) from customer limit 10;
 ```
 
 (output omitted)
+
+## Problem 2
+
+### Description
+
+Compute the following queries:
+
+1. For each customer, find the number of order with at least 2 items
+1. Find active customers for each year. A customer is active if it has at least three order
+   in a given year.
+1. For each year and for each customer city, compute the total income for the company
+   (i.e. the sum of the total price of each order)
+1. Find the three most frequent categories (possibly english) among e-commerce product
+1. Find for each product the number of sold items and the total income
+1. Find product category (possibly english) compute of sold items and the total income
+
+### Solution
+
+#### 1. For each customer, find the number of order with at least 2 items
+
+Works when it feels like it. Sometimes I have to delete `/tmp` on hdfs.
+I don't even know.
+
+```sql
+select c.id, count(distinct o.id) as orders
+from customer as c, orders as o, items as i1, items as i2
+where c.id = o.customer_id and o.id = i1.order_id and o.id = i2.order_id and i1.id <> i2.id
+group by c.id;
+```
+
+#### Find active customers for each year
+
+poi vediamo...
