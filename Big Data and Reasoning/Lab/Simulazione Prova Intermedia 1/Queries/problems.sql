@@ -1,5 +1,4 @@
 'For each customer, find the number of order with at least 2 items'
-
 select
     c.id,
     count(distinct o.id) as orders
@@ -14,6 +13,29 @@ where
     and o.id = i2.id
     and i1.item_id <> i2.item_id
 group by
+    c.id;
+
+Possibile miglioramento
+SELECT
+    c.id,
+    COUNT(DISTINCT o.id) AS orders
+FROM
+    customer AS c
+    JOIN (
+        SELECT
+            o.id AS order_id,
+            o.customer_id,
+            COUNT(DISTINCT i.product_id) AS item_count
+        FROM
+            orders AS o1
+            JOIN items AS i ON o1.id = i.order_id
+        GROUP BY
+            o.id,
+            o.customer_id
+        HAVING
+            item_count >= 2
+    ) AS o2 ON c.id = o2.customer_id
+GROUP BY
     c.id;
 
 ' Find active customers for each year. A customer is active if it has at least three order

@@ -1,5 +1,14 @@
 # Report for Assignment
 
+## If HIVESERVER2 doesn't work
+```bash
+# This command change the permission of the scartch dir 
+hadoop fs -chmod 1777 /user/hadoop/hive-tem-fold
+
+# This command change the permission of the tmp dir
+hadoop fs -chmod 1777 /tmp
+```
+
 ## Problem 1
 
 ### Description
