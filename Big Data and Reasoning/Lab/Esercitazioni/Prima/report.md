@@ -215,3 +215,41 @@ group by c.id;
 #### Find active customers for each year
 
 poi vediamo...
+
+
+## Problem 4
+
+Create a Data Warehouse.
+
+The data warehouse should be populated using data coming from:
+
+- Products that have a category assigned
+- Orders that have only products with categories assigned
+- Orders thta have a valid date. i.e. ***delivered_carried_date*** and ***delivered_custom_date*** are not null or missing
+
+### The fact table is **Order_Product**. 
+- **customer_zip_code**: zip code of the customer which made the order
+- **seller_zip_ccode**: zip code of the seller which sold the product in the order
+- **product_id**: product identifier
+- **purchase_day**: day of the purchase of the order
+- **income**: Sum of the price of the items in the order
+- **quantity**: Number of ordered products items
+- **delivery_time**: Difference in days between **delivered_custom_date** and **delivered_carrier_date**
+
+### Dimensions Tables:
+
+**Product:**
+- product_id
+- product_category (In english)
+
+**Date:** (Date in which at least one order has been made)
+- purchase_day
+- purchase_month
+- purchase_year
+
+**Location:**
+- zip_code (For both customer and sellers)
+- city (For both customer and sellers)
+- state (For both customer and sellers)
+
+
