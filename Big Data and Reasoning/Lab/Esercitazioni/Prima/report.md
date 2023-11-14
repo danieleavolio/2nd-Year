@@ -253,3 +253,98 @@ The data warehouse should be populated using data coming from:
 - state (For both customer and sellers)
 
 
+## Solution
+
+1. Create temporary tables for Orders and Products
+
+Create the temporary table for the products having category not null.
+```sql
+create table temp_prods as 
+select * 
+from product
+where category_name is not null or category_name <> '';
+```
+
+Create the temporary table having only orders with valid dates and orders with products with assigned category
+```sql
+create table temp_orders as
+select o.*
+from orders as o, items as i
+where o.delivered_carrier_date <> "" and o.delivered_customer_date <> "" and o.id = i.order_id and i.product_id in (select id from temp_prods) ;
+```
+
+Ok, now time for the dimensions!!!
+
+2. Create the dimension tables
+
+Dimension Table for **Product**
+```sql
+create table product_dim as
+select p.id, ct.translated_name as category
+from temp_prods as p, category_translate as ct
+where p.category_name = ct.name; 
+```
+
+Dimension Table for **Date** 
+
+(Knowing a date is valid and selecting only the ones in which at least one order has been made)
+```sql
+create table date_dim as
+select 
+    distinct YEAR(temp_orders.purchase_timestamp) as date_year,
+    MONTH(temp_orders.purchase_timestamp) as date_month,
+    DAY(temp_orders.purchase_timestamp) as date_day
+from temp_orders
+ORDER BY YEAR(temp_orders.purchase_timestamp), MONTH(temp_orders.purchase_timestamp), DAY(temp_orders.purchase_timestamp);
+```
+
+Dimension Table for **Location**
+
+```sql
+create table location_dim as
+select loc.zip_code, loc.city, loc.statee
+from
+(
+select 
+    distinct c.zip_code_prefix as zip_code,
+    c.city as city,
+    c.state as statee
+from customer as c 
+union
+select 
+    distinct s.zip_code_prefix as zip_code,
+    s.city as city,
+    s.state as statee
+from seller as s
+) as loc
+group by loc.zip_code, loc.city, loc.statee;
+```
+
+3. Create the fact table
+
+Manca da fare:
+- group by per le *dimensioni*
+- al posto di purchase_day fare la cast a day da purchase_date
+
+```sql
+create table Order_Product as 
+    select 
+        c.zip_code_prefix as customer_zip_code, 
+        s.zip_code_prefix as seller_zip_code, 
+        i.product_id as product_id,
+        DAY(purchase_timestamp) as purchase_day,
+        SUM(i.price) as income,
+        COUNT(*) as quantity,
+        DATEDIFF(tod.delivered_customer_date, tod.delivered_carrier_date) as delivery_time
+    from items as i , temp_orders as tod, seller as s, customer as c
+    where 
+        i.order_id = tod.id and 
+        i.seller_id = s.id and 
+        tod.customer_id = c.id
+    group by c.zip_code_prefix, 
+             s.zip_code_prefix, 
+             i.product_id, 
+             tod.delivered_customer_date,
+             tod.delivered_carrier_date,
+             tod.purchase_timestamp;
+```
