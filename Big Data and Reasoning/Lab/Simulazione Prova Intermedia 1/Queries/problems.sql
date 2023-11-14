@@ -11,7 +11,7 @@ where
     c.id = o.customer_id
     and o.id = i1.id
     and o.id = i2.id
-    and i1.item_id <> i2.item_id
+    and i1.id <> i2.id
 group by
     c.id;
 
@@ -23,15 +23,15 @@ FROM
     customer AS c
     JOIN (
         SELECT
-            o.id AS order_id,
-            o.customer_id,
+            o1.id AS order_id,
+            o1.customer_id,
             COUNT(DISTINCT i.product_id) AS item_count
         FROM
             orders AS o1
             JOIN items AS i ON o1.id = i.order_id
         GROUP BY
-            o.id,
-            o.customer_id
+            o1.id,
+            o1.customer_id
         HAVING
             item_count >= 2
     ) AS o2 ON c.id = o2.customer_id

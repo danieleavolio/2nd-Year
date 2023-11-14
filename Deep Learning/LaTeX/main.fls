@@ -477,6 +477,31 @@ INPUT .\images\outputgate.png
 INPUT .\images\outputgate.png
 INPUT .\images\outputgate.png
 INPUT .\images\outputgate.png
+INPUT .\chapters\08.tex
+INPUT .\chapters\08.tex
+INPUT chapters\08.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT .\images\archRNN.png
+INPUT .\images\archRNN.png
+INPUT .\images\archRNN.png
+INPUT .\images\archRNN.png
+INPUT .\images\archRNN.png
+INPUT .\images\archRNN.png
+INPUT .\images\archRNN.png
+INPUT .\images\seq2seq.png
+INPUT .\images\seq2seq.png
+INPUT .\images\seq2seq.png
+INPUT .\images\seq2seq.png
+INPUT .\images\seq2seq.png
+INPUT .\images\seq2seq.png
+INPUT .\images\seq2seq.png
+INPUT .\images\transformer.png
+INPUT .\images\transformer.png
+INPUT .\images\transformer.png
+INPUT .\images\transformer.png
+INPUT .\images\transformer.png
+INPUT .\images\transformer.png
+INPUT .\images\transformer.png
 INPUT .\chapters\lab01.tex
 INPUT .\chapters\lab01.tex
 INPUT chapters\lab01.tex
@@ -489,7 +514,6 @@ INPUT chapters\lab03.tex
 INPUT .\chapters\lab04.tex
 INPUT .\chapters\lab04.tex
 INPUT chapters\lab04.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 INPUT .\chapters\lab05.tex
 INPUT .\chapters\lab05.tex
 INPUT chapters\lab05.tex
@@ -531,9 +555,6 @@ INPUT .\images\reparametrization.png
 INPUT .\images\reparametrization.png
 INPUT .\images\reparametrization.png
 INPUT .\images\reparametrization.png
-INPUT .\images\archRNN.png
-INPUT .\images\archRNN.png
-INPUT .\images\archRNN.png
 INPUT .\images\archRNN.png
 INPUT .\images\archRNN.png
 INPUT .\images\archRNN.png
