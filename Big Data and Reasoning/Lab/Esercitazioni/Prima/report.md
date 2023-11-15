@@ -225,7 +225,7 @@ The data warehouse should be populated using data coming from:
 
 - Products that have a category assigned
 - Orders that have only products with categories assigned
-- Orders thta have a valid date. i.e. ***delivered_carried_date*** and ***delivered_custom_date*** are not null or missing
+- Orders that have a valid date. i.e. ***delivered_carried_date*** and ***delivered_custom_date*** are not null or missing
 
 ### The fact table is **Order_Product**. 
 - **customer_zip_code**: zip code of the customer which made the order
