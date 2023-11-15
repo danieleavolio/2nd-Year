@@ -8,6 +8,12 @@
 # Local History for Visual Studio Code
 .history/
 
+#Ignore jar files
+*.jar
+
+#Ignore target folder
+target/
+
 #Zip and models
 *.zip 
 *.h5
