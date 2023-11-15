@@ -110,7 +110,6 @@ esponenziale.
             \path [->] (A) edge node[left] {} (C);
             \path [->] (C) edge node[left] {} (D);
             \path [->] (C) edge node[left] {} (E);
-            \path [->] (D) edge node[left] {} (E);
             \path [->] (D) edge node[left] {} (F);
             \path [->] (E) edge node[left] {} (F);
         \end{tikzpicture}
@@ -136,28 +135,30 @@ figli; non c'è più bisogno di un algoritmo di backtracking.
 
 %disegna il grafo di prima come un albero 
 
-\begin{figure}[H]
-    \begin{center}
-        \begin{tikzpicture}
-            \node[circle,draw=black,fill=red!40] (A) at (0,0) {A};
-            \node[circle,draw=black,fill=blue!40] (B) at (-2,-1.5) {B};
-            \node[circle,draw=black,fill=green!40] (C) at (0,-1.5) {C};
-            \node[circle,draw=black,fill=red!40] (D) at (2,-1.5) {D};
-            \node[circle,draw=black,fill=blue!40] (E) at (0,-3) {E};
-            \node[circle,draw=black,fill=green!40] (F) at (2,-3) {F};
+\begin{center}
 
-            \draw[->] (A) -- (B);
-            \draw[->] (A) -- (C);
-            \draw[->] (A) -- (D);
-            \draw[->] (B) -- (C);
-            \draw[->] (B) -- (D);
-            \draw[->] (C) -- (E);
-            \draw[->] (C) -- (F);
-            \draw[->] (D) -- (E);
-            \draw[->] (D) -- (F);
-        \end{tikzpicture}
-    \end{center}
-\end{figure}
+    \begin{forest}
+        for tree={
+        circle,
+        draw,
+        fill=white,
+        l sep=20pt,
+        s sep=40pt,
+        edge={->},
+        }
+        [A, fill=red!40
+        [B, fill=blue!40]
+        [C, fill=green!40
+        [D, fill=red!40
+        [F, fill=blue!40]
+        ]
+        [E, fill=blue!40
+        [F, fill=green!40]
+        ]
+        ]
+        ]
+    \end{forest}
+\end{center}
 
 Ad esempio, dato un grafo, trovare il numero di vertici per rendere il grafo
 aciclico.
@@ -281,11 +282,53 @@ In questo caso, cerchiamo di capire come calcolare la \textit{ tree width}.
 %|
 %v
 %efg -> fg -> hij -> ikl -> bk
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \node (A) at (0,0) {abc};
+        \node (B) at (0,-1.5) {cd};
+        \node (C) at (0,-3) {def};
+        \node (D) at (-1.5,-4.5) {efg};
+        \node (E) at (1.5,-4.5) {fg};
+        \node (F) at (-2.5,-6) {hij};
+        \node (G) at (-0.5,-6) {ikl};
+        \node (H) at (2.5,-6) {bk};
+
+        \draw[->] (A) -- (B);
+        \draw[->] (B) -- (C);
+        \draw[->] (C) -- (D);
+        \draw[->] (C) -- (E);
+        \draw[->] (D) -- (F);
+        \draw[->] (D) -- (G);
+        \draw[->] (E) -- (H);
+    \end{tikzpicture}
+\end{figure}
 
 %Fai un grafo con questo
 
 %bk viola la componente biconnessa e devo aggiungerela a tutti i nodi
+\begin{figure}[H]
+    \centering
 
+    \begin{tikzpicture}
+        \node(A) at (0,0) {abc};
+        \node(B) at (0,-1.5) {cdb};
+        \node(C) at (0,-3) {defb};
+        \node(D) at (-1.5,-4.5) {efgb};
+        \node(E) at (1.5,-4.5) {fgb};
+        \node(F) at (-2.5,-6) {hijb};
+        \node(G) at (-0.5,-6) {iklb};
+        \node(H) at (2.5,-6) {bk};
+
+        \draw[->] (A) -- (B);
+        \draw[->] (B) -- (C);
+        \draw[->] (C) -- (D);
+        \draw[->] (C) -- (E);
+        \draw[->] (D) -- (F);
+        \draw[->] (D) -- (G);
+        \draw[->] (E) -- (H);
+    \end{tikzpicture}
+\end{figure}
 %abc
 %|
 %v
@@ -297,23 +340,68 @@ In questo caso, cerchiamo di capire come calcolare la \textit{ tree width}.
 %v
 %efgb -> fgb -> hijb -> iklb -> bk
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \node(A) at (0,0) {abc};
+        \node(B) at (0,-1.5) {cdb};
+        \node(C) at (0,-3) {defb};
+        \node(D) at (-1.5,-4.5) {efgb};
+        \node(E) at (1.5,-4.5) {fgb};
+        \node(F) at (-2.5,-6) {hijb};
+        \node(G) at (-0.5,-6) {iklb};
+        \node(H) at (2.5,-6) {bk};
+
+        \draw [->] (A) -- (B);
+        \draw [->] (B) -- (C);
+        \draw [->] (C) -- (D);
+        \draw [->] (C) -- (E);
+        \draw [->] (D) -- (F);
+        \draw [->] (D) -- (G);
+        \draw [->] (E) -- (H);
+    \end{tikzpicture}
+\end{figure}
+
 %In questo caso, il valore della width è 3
 
 Ma possiamo ottenere un valore migliore? Possiamo ottenere 2?
 
-%abc
-%|
-%v
-%cdb
-%|
-%v
-%dfb
-%/   \
-%v     v
-%dfg   fhb -> hib -> ikb -> bk
-%dge           |       | 
-% v       v
-%hij     ikl
+    %abc
+    %|
+    %v
+        %cdb
+        %|
+        %v
+        %dfb
+        %/   \
+        %v     v
+       %dfg   fhb -> hib -> ikb -> bk
+        %dge           |       | 
+        % v       v
+        %hij     ikl
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \node(A) at (0,0) {abc};
+        \node(B) at (0,-1.5) {cdb};
+        \node(C) at (0,-3) {dfb};
+        \node(D) at (-1.5,-4.5) {dfg};
+        \node(E) at (1.5,-4.5) {fhb};
+        \node(F) at (-2.5,-6) {hij};
+        \node(G) at (-0.5,-6) {ikl};
+        \node(H) at (2.5,-6) {bk};
+
+        \draw[->] (A) -- (B);
+        \draw[->] (B) -- (C);
+        \draw[->] (C) -- (D);
+        \draw[->] (C) -- (E);
+        \draw[->] (D) -- (F);
+        \draw[->] (E) -- (H);
+        \draw[->] (F) -- (G);
+        \draw[->] (E) -- (G);
+    \end{tikzpicture}
+\end{figure}
 
 La risposta è \textbf{si}, con questa configurazione posso ottenere una width
 di $2$.
@@ -392,10 +480,10 @@ Abbiamo un albero con questi nodi:
 \begin{itemize}
     \item yp
     \item yzv
-    \begin{itemize}
-        \item zvw
-        \item vz
-    \end{itemize}
+          \begin{itemize}
+              \item zvw
+              \item vz
+          \end{itemize}
 \end{itemize}
 
 %fai un albero con questi nodi
@@ -443,7 +531,8 @@ Per ogni nodo, prende esattamente $3^k$ per risolvere la 3 colorabilità.
           \end{itemize}
 \end{itemize}
 
-Dove vuole arrivare? Vuole dire che se calcoli le soluzioni per i sotto problemi, si nota che ci sono delle soluzioni che vanno bene anche per alcuni problemi 
-più grandi. Quindi si calcolano le \textbf{soluzioni locali} che sono $2^k$ e si utilizzano queste soluzioni per risolvere gli altri. E' quindi praticamente 
-un \textbf{algoritmo di programmazione dinamica}.
-\newpage
+Dove vuole arrivare? Vuole dire che se calcoli le soluzioni per i sotto
+problemi, si nota che ci sono delle soluzioni che vanno bene anche per alcuni
+problemi più grandi. Quindi si calcolano le \textbf{soluzioni locali} che sono
+$2^k$ e si utilizzano queste soluzioni per risolvere gli altri. E' quindi
+praticamente un \textbf{algoritmo di programmazione dinamica}. \newpage

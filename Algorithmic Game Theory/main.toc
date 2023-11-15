@@ -40,40 +40,40 @@
 \contentsline {section}{\numberline {8}Metodi di decomposizione strutturale e Isole di tracciability per problemi NP-Hard}{34}{section.8}%
 \contentsline {subsection}{\numberline {8.1}PPAD}{35}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Tree Decomposition}{35}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Proposta 1: Feedback Vertex Number}{36}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.1}Proposta 1: Feedback Vertex Number}{37}{subsubsection.8.2.1}%
 \contentsline {subsubsection}{\numberline {8.2.2}Proposta 2: Feedback Edge Number}{37}{subsubsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.3}Biconnected Width}{37}{subsubsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.3}Biconnected Width}{38}{subsubsection.8.2.3}%
 \contentsline {subsubsection}{\numberline {8.2.4}Deep dive nella tree decomposition}{38}{subsubsection.8.2.4}%
-\contentsline {subsubsection}{\numberline {8.2.5}Robber and Cops Game}{40}{subsubsection.8.2.5}%
-\contentsline {subsubsection}{\numberline {8.2.6}3 Colorabiltà con Tree Decomposition}{42}{subsubsection.8.2.6}%
-\contentsline {section}{\numberline {9}Introduzione alla teoria dell'utilità e decision making}{44}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Concetti di base}{44}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}ALTERNATIVE}{44}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}PREFERENZE}{44}{subsubsection.9.1.2}%
-\contentsline {subsubsection}{\numberline {9.1.3}Relazione di Preferenza}{44}{subsubsection.9.1.3}%
-\contentsline {subsubsection}{\numberline {9.1.4}Rappresentare le preferenze come \textbf {utilità}}{45}{subsubsection.9.1.4}%
-\contentsline {subsection}{\numberline {9.2}Le lotterie}{45}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Utilità di Von Neumann-Morgenstern}{46}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Atteggiamento verso il rischio}{47}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Applicazioni: Condivisione del rischio}{48}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Applicazione: Assicurazione}{48}{subsection.9.6}%
-\contentsline {section}{\numberline {10}Teoria dei giochi coalizionali}{49}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Superadditività}{50}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Core o Nucleo}{50}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Shapley Value}{50}{subsection.10.3}%
-\contentsline {section}{\numberline {11}Problemi computazionali nella teoria dei giochi coalizionali}{52}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Limitazioni dell'approccio Naive}{52}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Strategie per i problemi di computazione}{53}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Gioco del'aereoporto | Airport Game}{53}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Approssimazione di Montecarlo}{54}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Rappresentazioni compatte}{55}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Reti di contribuzione marginale |MC-Nets}{58}{subsection.11.6}%
-\contentsline {section}{\numberline {12}Non-cooperative Games}{61}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Giochi strategia puri}{62}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}Dilemma del prigioniero}{62}{subsubsection.12.1.1}%
-\contentsline {subsubsection}{\numberline {12.1.2}Pure Coordination}{62}{subsubsection.12.1.2}%
-\contentsline {subsubsection}{\numberline {12.1.3}Battle of the Sexes}{62}{subsubsection.12.1.3}%
-\contentsline {subsubsection}{\numberline {12.1.4}Matching Pennies}{63}{subsubsection.12.1.4}%
-\contentsline {subsection}{\numberline {12.2}Strategie e strategie miste}{63}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Nash Equilibria}{64}{subsection.12.3}%
-\contentsline {subsubsection}{\numberline {12.3.1}Giochi a Somma-Zero}{65}{subsubsection.12.3.1}%
+\contentsline {subsubsection}{\numberline {8.2.5}Robber and Cops Game}{42}{subsubsection.8.2.5}%
+\contentsline {subsubsection}{\numberline {8.2.6}3 Colorabiltà con Tree Decomposition}{43}{subsubsection.8.2.6}%
+\contentsline {section}{\numberline {9}Introduzione alla teoria dell'utilità e decision making}{45}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Concetti di base}{45}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}ALTERNATIVE}{45}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}PREFERENZE}{45}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}Relazione di Preferenza}{45}{subsubsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.4}Rappresentare le preferenze come \textbf {utilità}}{46}{subsubsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.2}Le lotterie}{46}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Utilità di Von Neumann-Morgenstern}{47}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Atteggiamento verso il rischio}{48}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Applicazioni: Condivisione del rischio}{49}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Applicazione: Assicurazione}{49}{subsection.9.6}%
+\contentsline {section}{\numberline {10}Teoria dei giochi coalizionali}{50}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Superadditività}{51}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Core o Nucleo}{51}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Shapley Value}{51}{subsection.10.3}%
+\contentsline {section}{\numberline {11}Problemi computazionali nella teoria dei giochi coalizionali}{53}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Limitazioni dell'approccio Naive}{53}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Strategie per i problemi di computazione}{54}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Gioco del'aereoporto | Airport Game}{54}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Approssimazione di Montecarlo}{55}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Rappresentazioni compatte}{56}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Reti di contribuzione marginale |MC-Nets}{59}{subsection.11.6}%
+\contentsline {section}{\numberline {12}Non-cooperative Games}{62}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Giochi strategia puri}{63}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}Dilemma del prigioniero}{63}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}Pure Coordination}{63}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}Battle of the Sexes}{63}{subsubsection.12.1.3}%
+\contentsline {subsubsection}{\numberline {12.1.4}Matching Pennies}{64}{subsubsection.12.1.4}%
+\contentsline {subsection}{\numberline {12.2}Strategie e strategie miste}{64}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Nash Equilibria}{65}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.3.1}Giochi a Somma-Zero}{66}{subsubsection.12.3.1}%
