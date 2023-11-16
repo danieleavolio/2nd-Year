@@ -1,0 +1,71 @@
+### PROBLEMA 1 ###
+
+hdfs dfs -mkdir -p /ecommerce/customer_data /ecommerce/seller_data /ecommerce/order_data/order_meta /ecommerce/order_data/items /ecommerce/product_data /ecommerce/cat_translation
+hdfs dfs -put olist_sellers_dataset.csv /ecommerce/seller_data
+hdfs dfs -put olist_orders_dataset.csv /ecommerce/order_data/order_meta
+hdfs dfs -put olist_order_items_dataset.csv /ecommerce/order_data/items
+hdfs dfs -put olist_products_dataset.csv /ecommerce/product_data/
+hdfs dfs -put product_category_name_translation.csv /ecommerce
+
+#define hive tables
+# le definisco come external tables, le insert avvengono da java direttamente su hdfs
+
+create external table customer(customer_id string, customer_unique_id string, customer_zip_code_prefix string,customer_city string,customer_state string) row format delimited fields terminated by ',' lines terminated by '\n' location '/ecommerce/customer_data';
+
+create external table seller(seller_id string,seller_zip_code_prefix string,seller_city string,seller_state string) row format delimited fields terminated by ',' lines terminated by '\n' location '/ecommerce/order_data/seller_data/'; 
+
+create external table orders(order_id string,customer_id string, order_status string, order_purchase_timestamp timestamp, order_approved_at timestamp, order_delivered_carrier_date timestamp, order_delivered_customer_date timestamp, order_estimated_delivery_date timestamp) row format delimited fields terminated by ',' lines terminated by '\n' location '/ecommerce/order_data/order_meta';
+create external table order_items(order_id string,order_item_id string,product_id string,seller_id string,shipping_limit_date timestamp,price decimal,freight_value decimal) row format delimited fields terminated by ',' lines terminated by '\n' location '/ecommerce/order_data/items';
+
+create external table product(product_id string,product_category_name string ,product_name_lenght int,product_description_lenght int,product_photos_qty int,product_weight_g int,product_length_cm int,product_height_cm int,product_width_cm int) row format delimited fields terminated by ',' lines terminated by '\n' location '/ecommerce/product_data';
+
+create external table category_translation(product_category_name string, english_name string) row format delimited fields terminated by ',' lines terminated by '\n' location '/ecommerce/cat_translation';
+
+
+PROBLEM 2
+For each customer, find the number of order with at least 2 items
+
+SELECT o.customer_id, COUNT(o.order_id) as num_orders
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY o.customer_id
+HAVING COUNT(oi.order_id) >= 2;
+
+
+Find active customers for each year. A customer is active if it has at least three order
+in a given year.
+
+select customer_id, year(order_purchase_timestamp) as anno from orders group by customer_id, anno having count(*) >= 3;
+
+
+For each year and for each customer city, compute the total income for the company
+
+select year(o.order_purchase_timestamp) as anno, c.customer_city as city, SUM(oi.price) as total_income from 
+orders o INNER JOIN order_items oi
+     ON o.order_id = oi.order_id
+        INNER JOIN customers c ON o.customer_id = c.customer_id 
+group by anno, city
+
+
+Find the three most frequent categories (possibly english) among e-commerce products  
+
+select top 5 ct.english_name, count(*) as freq from category_translation ct 
+    INNER JOIN product p ON p.product_category_name = ct.product_category_name
+    INNER JOIN order_items oi ON oi.product_id = p.product_id
+    INNER JOIN order o ON oi.order_id = o.order_id
+    group by ct.english_name
+    order by freq definisco
+
+
+Find for each product the number of sold items and the total income
+
+select p.product_id as prodotto, count(*) as sold_unit, sum(pr.price) as total_income
+ from product p INNER JOIN order_items oi ON oi.product_id = p.product_id
+
+
+Find product category (possibly english) compute of sold items and the total income
+
+mi sono rotto questa la skippo
+
+
+
