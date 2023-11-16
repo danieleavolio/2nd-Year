@@ -1,8 +1,9 @@
 # Report for Assignment
 
 ## If HIVESERVER2 doesn't work
+
 ```bash
-# This command change the permission of the scartch dir 
+# This command change the permission of the scartch dir
 hadoop fs -chmod 1777 /user/hadoop/hive-tem-fold
 
 # This command change the permission of the tmp dir
@@ -215,9 +216,89 @@ group by c.id;
 #### Find active customers for each year
 
 poi vediamo...
+(non abbiamo visto poi...)
 
+Pretty straightforward
+
+## Problem 3
+
+### The Java API
+
+First of all, add `core-site.xml` and `hdfs-site.xml` to the resources folder.
+
+```java
+Configuration conf = new Configuration();
+conf.addResource(new Path("core-site.xml"));
+conf.addResource(new Path("hdfs-site.xml")); // not needed, but if you want and like dicks :/
+```
+
+core-site.xml
+
+```xml
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://master:9000</value>
+    </property>
+</configuration>
+```
+
+Get the FileSystem object
+
+```java
+FileSystem fs = FileSystem.get(conf);
+```
+
+### Reading a file from HDFS
+
+Be sure that the file exists in the hdfs
+
+```java
+Path path = new Path("/path/on/the/hdfs");
+if(!fs.exists(path)) return; // file doesn't exist
+
+BufferedReader handle = new BufferedReader(new InputStreamReader(fs.open(path)));
+```
+
+Use the handle to read lines from the file
+
+```java
+int batchsize = 5;
+for (int i = 0; i < batchsize; ++i)
+    String line = handle.readLine();
+```
+
+### Writing a file to HDFS
+
+You don't have to make sure that the file exists
+
+```java
+Path path = new Path("/path/on/the/hdfs");
+```
+
+If the file doesn't exist, you can create it. If it exists, you can choose to append to the file.
+
+```java
+FSDataOutputStream handle = fs.create(path); // create the file
+FSDataOutputStream handle = fs.append(path); // append to the file
+
+//create the handle to write to the file
+BufferedWriter handle = new BufferedWriter(new OutputStreamWriter(stream));
+```
+
+Writing to the file
+
+```java
+String line = "Hello World";
+handle.write(line); //appends line to the end of the file
+handle.write("\n"); //add a newline
+```
+
+<h2 style="color:red">REMEMBER TO CLOSE THE HANDLES WHEN YOU ARE DONE READING / WRITING</h2>
 
 ## Problem 4
+
+### Description
 
 Create a Data Warehouse.
 
@@ -225,9 +306,12 @@ The data warehouse should be populated using data coming from:
 
 - Products that have a category assigned
 - Orders that have only products with categories assigned
-- Orders that have a valid date. i.e. ***delivered_carried_date*** and ***delivered_custom_date*** are not null or missing
+- Orders that have a valid date. i.e. **_delivered_carried_date_** and **_delivered_custom_date_** are not null or missing
 
-### The fact table is **Order_Product**. 
+### Fact table
+
+#### Order_Product
+
 - **customer_zip_code**: zip code of the customer which made the order
 - **seller_zip_ccode**: zip code of the seller which sold the product in the order
 - **product_id**: product identifier
@@ -236,115 +320,121 @@ The data warehouse should be populated using data coming from:
 - **quantity**: Number of ordered products items
 - **delivery_time**: Difference in days between **delivered_custom_date** and **delivered_carrier_date**
 
-### Dimensions Tables:
+### Dimensions Tables
 
-**Product:**
+#### Product
+
 - product_id
 - product_category (In english)
 
-**Date:** (Date in which at least one order has been made)
+#### Date
+
+(Date in which at least one order has been made)
+
 - purchase_day
 - purchase_month
 - purchase_year
 
-**Location:**
+#### Location
+
 - zip_code (For both customer and sellers)
 - city (For both customer and sellers)
 - state (For both customer and sellers)
 
+### Solution
 
-## Solution
+#### Create temporary tables for Orders and Products
 
-1. Create temporary tables for Orders and Products
+Create the table for the products having category not null.
 
-Create the temporary table for the products having category not null.
 ```sql
-create table temp_prods as 
-select * 
+create table temp_prods as
+select *
 from product
 where category_name is not null or category_name <> '';
 ```
 
-Create the temporary table having only orders with valid dates and orders with products with assigned category
+Create the table having only orders with valid dates and orders with products with assigned category
+
 ```sql
 create table temp_orders as
 select o.*
 from orders as o, items as i
-where o.delivered_carrier_date <> "" and o.delivered_customer_date <> "" and o.id = i.order_id and i.product_id in (select id from temp_prods) ;
+where o.delivered_carrier_date <> "" and
+    o.delivered_customer_date <> "" and
+    o.id = i.order_id and
+    i.product_id in (select id from temp_prods) ;
 ```
 
 Ok, now time for the dimensions!!!
 
-2. Create the dimension tables
+#### Create the dimension tables
 
-Dimension Table for **Product**
+Dimension Table for [Product](#product)
+
 ```sql
 create table product_dim as
 select p.id, ct.translated_name as category
 from temp_prods as p, category_translate as ct
-where p.category_name = ct.name; 
+where p.category_name = ct.name;
 ```
 
-Dimension Table for **Date** 
+Dimension Table for [Date](#date)
 
 (Knowing a date is valid and selecting only the ones in which at least one order has been made)
+
 ```sql
 create table date_dim as
-select 
+select
     distinct YEAR(temp_orders.purchase_timestamp) as date_year,
     MONTH(temp_orders.purchase_timestamp) as date_month,
     DAY(temp_orders.purchase_timestamp) as date_day
 from temp_orders
-ORDER BY YEAR(temp_orders.purchase_timestamp), MONTH(temp_orders.purchase_timestamp), DAY(temp_orders.purchase_timestamp);
+ORDER BY YEAR(temp_orders.purchase_timestamp),
+        MONTH(temp_orders.purchase_timestamp),
+        DAY(temp_orders.purchase_timestamp);
 ```
 
-Dimension Table for **Location**
+Dimension Table for [Location](#location)
 
 ```sql
 create table location_dim as
 select loc.zip_code, loc.city, loc.statee
-from
-(
-select 
-    distinct c.zip_code_prefix as zip_code,
-    c.city as city,
-    c.state as statee
-from customer as c 
-union
-select 
-    distinct s.zip_code_prefix as zip_code,
-    s.city as city,
-    s.state as statee
-from seller as s
-) as loc
+from (
+    select distinct c.zip_code_prefix as zip_code,
+            c.city as city,
+            c.state as statee
+    from customer as c union
+        select distinct s.zip_code_prefix as zip_code,
+                s.city as city,
+                s.state as statee
+    from seller as s) as loc
 group by loc.zip_code, loc.city, loc.statee;
 ```
 
-3. Create the fact table
-
-Manca da fare:
-- group by per le *dimensioni*
-- al posto di purchase_day fare la cast a day da purchase_date
+#### Create the [Fact Table](#fact-table)
 
 ```sql
-create table Order_Product as 
-    select 
-        c.zip_code_prefix as customer_zip_code, 
-        s.zip_code_prefix as seller_zip_code, 
+create table Order_Product as
+    select
+        c.zip_code_prefix as customer_zip_code,
+        s.zip_code_prefix as seller_zip_code,
         i.product_id as product_id,
         DAY(purchase_timestamp) as purchase_day,
         SUM(i.price) as income,
         COUNT(*) as quantity,
         DATEDIFF(tod.delivered_customer_date, tod.delivered_carrier_date) as delivery_time
     from items as i , temp_orders as tod, seller as s, customer as c
-    where 
-        i.order_id = tod.id and 
-        i.seller_id = s.id and 
+    where
+        i.order_id = tod.id and
+        i.seller_id = s.id and
         tod.customer_id = c.id
-    group by c.zip_code_prefix, 
-             s.zip_code_prefix, 
-             i.product_id, 
+    group by c.zip_code_prefix,
+             s.zip_code_prefix,
+             i.product_id,
              tod.delivered_customer_date,
              tod.delivered_carrier_date,
              tod.purchase_timestamp;
 ```
+
+<marquee Scrollamount=60><h1>cacati in mano e canta</h1></marquee>
