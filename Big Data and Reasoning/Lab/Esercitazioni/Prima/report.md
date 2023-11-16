@@ -437,4 +437,4 @@ create table Order_Product as
              tod.purchase_timestamp;
 ```
 
-<marquee Scrollamount=60><h1>cacati in mano e canta</h1></marquee>
+<marquee Scrollamount=40><h1>cacati in mano e canta</h1></marquee>
