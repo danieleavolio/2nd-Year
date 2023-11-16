@@ -222,9 +222,51 @@ Pretty straightforward
 
 ## Problem 3
 
-### The Java API
+Design a simple java application that store incoming orders into the data source. The
+application should be able to read customers and products in a lazy fashion during orders
+creation. Note that no GUI is requested, just read and write on terminal.
 
-First of all, add `core-site.xml` and `hdfs-site.xml` to the resources folder.
+### HDFS Java API
+
+(the following guide uses VSCode and [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack), make sure everything is well configured)
+
+Create a new `Maven Project` > `No Archetype`
+
+#### The POM
+
+Add the following dependencies inside the `<properties>` tag to `pom.xml`
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-mapreduce-client-core</artifactId>
+        <version>3.3.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-common</artifactId>
+        <version>3.3.6</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
+        <version>3.3.6</version>
+    </dependency>
+</dependencies>
+```
+
+Be careful to import the right packages
+
+```java
+import java.io.*; // Buffers and Exceptions...
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+```
+
+Add `core-site.xml` and `hdfs-site.xml` to the resource folder located in `src/main/resources`
 
 ```java
 Configuration conf = new Configuration();
@@ -249,7 +291,7 @@ Get the FileSystem object
 FileSystem fs = FileSystem.get(conf);
 ```
 
-### Reading a file from HDFS
+#### Reading a file from HDFS
 
 Be sure that the file exists in the hdfs
 
@@ -268,7 +310,7 @@ for (int i = 0; i < batchsize; ++i)
     String line = handle.readLine();
 ```
 
-### Writing a file to HDFS
+#### Writing a file to HDFS
 
 You don't have to make sure that the file exists
 
@@ -295,6 +337,10 @@ handle.write("\n"); //add a newline
 ```
 
 <h2 style="color:red">REMEMBER TO CLOSE THE HANDLES WHEN YOU ARE DONE READING / WRITING</h2>
+
+```java
+handle.close(); // close after use in the same scope where it was created
+```
 
 ## Problem 4
 
