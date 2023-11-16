@@ -79,6 +79,6 @@
 \contentsline {subsubsection}{\numberline {12.3.1}Giochi a Somma-Zero}{66}{subsubsection.12.3.1}%
 \contentsline {section}{\numberline {13}Tree Decompositions Lab}{69}{section.13}%
 \contentsline {subsection}{\numberline {13.1}Maximum Independent Set (MIS)}{69}{subsection.13.1}%
-\contentsline {subsubsection}{\numberline {13.1.1}L'algoritmo di programmazione dinamica}{69}{subsubsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.2}Cops e Robber}{72}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Calcolare la tree decomposition}{72}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.1.1}L'algoritmo di programmazione dinamica}{71}{subsubsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.2}Cops e Robber}{75}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Calcolare la tree decomposition}{79}{subsection.13.3}%
