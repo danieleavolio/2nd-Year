@@ -558,6 +558,23 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT .\chapters\l4.tex
 INPUT .\chapters\l4.tex
 INPUT chapters\l4.tex
+INPUT .\chapters\l5.tex
+INPUT .\chapters\l5.tex
+INPUT chapters\l5.tex
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\mis clique.png
+INPUT .\chapters\images\clique format.png
+INPUT .\chapters\images\clique format.png
+INPUT .\chapters\images\clique format.png
+INPUT .\chapters\images\clique format.png
+INPUT .\chapters\images\clique format.png
+INPUT .\chapters\images\clique format.png
+INPUT .\chapters\images\clique format.png
 OUTPUT main.loe
 INPUT main.aux
 INPUT .\main.out
