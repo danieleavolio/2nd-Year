@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  14 NOV 2023 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  20 NOV 2023 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -951,9 +951,9 @@ Package pdftex.def Info: images/archRNN.png  used on input line 190.
 [86]
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
-Package pdftex.def Info: images/LSTM.png  used on input line 203.
+Package pdftex.def Info: images/LSTM.png  used on input line 218.
 (pdftex.def)             Requested size: 241.49895pt x 122.59117pt.
- [87] [88]) (main.aux)
+ [87] [88] [89]) (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -966,17 +966,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E0F9835B6D6F58C4DFE5BF29FA9DC1DF;21899.
  ) 
 Here is how much of TeX's memory you used:
- 38116 strings out of 475503
- 876452 string characters out of 5771650
+ 38117 strings out of 475503
+ 876459 string characters out of 5771650
  2265248 words of memory out of 5000000
  57897 multiletter control sequences out of 15000+600000
  568612 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,93p,773b,2240s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (88 pages, 4063061 bytes).
+Output written on main.pdf (89 pages, 4064101 bytes).
 PDF statistics:
- 2058 PDF objects out of 2073 (max. 8388607)
- 924 named destinations out of 1000 (max. 500000)
+ 2063 PDF objects out of 2073 (max. 8388607)
+ 925 named destinations out of 1000 (max. 500000)
  1110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

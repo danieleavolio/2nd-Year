@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1699963391 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1699963401 0
+["pdflatex"] 1700480458 "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" "main.pdf" "main" 1700480468 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993058908 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -201,7 +201,7 @@
   "C:/Program Files/MiKTeX/tex/latex/tools/tabularx.sty" 1686252040 7147 d80d8cf72d313443d08c13c1af59c90f ""
   "C:/Program Files/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656233290 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "C:/Users/danie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1697726977 82507 a9eef8696c92627b87e9975edea03b2a ""
+  "C:/Users/danie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1700055053 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/danie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1693989350 11548 fd1cf73135e23cfb68fbacb10797f2d3 ""
   "C:/Users/danie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693988794 24110763 029840ad5082a1f614c6d7ba04f0deda ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -239,7 +239,7 @@
   "chapters/lab03.tex" 1698071931 3655 86201b13921bb57990c6168fce0c7f52 ""
   "chapters/lab04.tex" 1698076574 7080 9c2266e7d2174230cab66519132ba8f8 ""
   "chapters/lab05.tex" 1699291338 5135 451b759dff99387c29782a5cd2c3e377 ""
-  "chapters/lab06.tex" 1699360145 11733 1334357c7f08836d969e3e35b9097d05 ""
+  "chapters/lab06.tex" 1700480448 12605 a7ca9fe3b409f4d1a7c1ceb7f52eb9f0 ""
   "common.tex" 1699355521 3331 0681da50c28ea40ca6a3331402c578ed ""
   "d:/Lovaion/University/2nd Year/Deep Learning/LaTeX/main.tex" 1699955429 1393 d6f83407d8d7d946736dfe3948f5e3c1 ""
   "images/LSTM.png" 1698763823 41367 9ce236dd12df83a5551269cf251d1577 ""
@@ -263,10 +263,10 @@
   "images/vae.png" 1699351881 206827 339d90ee56970392a601e5838dcac88f ""
   "images/vae2.png" 1699353190 483685 5f694c30414b22f50843c6662f8a877e ""
   "images/wrong network.png" 1696325143 152862 babdc143f3fa6ed0f86c559593fbd79b ""
-  "main.aux" 1699963400 25729 f2b9e2ca966a76ffc05fcaa76479a9d4 "pdflatex"
-  "main.out" 1699963400 21899 e0f9835b6d6f58c4dfe5bf29fa9dc1df "pdflatex"
+  "main.aux" 1700480467 25729 32c22672285370d01e8ab3c4ed8d637f "pdflatex"
+  "main.out" 1700480467 21899 e0f9835b6d6f58c4dfe5bf29fa9dc1df "pdflatex"
   "main.tex" 1699955429 1393 d6f83407d8d7d946736dfe3948f5e3c1 ""
-  "main.toc" 1699963400 11317 d2283f6f5a84d16d64e1b2e9e68eea23 "pdflatex"
+  "main.toc" 1700480467 11317 d2283f6f5a84d16d64e1b2e9e68eea23 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
