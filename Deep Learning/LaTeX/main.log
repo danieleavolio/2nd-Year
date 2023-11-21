@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  20 NOV 2023 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  21 NOV 2023 12:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -699,7 +699,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/danie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc [2] [3] [4]
-Overfull \hbox (7.6539pt too wide) in paragraph at lines 120--120
+Overfull \hbox (7.6539pt too wide) in paragraph at lines 126--126
  [] [][][]\OT1/cmr/bx/n/10 Recurrent Neu-ral Net-work e Nat-u-ral Lan-guage Pro-cess-ing (RNN 
  []
 
@@ -729,19 +729,19 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) [20]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 54.
  [21] [22] [23]
-<images/plot res.png, id=801, 713.66624pt x 458.46281pt>
+<images/plot res.png, id=831, 713.66624pt x 458.46281pt>
 File: images/plot res.png Graphic file (type png)
 <use images/plot res.png>
 Package pdftex.def Info: images/plot res.png  used on input line 297.
 (pdftex.def)             Requested size: 276.00105pt x 177.30272pt.
  [24] [25 <./images/plot res.png>] [26]
-<images/wrong network.png, id=827, 515.67656pt x 345.54094pt>
+<images/wrong network.png, id=857, 515.67656pt x 345.54094pt>
 File: images/wrong network.png Graphic file (type png)
 <use images/wrong network.png>
 Package pdftex.def Info: images/wrong network.png  used on input line 439.
 (pdftex.def)             Requested size: 276.00105pt x 184.94429pt.
  [27]
-<images/overfitting.png, id=853, 486.31688pt x 322.95656pt>
+<images/overfitting.png, id=883, 486.31688pt x 322.95656pt>
 File: images/overfitting.png Graphic file (type png)
 <use images/overfitting.png>
 Package pdftex.def Info: images/overfitting.png  used on input line 462.
@@ -752,7 +752,7 @@ Overfull \hbox (114.2972pt too wide) detected at line 474
  []
 
 [29 <./images/overfitting.png>] [30] [31]) [32] (chapters/04.tex [33] [34]
-<images/mae.png, id=1002, 822.07124pt x 283.0575pt>
+<images/mae.png, id=1032, 822.07124pt x 283.0575pt>
 File: images/mae.png Graphic file (type png)
 <use images/mae.png>
 Package pdftex.def Info: images/mae.png  used on input line 119.
@@ -763,13 +763,13 @@ Overfull \hbox (66.0346pt too wide) in paragraph at lines 119--120
  []
 
 [35 <./images/mae.png>]
-<images/l2reg.png, id=1021, 409.53pt x 245.41687pt>
+<images/l2reg.png, id=1051, 409.53pt x 245.41687pt>
 File: images/l2reg.png Graphic file (type png)
 <use images/l2reg.png>
 Package pdftex.def Info: images/l2reg.png  used on input line 182.
 (pdftex.def)             Requested size: 204.7645pt x 122.70813pt.
  [36 <./images/l2reg.png>]
-<images/dropout.png, id=1043, 438.13687pt x 297.36093pt>
+<images/dropout.png, id=1073, 438.13687pt x 297.36093pt>
 File: images/dropout.png Graphic file (type png)
 <use images/dropout.png>
 Package pdftex.def Info: images/dropout.png  used on input line 216.
@@ -794,7 +794,7 @@ Overfull \hbox (7.97289pt too wide) in paragraph at lines 190--192
 \OT1/cmr/m/n/10 carat-ter-is-tiche, in-dipen-den-te-mente dalla loro po-sizione esatta nell'immagine. 
  []
 
-<images/conv.png, id=1082, 813.79031pt x 278.54062pt>
+<images/conv.png, id=1112, 813.79031pt x 278.54062pt>
 File: images/conv.png Graphic file (type png)
 <use images/conv.png>
 Package pdftex.def Info: images/conv.png  used on input line 215.
@@ -815,7 +815,7 @@ Overfull \hbox (16.36172pt too wide) in paragraph at lines 204--207
  []
 
 [48]) (chapters/07.tex [49]
-<images/RNN.png, id=1242, 402.75468pt x 192.72pt>
+<images/RNN.png, id=1272, 402.75468pt x 192.72pt>
 File: images/RNN.png Graphic file (type png)
 <use images/RNN.png>
 Package pdftex.def Info: images/RNN.png  used on input line 109.
@@ -825,29 +825,29 @@ Overfull \hbox (7.45024pt too wide) in paragraph at lines 203--207
 \OT1/cmr/m/n/10 lungo ter-mine. In pati-co-lare, sono state pro-get-tate per \OT1/cmr/bx/n/10 con-trol-lare la sparizione
  []
 
-<images/LSTM.png, id=1291, 394.47375pt x 200.24812pt>
+<images/LSTM.png, id=1321, 394.47375pt x 200.24812pt>
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
 Package pdftex.def Info: images/LSTM.png  used on input line 211.
 (pdftex.def)             Requested size: 315.57942pt x 160.19872pt.
-<images/forgetgate.png, id=1292, 345.54094pt x 234.1247pt>
+<images/forgetgate.png, id=1322, 345.54094pt x 234.1247pt>
 File: images/forgetgate.png Graphic file (type png)
 <use images/forgetgate.png>
 Package pdftex.def Info: images/forgetgate.png  used on input line 228.
 (pdftex.def)             Requested size: 276.43312pt x 187.3pt.
 [52 <./images/LSTM.png>]
-<images/inputgate.png, id=1299, 341.77687pt x 239.39438pt>
+<images/inputgate.png, id=1329, 341.77687pt x 239.39438pt>
 File: images/inputgate.png Graphic file (type png)
 <use images/inputgate.png>
 Package pdftex.def Info: images/inputgate.png  used on input line 241.
 (pdftex.def)             Requested size: 273.42186pt x 191.51575pt.
  [53 <./images/forgetgate.png> <./images/inputgate.png>]
-<images/update.png, id=1309, 336.50719pt x 240.9pt>
+<images/update.png, id=1339, 336.50719pt x 240.9pt>
 File: images/update.png Graphic file (type png)
 <use images/update.png>
 Package pdftex.def Info: images/update.png  used on input line 250.
 (pdftex.def)             Requested size: 269.2061pt x 192.72025pt.
-<images/outputgate.png, id=1310, 356.0803pt x 231.11343pt>
+<images/outputgate.png, id=1340, 356.0803pt x 231.11343pt>
 File: images/outputgate.png Graphic file (type png)
 <use images/outputgate.png>
 Package pdftex.def Info: images/outputgate.png  used on input line 263.
@@ -862,18 +862,18 @@ Overfull \hbox (9.80627pt too wide) in paragraph at lines 159--163
 []\OT1/cmr/m/n/10 Si fanno degli step in-cre-men-tali, ag-giun-gendo man mano del noise all'immagine.
  []
 
-<images/archRNN.png, id=1351, 721.94719pt x 231.11343pt>
+<images/archRNN.png, id=1381, 721.94719pt x 231.11343pt>
 File: images/archRNN.png Graphic file (type png)
 <use images/archRNN.png>
 Package pdftex.def Info: images/archRNN.png  used on input line 169.
 (pdftex.def)             Requested size: 276.00105pt x 88.35298pt.
 [58] [59 <./images/archRNN.png>]
-<images/seq2seq.png, id=1364, 892.08281pt x 411.78844pt>
+<images/seq2seq.png, id=1394, 892.08281pt x 411.78844pt>
 File: images/seq2seq.png Graphic file (type png)
 <use images/seq2seq.png>
 Package pdftex.def Info: images/seq2seq.png  used on input line 211.
 (pdftex.def)             Requested size: 276.00105pt x 127.40175pt.
-<images/transformer.png, id=1365, 402.00188pt x 515.67656pt>
+<images/transformer.png, id=1395, 402.00188pt x 515.67656pt>
 File: images/transformer.png Graphic file (type png)
 <use images/transformer.png>
 Package pdftex.def Info: images/transformer.png  used on input line 244.
@@ -883,17 +883,76 @@ Overfull \hbox (26.36237pt too wide) in paragraph at lines 253--255
 []\OT1/cmr/m/n/10 Successivamente si ha un \OT1/cmr/bx/n/10 po-si-tional en-cod-ing\OT1/cmr/m/n/10 : Ci serve man-tenere l'informazione
  []
 
-[61 <./images/transformer.png>] [62]) (chapters/lab01.tex [63] [64]) [65] (chapters/lab02.tex
+[61 <./images/transformer.png>] [62]) (chapters/09.tex
+<images/entire-architecture.png, id=1412, 764.8575pt x 1084.05pt>
+File: images/entire-architecture.png Graphic file (type png)
+<use images/entire-architecture.png>
+Package pdftex.def Info: images/entire-architecture.png  used on input line 4.
+(pdftex.def)             Requested size: 345.0pt x 488.97589pt.
+ [63]
+Overfull \vbox (13.82309pt too high) has occurred while \output is active []
+
+ [64 <./images/entire-architecture.png>]
+<images/evolution-Version-0.png, id=1423, 1084.05pt x 340.27126pt>
+File: images/evolution-Version-0.png Graphic file (type png)
+<use images/evolution-Version-0.png>
+Package pdftex.def Info: images/evolution-Version-0.png  used on input line 23.
+(pdftex.def)             Requested size: 345.0pt x 108.29193pt.
+<images/evolution-Version-1.png, id=1424, 1084.05pt x 349.305pt>
+File: images/evolution-Version-1.png Graphic file (type png)
+<use images/evolution-Version-1.png>
+Package pdftex.def Info: images/evolution-Version-1.png  used on input line 36.
+(pdftex.def)             Requested size: 345.0pt x 111.16693pt.
+<images/un-softmax-sol-diagram.png, id=1425, 1084.05pt x 722.7pt>
+File: images/un-softmax-sol-diagram.png Graphic file (type png)
+<use images/un-softmax-sol-diagram.png>
+Package pdftex.def Info: images/un-softmax-sol-diagram.png  used on input line 44.
+(pdftex.def)             Requested size: 345.0pt x 230.00055pt.
+ [65 <./images/evolution-Version-0.png> <./images/evolution-Version-1.png>]
+<images/softmax-std-diagram.png, id=1435, 1084.05pt x 722.7pt>
+File: images/softmax-std-diagram.png Graphic file (type png)
+<use images/softmax-std-diagram.png>
+Package pdftex.def Info: images/softmax-std-diagram.png  used on input line 54.
+(pdftex.def)             Requested size: 345.0pt x 230.00055pt.
+ [66 <./images/un-softmax-sol-diagram.png>]
+<images/evolution-Version-3.png, id=1442, 1084.05pt x 439.6425pt>
+File: images/evolution-Version-3.png Graphic file (type png)
+<use images/evolution-Version-3.png>
+Package pdftex.def Info: images/evolution-Version-3.png  used on input line 67.
+(pdftex.def)             Requested size: 345.0pt x 139.917pt.
+<images/evolution-Version-4.png, id=1443, 1084.05pt x 525.965pt>
+File: images/evolution-Version-4.png Graphic file (type png)
+<use images/evolution-Version-4.png>
+Package pdftex.def Info: images/evolution-Version-4.png  used on input line 75.
+(pdftex.def)             Requested size: 345.0pt x 167.38928pt.
+ [67 <./images/softmax-std-diagram.png> <./images/evolution-Version-3.png>]
+<images/evolution-Version-5.png, id=1453, 1084.05pt x 525.965pt>
+File: images/evolution-Version-5.png Graphic file (type png)
+<use images/evolution-Version-5.png>
+Package pdftex.def Info: images/evolution-Version-5.png  used on input line 116.
+(pdftex.def)             Requested size: 345.0pt x 167.38928pt.
+ [68 <./images/evolution-Version-4.png>]
+<images/mha.png, id=1462, 1084.05pt x 546.04pt>
+File: images/mha.png Graphic file (type png)
+<use images/mha.png>
+Package pdftex.def Info: images/mha.png  used on input line 128.
+(pdftex.def)             Requested size: 345.0pt x 173.7782pt.
+<images/penc.png, id=1463, 554.07pt x 227.34938pt>
+File: images/penc.png Graphic file (type png)
+<use images/penc.png>
+Package pdftex.def Info: images/penc.png  used on input line 139.
+(pdftex.def)             Requested size: 345.0pt x 141.56224pt.
+ [69 <./images/evolution-Version-5.png> <./images/mha.png>] [70 <./images/penc.png>] [71]) (chapters/lab01.tex [72] [73]) [74] (chapters/lab02.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[66] [67] [68]
+[75] [76] [77]
 Overfull \hbox (25.85649pt too wide) in paragraph at lines 196--201
 []\OT1/cmr/m/n/10 Detto questo, \OT1/cmr/bx/n/10 per quale mo-tivo ^^Re im-por-tante? \OT1/cmr/m/n/10 Se pen-si-amo all'\OT1/cmr/m/it/10 inizializzazione\OT1/cmr/m/n/10 ,
  []
 
-[69] [70] [71] [72] [73]) (chapters/lab03.tex [74] [75]) (chapters/lab04.tex [76] [77] [78]) (chapters/lab05.tex [79]
-<images/autoencoders.png, id=1606, 1300.1072pt x 316.93407pt>
+[78] [79] [80] [81] [82]) (chapters/lab03.tex [83] [84]) (chapters/lab04.tex [85] [86] [87]) (chapters/lab05.tex [88]
+<images/autoencoders.png, id=1707, 1300.1072pt x 316.93407pt>
 File: images/autoencoders.png Graphic file (type png)
 <use images/autoencoders.png>
 Package pdftex.def Info: images/autoencoders.png  used on input line 140.
@@ -903,8 +962,8 @@ Overfull \hbox (45.03517pt too wide) in paragraph at lines 140--141
  [] 
  []
 
-[80]
-<images/autoencoders2.png, id=1615, 1305.37688pt x 620.3175pt>
+[89]
+<images/autoencoders2.png, id=1716, 1305.37688pt x 620.3175pt>
 File: images/autoencoders2.png Graphic file (type png)
 <use images/autoencoders2.png>
 Package pdftex.def Info: images/autoencoders2.png  used on input line 147.
@@ -914,32 +973,32 @@ Overfull \hbox (46.61609pt too wide) in paragraph at lines 147--148
  [] 
  []
 
-[81 <./images/autoencoders.png> <./images/autoencoders2.png>]) (chapters/lab06.tex
+[90 <./images/autoencoders.png> <./images/autoencoders2.png>]) (chapters/lab06.tex
 Overfull \hbox (39.18275pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 VAE (Vari-a-tional Au-toen-coder)| 
  []
 
-<images/vae.png, id=1624, 829.59938pt x 441.14813pt>
+<images/vae.png, id=1725, 829.59938pt x 441.14813pt>
 File: images/vae.png Graphic file (type png)
 <use images/vae.png>
 Package pdftex.def Info: images/vae.png  used on input line 13.
 (pdftex.def)             Requested size: 241.49895pt x 128.41434pt.
-[82 <./images/vae.png>]
+[91 <./images/vae.png>]
 Overfull \hbox (19.28294pt too wide) in paragraph at lines 45--45
-|[]\OT1/cmr/bx/n/14.4 18.1 Reg-u-lar-iza-tion term e Reparametriza-tion trick| 
+|[]\OT1/cmr/bx/n/14.4 19.1 Reg-u-lar-iza-tion term e Reparametriza-tion trick| 
  []
 
-<images/vae2.png, id=1636, 923.70094pt x 490.08093pt>
+<images/vae2.png, id=1738, 923.70094pt x 490.08093pt>
 File: images/vae2.png Graphic file (type png)
 <use images/vae2.png>
 Package pdftex.def Info: images/vae2.png  used on input line 58.
 (pdftex.def)             Requested size: 241.49895pt x 128.12845pt.
-<images/reparametrization.png, id=1637, 832.61063pt x 434.37282pt>
+<images/reparametrization.png, id=1739, 832.61063pt x 434.37282pt>
 File: images/reparametrization.png Graphic file (type png)
 <use images/reparametrization.png>
 Package pdftex.def Info: images/reparametrization.png  used on input line 73.
 (pdftex.def)             Requested size: 241.49895pt x 125.9914pt.
-[83 <./images/vae2.png>] [84 <./images/reparametrization.png>] [85]
+[92 <./images/vae2.png>] [93 <./images/reparametrization.png>] [94]
 Overfull \hbox (8.00816pt too wide) in paragraph at lines 180--180
 \OT1/cmr/bx/n/24.88 Nat-u-ral Lan-guage Pro-cess-ing
  []
@@ -948,12 +1007,12 @@ File: images/archRNN.png Graphic file (type png)
 <use images/archRNN.png>
 Package pdftex.def Info: images/archRNN.png  used on input line 190.
 (pdftex.def)             Requested size: 241.49895pt x 77.30798pt.
-[86]
+[95]
 File: images/LSTM.png Graphic file (type png)
 <use images/LSTM.png>
 Package pdftex.def Info: images/LSTM.png  used on input line 218.
 (pdftex.def)             Requested size: 241.49895pt x 122.59117pt.
- [87] [88] [89]) (main.aux)
+ [96] [97] [98]) (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -963,20 +1022,20 @@ L3 programming layer <2023-08-11>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E0F9835B6D6F58C4DFE5BF29FA9DC1DF;21899.
+(rerunfilecheck)             Checksum: DF9A456A9A76804CAF0D21CE26278957;22986.
  ) 
 Here is how much of TeX's memory you used:
- 38117 strings out of 475503
- 876459 string characters out of 5771650
+ 38228 strings out of 475503
+ 879388 string characters out of 5771650
  2265248 words of memory out of 5000000
- 57897 multiletter control sequences out of 15000+600000
+ 57976 multiletter control sequences out of 15000+600000
  568612 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,93p,773b,2240s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (89 pages, 4064101 bytes).
+Output written on main.pdf (98 pages, 4213474 bytes).
 PDF statistics:
- 2063 PDF objects out of 2073 (max. 8388607)
- 925 named destinations out of 1000 (max. 500000)
- 1110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2170 PDF objects out of 2487 (max. 8388607)
+ 954 named destinations out of 1000 (max. 500000)
+ 1208 words of extra memory for PDF output out of 10000 (max. 10000000)
 

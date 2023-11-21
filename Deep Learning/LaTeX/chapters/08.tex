@@ -227,7 +227,7 @@ alla rete neurale, si usa una \textbf{softmax} calcolata dinamicamente ogni volt
 Tocca farsela spiegare da chat più tardi e mettere una cazzo di immagine porco dio.
 
 
-\subsection{Da Seq2Seq a Transformer}
+\subsection{Da Seq2Seq ad accenni Transformer}
 
 \textbf{Seq2Seq} è un modello che si basa su \textbf{RNN} e \textbf{LSTM}. Questi modelli hanno un problema: \textbf{sono lenti}. Per ogni parola, si deve aspettare che la rete neurale
 faccia il suo lavoro. Non solo. Ciò che viene calcolato per le celle, rimane li. Non si può eliminare.
@@ -282,7 +282,6 @@ Sommario:
     \end{itemize}
     \item Ho la conoscenza fino alla posizione 2, e a runtime produco la stringa basandoci sulle probabilità che ho calcolato
 \end{itemize}
-\newpage
 
 \subsubsection{Cosa significa Masking?}
 
@@ -290,3 +289,5 @@ Come hanno fatto ad allenare CHAT-GPT? Quali sono stati gli \textbf{input, outpu
 
 Il concetto è quello di \textbf{aggiungere noise alle parole}, come in diffusion. ChatGPT ha imparato a rimuovere 
 il noise dalle parole, ed è praticamente stato usato come un noise remover. In questo modo, la rete ha imparato.
+
+\newpage
