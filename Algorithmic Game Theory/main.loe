@@ -23,46 +23,50 @@
 \contentsline {corollary}{\ifthmt@listswap Corollario\nobreakspace {}8.0.1\else \numberline {8.0.1}Corollario\fi }{41}{corollary.8.0.1}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}8.2\else \numberline {8.2}Definizione\fi }{42}{definition.8.2}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}8.3\else \numberline {8.3}Definizione\fi }{43}{definition.8.3}%
-\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}9.1\else \numberline {9.1}Teorema\fi \thmtformatoptarg {Rappresentazione Ordinale}}{46}{theorem.9.1}%
-\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}9.1\else \numberline {9.1}Dimostrazione\fi \thmtformatoptarg {Rappresentazione Ordinale}}{46}{dimostrazione.9.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}9.1\else \numberline {9.1}Definizione\fi \thmtformatoptarg {Utilità attesa}}{47}{definition.9.1}%
-\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}9.2\else \numberline {9.2}Teorema\fi \thmtformatoptarg {Teorema di VNM}}{47}{theorem.9.2}%
-\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}9.2\else \numberline {9.2}Dimostrazione\fi \thmtformatoptarg {Parte 1 VNM}}{48}{dimostrazione.9.2}%
-\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}9.3\else \numberline {9.3}Dimostrazione\fi \thmtformatoptarg {Parte 2 VNM}}{48}{dimostrazione.9.3}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}10.1\else \numberline {10.1}Definizione\fi \thmtformatoptarg {Giochi coalizionali}}{50}{definition.10.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}10.2\else \numberline {10.2}Definizione\fi \thmtformatoptarg {Funzione caratteristica}}{50}{definition.10.2}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}10.1\else \numberline {10.1}Esempio\fi \thmtformatoptarg {Gelati}}{50}{esempio.10.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}10.3\else \numberline {10.3}Definizione\fi \thmtformatoptarg {Superadditività}}{51}{definition.10.3}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}10.2\else \numberline {10.2}Esempio\fi \thmtformatoptarg {Shapley value con giocatore A}}{52}{esempio.10.2}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.1\else \numberline {11.1}Definizione\fi \thmtformatoptarg {Airport game}}{54}{definition.11.1}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.1\else \numberline {11.1}Esempio\fi \thmtformatoptarg {Airport game}}{54}{esempio.11.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.2\else \numberline {11.2}Definizione\fi \thmtformatoptarg {Approssimazione di montercarlo}}{55}{definition.11.2}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.2\else \numberline {11.2}Esempio\fi \thmtformatoptarg {Pseudo codice Shapley Value con Montecarlo}}{56}{esempio.11.2}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.3\else \numberline {11.3}Definizione\fi \thmtformatoptarg {Gioco del grafo indotto (ISG)}}{57}{definition.11.3}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.3\else \numberline {11.3}Esempio\fi \thmtformatoptarg {Coalizioni nel grafo indotto}}{57}{esempio.11.3}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.4\else \numberline {11.4}Definizione\fi \thmtformatoptarg {MC-Nets}}{59}{definition.11.4}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.4\else \numberline {11.4}Esempio\fi \thmtformatoptarg {MC-Nets}}{59}{esempio.11.4}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.5\else \numberline {11.5}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a\}}}{59}{esempio.11.5}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.6\else \numberline {11.6}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{60}{esempio.11.6}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.7\else \numberline {11.7}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{61}{esempio.11.7}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.1\else \numberline {12.1}Definizione\fi }{62}{definition.12.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.2\else \numberline {12.2}Definizione\fi }{63}{definition.12.2}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.3\else \numberline {12.3}Definizione\fi }{64}{definition.12.3}%
-\contentsline {domanda}{\ifthmt@listswap Domanda\nobreakspace {}12.1\else \numberline {12.1}Domanda\fi }{64}{domanda.12.1}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.1\else \numberline {12.1}Esempio\fi }{65}{esempio.12.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.4\else \numberline {12.4}Definizione\fi }{65}{definition.12.4}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.5\else \numberline {12.5}Definizione\fi }{65}{definition.12.5}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.2\else \numberline {12.2}Esempio\fi }{66}{esempio.12.2}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.3\else \numberline {12.3}Esempio\fi }{66}{esempio.12.3}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.4\else \numberline {12.4}Esempio\fi }{66}{esempio.12.4}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.6\else \numberline {12.6}Definizione\fi }{66}{definition.12.6}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.5\else \numberline {12.5}Esempio\fi }{67}{esempio.12.5}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.6\else \numberline {12.6}Esempio\fi }{68}{esempio.12.6}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.1\else \numberline {13.1}Definizione\fi }{69}{definition.13.1}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.1\else \numberline {13.1}Esempio\fi }{71}{esempio.13.1}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.2\else \numberline {13.2}Definizione\fi }{74}{definition.13.2}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.3\else \numberline {13.3}Definizione\fi }{74}{definition.13.3}%
-\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}13.1\else \numberline {13.1}Teorema\fi }{75}{theorem.13.1}%
-\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.2\else \numberline {13.2}Esempio\fi }{75}{esempio.13.2}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.4\else \numberline {13.4}Definizione\fi }{79}{definition.13.4}%
-\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.5\else \numberline {13.5}Definizione\fi }{82}{definition.13.5}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}9.1\else \numberline {9.1}Teorema\fi }{45}{theorem.9.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}9.1\else \numberline {9.1}Esempio\fi }{45}{esempio.9.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}9.2\else \numberline {9.2}Esempio\fi }{45}{esempio.9.2}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}9.3\else \numberline {9.3}Esempio\fi }{47}{esempio.9.3}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}10.1\else \numberline {10.1}Teorema\fi \thmtformatoptarg {Rappresentazione Ordinale}}{49}{theorem.10.1}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}10.1\else \numberline {10.1}Dimostrazione\fi \thmtformatoptarg {Rappresentazione Ordinale}}{49}{dimostrazione.10.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}10.1\else \numberline {10.1}Definizione\fi \thmtformatoptarg {Utilità attesa}}{50}{definition.10.1}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}10.2\else \numberline {10.2}Teorema\fi \thmtformatoptarg {Teorema di VNM}}{50}{theorem.10.2}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}10.2\else \numberline {10.2}Dimostrazione\fi \thmtformatoptarg {Parte 1 VNM}}{51}{dimostrazione.10.2}%
+\contentsline {dimostrazione}{\ifthmt@listswap Dimostrazione\nobreakspace {}10.3\else \numberline {10.3}Dimostrazione\fi \thmtformatoptarg {Parte 2 VNM}}{51}{dimostrazione.10.3}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.1\else \numberline {11.1}Definizione\fi \thmtformatoptarg {Giochi coalizionali}}{53}{definition.11.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.2\else \numberline {11.2}Definizione\fi \thmtformatoptarg {Funzione caratteristica}}{53}{definition.11.2}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.1\else \numberline {11.1}Esempio\fi \thmtformatoptarg {Gelati}}{53}{esempio.11.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}11.3\else \numberline {11.3}Definizione\fi \thmtformatoptarg {Superadditività}}{54}{definition.11.3}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}11.2\else \numberline {11.2}Esempio\fi \thmtformatoptarg {Shapley value con giocatore A}}{55}{esempio.11.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.1\else \numberline {12.1}Definizione\fi \thmtformatoptarg {Airport game}}{57}{definition.12.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.1\else \numberline {12.1}Esempio\fi \thmtformatoptarg {Airport game}}{57}{esempio.12.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.2\else \numberline {12.2}Definizione\fi \thmtformatoptarg {Approssimazione di montercarlo}}{58}{definition.12.2}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.2\else \numberline {12.2}Esempio\fi \thmtformatoptarg {Pseudo codice Shapley Value con Montecarlo}}{59}{esempio.12.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.3\else \numberline {12.3}Definizione\fi \thmtformatoptarg {Gioco del grafo indotto (ISG)}}{60}{definition.12.3}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.3\else \numberline {12.3}Esempio\fi \thmtformatoptarg {Coalizioni nel grafo indotto}}{60}{esempio.12.3}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}12.4\else \numberline {12.4}Definizione\fi \thmtformatoptarg {MC-Nets}}{62}{definition.12.4}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.4\else \numberline {12.4}Esempio\fi \thmtformatoptarg {MC-Nets}}{62}{esempio.12.4}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.5\else \numberline {12.5}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a\}}}{62}{esempio.12.5}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.6\else \numberline {12.6}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{63}{esempio.12.6}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}12.7\else \numberline {12.7}Esempio\fi \thmtformatoptarg {MC-Nets coalizione \{a,b\}}}{64}{esempio.12.7}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.1\else \numberline {13.1}Definizione\fi }{65}{definition.13.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.2\else \numberline {13.2}Definizione\fi }{66}{definition.13.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.3\else \numberline {13.3}Definizione\fi }{67}{definition.13.3}%
+\contentsline {domanda}{\ifthmt@listswap Domanda\nobreakspace {}13.1\else \numberline {13.1}Domanda\fi }{67}{domanda.13.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.1\else \numberline {13.1}Esempio\fi }{68}{esempio.13.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.4\else \numberline {13.4}Definizione\fi }{68}{definition.13.4}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.5\else \numberline {13.5}Definizione\fi }{68}{definition.13.5}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.2\else \numberline {13.2}Esempio\fi }{69}{esempio.13.2}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.3\else \numberline {13.3}Esempio\fi }{69}{esempio.13.3}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.4\else \numberline {13.4}Esempio\fi }{69}{esempio.13.4}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}13.6\else \numberline {13.6}Definizione\fi }{69}{definition.13.6}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.5\else \numberline {13.5}Esempio\fi }{70}{esempio.13.5}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}13.6\else \numberline {13.6}Esempio\fi }{71}{esempio.13.6}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.1\else \numberline {14.1}Definizione\fi }{72}{definition.14.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}14.1\else \numberline {14.1}Esempio\fi }{74}{esempio.14.1}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.2\else \numberline {14.2}Definizione\fi }{77}{definition.14.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.3\else \numberline {14.3}Definizione\fi }{77}{definition.14.3}%
+\contentsline {theorem}{\ifthmt@listswap Teorema\nobreakspace {}14.1\else \numberline {14.1}Teorema\fi }{78}{theorem.14.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}14.2\else \numberline {14.2}Esempio\fi }{78}{esempio.14.2}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.4\else \numberline {14.4}Definizione\fi }{82}{definition.14.4}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.5\else \numberline {14.5}Definizione\fi }{85}{definition.14.5}%

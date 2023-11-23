@@ -1,0 +1,1 @@
+La soluzione ottima x = [0.000000 0.157895 2.052632] e il valore ottimo di f* = -7.736842
