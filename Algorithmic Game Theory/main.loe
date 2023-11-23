@@ -70,3 +70,5 @@
 \contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}14.2\else \numberline {14.2}Esempio\fi }{78}{esempio.14.2}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.4\else \numberline {14.4}Definizione\fi }{82}{definition.14.4}%
 \contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}14.5\else \numberline {14.5}Definizione\fi }{85}{definition.14.5}%
+\contentsline {definition}{\ifthmt@listswap Definizione\nobreakspace {}15.1\else \numberline {15.1}Definizione\fi \thmtformatoptarg {Hypergraph}}{86}{definition.15.1}%
+\contentsline {esempio}{\ifthmt@listswap Esempio\nobreakspace {}15.1\else \numberline {15.1}Esempio\fi }{87}{esempio.15.1}%

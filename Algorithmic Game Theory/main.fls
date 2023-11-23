@@ -599,6 +599,9 @@ INPUT .\chapters\images\esrimozioen.png
 INPUT .\chapters\images\esrimozioen.png
 INPUT .\chapters\images\esrimozioen.png
 INPUT .\chapters\images\esrimozioen.png
+INPUT .\chapters\l6.tex
+INPUT .\chapters\l6.tex
+INPUT chapters\l6.tex
 OUTPUT main.loe
 INPUT main.aux
 INPUT .\main.out
@@ -645,6 +648,8 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
