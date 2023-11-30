@@ -94,3 +94,6 @@
 \contentsline {subsection}{\numberline {15.3}Calcolare la tree decomposition}{87}{subsection.15.3}%
 \contentsline {section}{\numberline {16}Tree Decomposition e programmazione dinamica}{91}{section.16}%
 \contentsline {subsection}{\numberline {16.1}MIS sui grafi con treewidth limitata}{91}{subsection.16.1}%
+\contentsline {section}{\numberline {17}Lab: Computational Social Choice}{93}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Proprietà desiderate per il sistema di voto}{94}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Sistemi di voto}{95}{subsection.17.2}%

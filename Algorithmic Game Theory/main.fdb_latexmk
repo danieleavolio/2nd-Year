@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1701280318 "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" "main.pdf" "main" 1701280326 0
+["pdflatex"] 1701355206 "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" "main.pdf" "main" 1701355214 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993058908 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -269,7 +269,7 @@
   "chapters/04.tex" 1699376637 8752 83e0128027103a766b6e227203ec5267 ""
   "chapters/05.tex" 1700055662 17395 67b2059e228ecc502cba31f12a08c0f2 ""
   "chapters/06.tex" 1700652952 4139 d4f387b973884fe36edbd749db2d2859 ""
-  "chapters/07.tex" 1701280317 8412 1bd9ea1bb8913033cebc28f4ad7db437 ""
+  "chapters/07.tex" 1701331133 8881 3e9f328dd5e440f455d08ba8ddd958a8 ""
   "chapters/images/13-Figure1.1-1.png" 1700042180 14673 baa32f6b7670002a654e7e6a04715e1d ""
   "chapters/images/Grafopertree.png" 1700150278 34145 fcc1facabe031fc238c9a155f848fcfa ""
   "chapters/images/biconnected.png" 1700045832 36932 8826d1cbb1941da35f1d1173062f77bd ""
@@ -295,12 +295,13 @@
   "chapters/l4.tex" 1699550801 15871 93406223cd9d1c9a213e401ed5f9427a ""
   "chapters/l5.tex" 1700153165 32539 5bee64cab9312abe9a3faa84c98b6dd7 ""
   "chapters/l6.tex" 1700742243 5436 aba5f8eaa81b63114c5cf6613dc029dc ""
-  "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" 1701275574 4441 b4b04c072f6e4ce13b18f1407395757a ""
-  "main.aux" 1701280326 37479 9f7c320baa72cb2ab2bc454f89208b27 "pdflatex"
-  "main.loe" 1701280326 11938 dbcb0bff0544396c7981aef9664bf7d3 "pdflatex"
-  "main.out" 1701280326 18844 f3a83be284140edbad532a26b836ab09 "pdflatex"
-  "main.tex" 1701275574 4441 b4b04c072f6e4ce13b18f1407395757a ""
-  "main.toc" 1701280326 9087 2b4d64c1fae10bdf53e62f80bb03b060 "pdflatex"
+  "chapters/l7.tex" 1701355199 7590 1298e569ec15c6678df346e246572990 ""
+  "d:/Lovaion/University/2nd Year/Algorithmic Game Theory/main.tex" 1701341897 4466 fafce04f1edef5bdc094c3fef83780c4 ""
+  "main.aux" 1701355213 39090 aaa96414bce61a6b920663f25ba7db0b "pdflatex"
+  "main.loe" 1701355213 12844 d0a44f85ecf3e78cbafcefe3c7dd8567 "pdflatex"
+  "main.out" 1701355213 19495 bb4d60f5efe36ec7951026e629809401 "pdflatex"
+  "main.tex" 1701341897 4466 fafce04f1edef5bdc094c3fef83780c4 ""
+  "main.toc" 1701355213 9375 6266baf5e078f42ef2d1b6ba81d7337f "pdflatex"
   (generated)
   "main.aux"
   "main.loe"
