@@ -1,0 +1,1 @@
+Found solution x = 0.308786 -0.538760 0.324289 with objective -5.563456
