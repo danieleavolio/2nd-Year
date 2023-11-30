@@ -1,0 +1,245 @@
+\section{Social Choiche}
+\label{sec:social-choice}
+
+Partiamo dando qualche definizione generale.
+
+Il risultato e' fissato per ogni agente. Una volta presa una decisione, ogni
+agente deve rispettare la decisione presa.
+
+Quando viene deciso un risultato, deve essere lo stesso per tutti. (Fanno tutti
+la stessa cosa).
+
+\begin{definition}(Preferenza aggergata)
+
+    Abbiamo un insieme di Agenti $A$ e ogni agente ha una preferenza.
+
+    Relazioni di Preferenza: $a \succsim b$. Indica che anche l'agente $i$ ha una
+    preferenza.
+
+    \begin{equation}
+        \begin{aligned}
+            O = \{a,b,c\dots\} \rightarrow Risultati \\
+            A = \{1,2,3\dots\} \rightarrow Agenti    \\
+            P = \{ \succsim_1, \succsim_2, \succsim_3\dots\} \rightarrow Preferenze
+        \end{aligned}
+    \end{equation}
+\end{definition}
+
+Una \textbf{funzione di scelta sociale} prende in input tutte le preferenze.
+
+\begin{definition}(Funzione di scelta sociale)
+    Dato un insieme di agenti $N = \{1,2,3\dots\}$ e un insieme di risultati $O = \{a,b,c\dots\}$.
+    Sia $L\_$ l'insieme di \textbf{total order non stretti} su $O$. Una \textbf{funzione
+        di scelta sociale} e' $C: L\_^n \rightarrow O$.
+\end{definition}
+
+\begin{definition}(Funione di welfare sociale)
+    Dato un insieme di agenti $N = \{1,2,3\dots\}$ e un insieme di risultati $O = \{a,b,c\dots\}$.
+    Sia $L\_$ l'insieme di \textbf{total order non stretti} su $O$. Una \textbf{funzione
+        di welfare sociale} e' $W: L\_^n \rightarrow L\_$.
+\end{definition}
+
+Qual e' la differenza tra una funzione di scelta sociale e una funzione di
+welfare sociale?
+
+\begin{itemize}
+    \item Una funzione di scelta sociale prende in input tutte le preferenze e
+          restituisce un risultato.
+    \item Una funzione di welfare sociale prende in input tutte le preferenze e
+          restituisce un ordinamento.
+\end{itemize}
+
+\subsection{Sistema di voto senza ranking}
+
+Praticamente ci si interessa ad un solo candidato.
+
+Immaginiamo di avere $4$ agenti (Per la pluralita' che vedremo ora).
+\begin{itemize}
+    \item \textbf{Pluralita'}: Il candidato con piu' voti vince.
+          \begin{table}[H]
+              \centering
+              \begin{tabular}{|c|c|c|c|}
+                  \hline
+                  \textbf{Agente} & \textbf{a} & \textbf{b} & \textbf{c} \\
+                  \hline
+                  \textbf{Voto}   & $a$        & $b$        & $a$        \\
+                  \hline
+              \end{tabular}
+              \caption{Esempio di pluralita'}
+              \label{tab:my_label}
+          \end{table}
+
+    \item \textbf{Voto cumulativo}: Ad esempio distribuire piu voti tra i candidati. Si puo' votare un agente piu volte.
+          \begin{table}
+
+          \end{table}
+    \item \textbf{Voto ad approvazione}: Accetta quanti risultati "preferisci".
+\end{itemize}
+
+\subsection{Sistema di voto con ranking}
+
+In questo caso vogliamo un \textbf{ranking} e non un solo vincitore.
+
+Diamo qualche nozione come prima:
+
+\begin{itemize}
+    \item \textbf{Pluralita' con eliminazione}: Si eliminano i candidati con meno voti e si ripete il processo fino ad ottenere un solo candidato.
+    \item \textbf{Borda}:
+          \begin{itemize}
+              \item Si associa ad ogni risultato un numero.
+              \item Il risultato preferito prende un punteggio di $n-1$. Il prossimo dopo di lui
+                    prende $n-2$, fino ad arrivare all'$n-esimo$ che prendera' $n-n$ cioe $0$.
+              \item Si sommano i numeri di ogni risultato e si prende il risultato con il punteggio
+                    piu' alto.
+          \end{itemize}
+    \item \textbf{Eliminazione a coppie}: Si prendono in anticipo le coppie di risultati da confrontare. Per ogni coppia, si elimina quello con meno punti. Si continua cosi fino ad arrivare alla fine.
+\end{itemize}
+
+\begin{domanda}
+    (Quale tra questi schemi e' il migliore?)
+
+    La domanda mi devasta... No, questo e' un problema di informatica. Bisogna
+    ragionare sulle seguenti intuizioni.
+
+    Se c'e' un candidato che e' il preferito da tutti e che batte qualsiasi altro
+    candidato in una sfida a coppie, allora lui si \textbf{merita} di vincere.
+
+    C'e' da dire, pero', che questo schema non e' sempre applicabile. Alcune volte
+    potremmo trovare unc ciclo dove $A$ batte $B$. $B$ batte $C$ e poi $C$ batte
+    $A$ in una sfida a coppie. Una bella gatta da pelare.
+\end{domanda}
+
+\subsection{Fun Game}
+
+\begin{esempio}
+    (Fun Game - TRIP)
+
+    Immaginiamo ci sia la possibilita' di organizzare una settimana alla fine delle
+    lezioni in una delle seguenti destinazioni.
+
+    \begin{itemize}
+        \item \textbf{O} - Orlando
+        \item \textbf{P} - Parigi
+        \item \textbf{T} - Tokyo
+        \item \textbf{B} - Beijing
+    \end{itemize}
+
+    Dobbiamo costruire il nostro ordine di preferenza. Cosa usiamo?
+
+    Votiamo usando i seguenti schemi:
+    \begin{itemize}
+        \item Pluralita
+        \item Pluralita' con eliminazione
+        \item Borda
+        \item Eliminazione a coppie
+    \end{itemize}
+\end{esempio}
+
+\begin{esempio}
+    (Esempio Condorcet)
+
+    \begin{equation}
+        \begin{aligned}
+            499 \ Agents & : A \succ B \succ C \\
+            3 \ Agents   & : B \succ C \succ A \\
+            498 \ Agents & : C \succ B \succ A \\
+        \end{aligned}
+    \end{equation}
+
+    Chi e' il vincitore secondo il metodo di Condorcet? Ovviamente $B$ perche' non
+    ci sono casi in cui $B$ e' il meno preferito.
+
+    Chi vincerebbe, invece, sotto il caso di Pluralita'? $A$ perche' e' il piu'
+    preferito. \textit{Spiegazione:}Contando i voti per il candidato preferito da
+    ogni agente, otteniamo:
+
+    A riceve 499 voti. B riceve 3 voti. C riceve 498 voti. Quindi, secondo il
+    metodo di Pluralità, A vince perché ha ricevuto il maggior numero di voti.
+
+    \textbf{Attenzione pero'}. Se secondo il metodo condorcet si sceglie il piu intuitivo,
+    come fa ad essere $A$ in questo caso il vincitore? Siamo osservando un
+    \textbf{paradosso.}
+
+    Chi vincerebbe, invece, sotto Pluralita' con eliminazione? 
+    Vincerebbe $C$. Si elimina il meno preferito, quindi $B$. Dopodiche' i 
+    voti per C sono quelli del $498$ agenti + 3 per cui vince C su A.
+\end{esempio}
+
+\subsection{Sensitivita' al candidato perdente}
+
+Immaginiamo una situazione del genere:
+
+\begin{equation}
+    \begin{aligned}
+        35 \ Agents & : A \succ C \succ B \\
+        33 \ Agents & : B \succ A \succ C \\
+        32 \ Agents & : C \succ B \succ A \\
+    \end{aligned}
+\end{equation}
+
+Quale candidato vincerebbe sotto \textbf{pluralita'}? $A$.
+
+Quale candidato vincerebbe sotto \textbf{Borda}?
+
+Come ragioniamo? Assegnamo i punteggi e sommiamo.
+
+$A \rightarrow 2; B \rightarrow 2; C \rightarrow 2$.
+
+$C \rightarrow 1; B \rightarrow 1; A \rightarrow 1$.
+
+$B \rightarrow 0; A \rightarrow 0; C \rightarrow 0$.
+
+\begin{equation}
+    \begin{aligned}
+        A &= 2 \cdot 35 + 1 \cdot 33 + 0 \cdot 32 = 103 \\
+        B &= 2 \cdot 33 + 1 \cdot 32 + 0 \cdot 35 = 98  \\
+        C &= 2 \cdot 32 + 1 \cdot 35 + 0 \cdot 33 = 99  \\
+    \end{aligned}
+\end{equation}
+
+Chiaramente, il vincitore e' $A$.
+
+Cosa succederebbe se eliminassimo $C$ dal gioco? Cosa succede sia per una che per l'altra modalita' di voto? \textbf{Vincerebbe} $B$.
+
+Se invece giocassimo con \textbf{eliminazione a coppie} con ordine $A,B,C?$ 
+Vincerebbe $C$. Perche'? Perche' $C$ batte $A$ e $B$.
+
+E con un ordine $A,C,B$? Vincerebbe $B$
+
+E con un ordine di $B,C,A$? Vincerebbe $A$
+
+\textbf{Costruiamo un altro problema}
+
+\begin{equation}
+    \begin{aligned}
+        1 \ Agent & : B \succ D \succ C \succ A \\
+        1 \ Agent & : A \succ B \succ D \succ C \\
+        1 \ Agent & : C \succ A \succ B \succ D \\
+    \end{aligned}
+\end{equation}
+
+Usando \textbf{eliminazione a coppie} con ordine $A,B,C,D$? 
+Vediamo se ho capito bene.
+
+\begin{itemize}
+    \item $A$ vs $B$ : Vince $A$
+    \item $A$ vs $C$ : Vince $C$
+    \item $D$ vs $C$ : Vince $D$
+\end{itemize}
+
+Il vincitore e' $D$.
+
+\textbf{Problema}: Tutti gli agenti preferiscono $B$ a $D$. Il candidato e' \textbf{Pareto dominato!}
+
+Ogni metodo ha dei problemi. Sta a te capire quale scegliere.
+
+Definiamo delle notazioni e proprietà per risolvere i problemi come quello precedente.
+
+\begin{itemize}
+    \item $N$: Insieme di Agenti
+    \item $O$: Insieme finito di risultati con $|O| \geq 3$
+    \item $L$: L'insieme di tutte le preferenze di ordinamento stretto su $O$.
+    \item $[\succ]$: Un elemento dell'insieme $L^n$ (Un ordinamento di preferenza per ogni agente. L'input della nostra funzione di welfare sociale)
+    \item $\succ_w$
+\end{itemize}
+\newpage
