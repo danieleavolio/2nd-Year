@@ -1,7 +1,7 @@
 clear;
 
 %Load dataset
-load toy.mat;
+load impossible.mat;
 
 [numPoints, dim] = size(X);
 
@@ -70,7 +70,7 @@ drawDataset(X, numPoints, y);
 hold on;
 
 drawHyperplane(X,v,gamma);
-
+waitfor(gcf);
 
 
 

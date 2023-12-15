@@ -47,10 +47,10 @@ yMax = max(X(:, 2));
 axis([xMin, xMax, yMin, yMax]);
 
 hold on;
-scatter(Plus(:, 1), Plus(:, 2), 'b', 'o', 'filled');
+scatter(Plus(:, 1), Plus(:, 2), 'r', 'o', 'filled');
 
 hold on;
-scatter(Minus(:, 1), Minus(:, 2), 'r', 'o', 'filled');
+scatter(Minus(:, 1), Minus(:, 2), 'b', 'o', 'filled');
 
 
 endfunction
