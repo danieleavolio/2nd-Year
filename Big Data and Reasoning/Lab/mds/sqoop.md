@@ -1,4 +1,4 @@
-# `Sqoop Tutorial`
+# `Sqoop Cheat Sheet`
 
 **Cosa è `Sqoop`**: Sqoop è uno strumento che consente di trasferire dati tra `Hadoop`  e database relazionali strutturati come `MySQL`, Oracle, PostgreSQL, ecc.
 
@@ -221,17 +221,12 @@ sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table 
 sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table sparseTable --target-dir nullvalues --null-string '' --null-non-string '-1'
 
 ```
-Here's a breakdown of what each command does:
+Ecco cosa fanno questi comandi:
 
-1. The first two lines are SQL commands that create a table named `sparseTable` and insert some values into it. Some of these values are `NULL`.
-
-2. The third line is a Sqoop import command. It imports data from a MySQL database located at `jdbc:mysql://master/sqooptest` into Hadoop. The username for the database is `hive`, and `-P` prompts for the password. The table being imported is `sparseTable`, and the data is being stored in a Hadoop directory named `emptyString`. The `--null-string ''` option specifies that null values in the string columns of the table should be represented as empty strings in Hadoop.
-
-3. The fourth line is similar to the third, but it stores the data in a different Hadoop directory named `nullvalues`. It also includes the `--null-non-string '-1'` option, which specifies that null values in the non-string columns of the table should be represented as `-1` in Hadoop.
-
-
-
-
+1. Le prime due righe sono comandi SQL che creano una tabella chiamata `sparseTable` e inseriscono alcuni valori al suo interno. Alcuni di questi valori sono `NULL`.
+2. La terza riga è un comando Sqoop import. Importa i dati da un database MySQL situato in `jdbc:mysql://master/sqooptest` in Hadoop. Il nome utente per il database è `hive`, e `-P` richiede la password. La tabella che viene importata è `sparseTable`, e i dati vengono memorizzati in una directory Hadoop chiamata `emptyString`. L'opzione `--null-string ''` specifica che i valori null nelle colonne di stringa della tabella dovrebbero essere rappresentati come stringhe vuote in Hadoop.
+3. La quarta riga è simile alla terza, ma memorizza i dati in una directory Hadoop diversa chiamata `nullvalues`. Include anche l'opzione `--null-non-string '-1'`, che specifica che i valori null nelle colonne non stringa della tabella dovrebbero essere rappresentati come `-1` in Hadoop.
+   
 ```bash
 
 create table department(dep_id int primary key, dep_name varchar(255))
@@ -283,46 +278,42 @@ sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table 
 
 sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table table_ --export-dir t_fold --update-key id --update-mode allowinsert
 ```
-1. `hdfs dfs -put data2 t_fold`: This command is used to put the `data2` file from your local file system into the Hadoop Distributed File System (HDFS) directory named `t_fold`.
 
-2. `sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table table_ --export-dir t_fold --update-key id`: This command exports data from the Hadoop directory `t_fold` to a MySQL table named `table_`. The `--update-key id` option specifies that the `id` column should be used as the key to determine which rows in the MySQL table should be updated with the data from Hadoop.
+1. `hdfs dfs -put data2 t_fold`: Questo comando viene utilizzato per inserire il file `data2` dal file system locale nella directory Hadoop Distributed File System (HDFS) denominata `t_fold`.	
 
-3. `sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table table_ --export-dir t_fold --update-key id --update-mode allowinsert`: This command is similar to the second, but it includes the `--update-mode allowinsert` option. This means that if a row with a given `id` does not exist in the MySQL table, then Sqoop will insert a new row with that `id` and the corresponding data from Hadoop.
+2. `sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table table_ --export-dir t_fold --update-key id`: Questo comando esporta i dati dalla directory Hadoop `t_fold` in una tabella MySQL denominata `table_`. L'opzione `--update-key id` specifica che la colonna `id` dovrebbe essere utilizzata come chiave per determinare quali righe nella tabella MySQL dovrebbero essere aggiornate con i dati da Hadoop.
 
-```bash
-
-create table larger_table (id int primary key, name varchar(255), nn varchar(255));
-sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table larger_table --export-dir t_fold --columns id,nn
-```
-The `--columns id,nn` option in the `sqoop-export` command specifies that only the `id` and `nn` columns should be exported from the Hadoop directory `t_fold` to the MySQL table `larger_table`. Any other columns in the Hadoop data will be ignored.
-
+3. `sqoop-export --connect jdbc:mysql://master/sqooptest --username hive -P --table table_ --export-dir t_fold --update-key id --update-mode allowinsert`: Questo comando è simile al secondo, ma include l'opzione `--update-mode allowinsert`. Ciò significa che se una riga con un determinato `id` non esiste nella tabella MySQL, Sqoop inserirà una nuova riga con quell'`id` e i dati corrispondenti da Hadoop.
 
 ```bash
 sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table cities --hive-import 
 ```
 
-`--hive-import:` This option tells Sqoop to import the data directly into Hive. Sqoop will automatically create a Hive table with the same structure as the MySQL table and load the data into this table. If the Hive table already exists, Sqoop will append the data to it.
+`--hive-import:` Questa opzione dice a Sqoop di importare i dati direttamente in Hive. Sqoop creerà automaticamente una tabella Hive con la stessa struttura della tabella MySQL e caricherà i dati in questa tabella. Se la tabella Hive esiste già, Sqoop vi aggiungerà i dati.
+
 
 ```bash
 sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table cities --hive-import --hive-table citystring --map-column-hive id=string
 ```
 
-- `--hive-table citystring`: This option specifies the name of the Hive table into which the data will be imported. If this option is not provided, Sqoop will use the same name as the MySQL table.
+- `--hive-import:` Questa opzione dice a Sqoop di importare i dati direttamente in Hive. Sqoop creerà automaticamente una tabella Hive con la stessa struttura della tabella MySQL e caricherà i dati in questa tabella. Se la tabella Hive esiste già, Sqoop vi aggiungerà i dati.
+- `--hive-table citystring:` Questa opzione specifica il nome della tabella Hive in cui i dati verranno importati. Se questa opzione non viene fornita, Sqoop utilizzerà lo stesso nome della tabella MySQL.
 
-- `--map-column-hive id=string`: This option tells Sqoop to treat the id column as a string when importing the data into Hive. By default, Sqoop tries to preserve the original data types of the columns, but this option can be used to override that behavior for specific columns.
 
 ```bash
 sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table cities --hive-import --hive-table citypart --hive-partition-key part --hive-partition-value 'all'
 ```
 
-`--hive-partition-key part:` This option specifies that the data should be partitioned based on the part column in the Hive table. Partitioning is a way of dividing a table into related parts based on the values of certain columns. This can make querying the data more efficient.
+`--hive-partition-key part:` Questa opzione specifica che i dati dovrebbero essere partizionati in base alla colonna part nella tabella Hive. La partizione è un modo per dividere una tabella in parti correlate in base ai valori di determinate colonne. Ciò può rendere più efficiente l'interrogazione dei dati.
 
-`--hive-partition-value 'all':` This option specifies the value for the partition. In this case, all the data will be imported into a partition named 'all'. If you were to run this command multiple times with different partition values, each run would create a new partition in the Hive table.
+`--hive-partition-value 'all':` Questa opzione specifica il valore per la partizione. In questo caso, tutti i dati verranno importati in una partizione denominata 'all'. Se si eseguisse questo comando più volte con valori di partizione diversi, ogni esecuzione creerebbe una nuova partizione nella tabella Hive.
 
-So, in this case, the command will import data from the cities table in the MySQL database into a Hive table named citypart. The data will be divided into partitions based on the part column, and all the data from this particular import operation will be placed in a partition named 'all'.
+Quindi, in questo caso, il comando importerà i dati dalla tabella cities nel database MySQL in una tabella Hive denominata citypart. I dati verranno partizionati in base alla colonna part, e tutti i dati da questa particolare operazione di importazione verranno inseriti in una partizione denominata 'all'.
+
 
 ```bash
 sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table cities --where 'country="USA"' --hive-import --hive-table citypart --hive-partition-key part --hive-partition-value 'USA'
 ```
 
-So, in this case, the command will import data from the cities table in the MySQL database where the country is 'USA' into a Hive table named citypart. The data will be divided into partitions based on the part column, and all the data from this particular import operation will be placed in a partition named `USA`.
+Quindi, in questo caso, il comando importerà i dati dalla tabella cities nel database MySQL in una tabella Hive denominata citypart. I dati verranno partizionati in base alla colonna part, e tutti i dati da questa particolare operazione di importazione verranno inseriti in una partizione denominata 'USA'.
+

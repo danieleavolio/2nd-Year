@@ -10,6 +10,39 @@ Questo si basa sulla traccia `PDF` che ha svolto il prof `Mazzotta`
     //private static String master = "local";
 ```
 
+`XML`: `pom.xml`
+
+```xml
+
+  	<dependencies>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.13</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.13</artifactId>
+			<version>3.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-mllib_2.13</artifactId>
+			<version>3.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hive -->
+		<dependency>
+		    <groupId>org.apache.spark</groupId>
+		    <artifactId>spark-hive_2.13</artifactId>
+		    <version>3.3.1</version>
+		    <scope>provided</scope>
+		</dependency>
+	</dependencies>
+```
+
 ## `Problem 1`
 ![Problem 1](https://i.imgur.com/QJ6dkFz.png)
 
