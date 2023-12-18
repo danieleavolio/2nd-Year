@@ -298,6 +298,8 @@ sqoop-import --connect jdbc:mysql://master/sqooptest --username hive -P --table 
 
 - `--hive-import:` Questa opzione dice a Sqoop di importare i dati direttamente in Hive. Sqoop creerà automaticamente una tabella Hive con la stessa struttura della tabella MySQL e caricherà i dati in questa tabella. Se la tabella Hive esiste già, Sqoop vi aggiungerà i dati.
 - `--hive-table citystring:` Questa opzione specifica il nome della tabella Hive in cui i dati verranno importati. Se questa opzione non viene fornita, Sqoop utilizzerà lo stesso nome della tabella MySQL.
+- `--map-column-hive id=string:` Questa opzione specifica che la colonna `id` dovrebbe essere mappata alla colonna `string` nella tabella Hive. In questo caso, la colonna `id` è di tipo intero nella tabella MySQL, ma Sqoop la mappa a una colonna di tipo stringa nella tabella Hive.
+
 
 
 ```bash
