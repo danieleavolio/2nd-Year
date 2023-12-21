@@ -1,4 +1,4 @@
-# `Spark Cheatset`
+# `Spark Cheatsheet`
 
 Questo si basa sulla traccia `PDF` che ha svolto il prof `Mazzotta`
 
