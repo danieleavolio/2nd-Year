@@ -1,0 +1,54 @@
+\documentclass{article}
+
+% Packages for code, figures, and automata
+\usepackage{listings} % For code listings
+\usepackage{graphicx} % For including figures
+\usepackage{tikz}     % For drawing automata
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amssymb} % Pacchetto per simboli matematici
+\usepackage{float}
+\usepackage{nicematrix}
+% \usepackage[style=numeric-comp,useprefix,hyperref,backend=bibtex]{biblatex}
+
+\usepackage{pgfplots}
+\usepackage{amsmath}
+
+
+%colorize lstlisting with language
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{titlepic}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+%import all important packages 
+\input{common.tex}
+% Define title and author
+\begin{titlepage}
+    \title{\color{nodeblue}\fontsize{32}{38}\selectfont \textbf{Optimization for Machine Learning - Notes}}  % Change this line
+    \author{
+        \begin{tabular}{c}
+            \textbf{Daniele Avolio - 242423}   \\
+        \end{tabular}
+    }
+    % write academic year
+    \date{Academic Year 2023/2024}
+
+\end{titlepage}
+
+\pgfplotsset{compat=1.18}
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\listoffigures
+\newpage
+
+\input{capitoli/1.tex}
+
+\bibliographystyle{plain}
+\bibliography{references}  % if your .bib file is named references.bib
+\end{document}
