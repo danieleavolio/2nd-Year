@@ -415,6 +415,10 @@ INPUT .\images\non conv.png
 INPUT .\images\non conv.png
 INPUT .\images\non conv.png
 INPUT .\images\non conv.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb7t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
 INPUT .\notes.bbl

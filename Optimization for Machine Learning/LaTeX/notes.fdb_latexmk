@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex notes"] 1704825257 "notes.aux" "notes.bbl" "notes" 1704825260 0
+["bibtex notes"] 1704910247 "notes.aux" "notes.bbl" "notes" 1704910316 0
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/bibtex/bib/feupphdteses/references.bib" 1366808100 2206 985e03fb36d872d306e76cfacc160693 ""
-  "notes.aux" 1704825259 2028 addc25116e972c4efdcc259a86eb8852 "pdflatex"
+  "notes.aux" 1704910315 2287 5580452cbafbc7a00a302227e42080e2 "pdflatex"
   (generated)
   "notes.bbl"
   "notes.blg"
   (rewritten before read)
-["pdflatex"] 1704825257 "d:/Lovaion/University/2nd Year/Optimization for Machine Learning/LaTeX/notes.tex" "notes.pdf" "notes" 1704825260 0
+["pdflatex"] 1704910313 "d:/Lovaion/University/2nd Year/Optimization for Machine Learning/LaTeX/notes.tex" "notes.pdf" "notes" 1704910316 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768654 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768654 4484 b828043cbd581d289d955903c1339981 ""
@@ -233,18 +233,18 @@
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657797096 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/titlepic/titlepic.sty" 1489484686 2413 55bd0992722870fa3a65fe4585d37364 ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1625494067 48833 3b7b4cfab1a3d15596bfd3772a77ab65 ""
-  "capitoli/1.tex" 1704825253 12442 01806b4c5f14acb70f1feef34c520e2e ""
+  "capitoli/1.tex" 1704910312 18274 6a7f0b72b0bfc8e3f6ef6922ecc93dc5 ""
   "common.tex" 1704584295 3442 2a7b8a5a6b695f5f1631e4de45f0479b ""
   "d:/Lovaion/University/2nd Year/Optimization for Machine Learning/LaTeX/notes.tex" 1704820076 1348 34b1bf78c5313a2845609897878ebbec ""
   "images/funz conv.png" 1704823368 46380 289890d697842d89da8b4497ad5da9f2 ""
   "images/minimo locale.png" 1704822838 51341 80a0e05fd04a6d4d26dd575b7c015016 ""
   "images/non conv.png" 1704823393 32651 12d956545248955576d0e3396c457b8e ""
-  "notes.aux" 1704825259 2028 addc25116e972c4efdcc259a86eb8852 "pdflatex"
-  "notes.bbl" 1704825257 52 0eba253fc001332e731e8aba3f23127b "bibtex notes"
-  "notes.lof" 1704825259 302 362929c50fbc0763d63fe73c52792d6e "pdflatex"
-  "notes.out" 1704825259 831 a8989b360d64875a237a9060285ca807 "pdflatex"
+  "notes.aux" 1704910315 2287 5580452cbafbc7a00a302227e42080e2 "pdflatex"
+  "notes.bbl" 1704910248 52 0eba253fc001332e731e8aba3f23127b "bibtex notes"
+  "notes.lof" 1704910315 302 362929c50fbc0763d63fe73c52792d6e "pdflatex"
+  "notes.out" 1704910315 1207 fef93906291ad16d8e83c29138797d04 "pdflatex"
   "notes.tex" 1704820076 1348 34b1bf78c5313a2845609897878ebbec ""
-  "notes.toc" 1704825259 414 f73ce047c2af4a240b01d727987514f0 "pdflatex"
+  "notes.toc" 1704910315 590 91b0162c1badb6657e764a4736f3ba42 "pdflatex"
   (generated)
   "notes.aux"
   "notes.lof"

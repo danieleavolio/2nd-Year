@@ -1,5 +1,7 @@
 \contentsline {section}{\numberline {1}Introduzione}{3}{section.1}%
 \contentsline {section}{\numberline {2}Programmazione non lineare}{3}{section.2}%
 \contentsline {subsubsection}{\numberline {2.0.1}Caso di problemi senza vincoli}{6}{subsubsection.2.0.1}%
-\contentsline {section}{\numberline {3}Approcci di classificazione}{8}{section.3}%
-\contentsline {section}{\numberline {4}Separazione Lineare}{9}{section.4}%
+\contentsline {subsection}{\numberline {2.1}Condizioni di ottimalità}{8}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Eigen Values e Auto Vettori}{8}{section.3}%
+\contentsline {section}{\numberline {4}Approcci di classificazione}{10}{section.4}%
+\contentsline {section}{\numberline {5}Separazione Lineare}{12}{section.5}%

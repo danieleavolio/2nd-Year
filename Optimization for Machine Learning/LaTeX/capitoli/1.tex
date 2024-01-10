@@ -249,6 +249,198 @@ Vediamo come si applica il gradiente e la matrice hessiana.
     $$
 \end{esempio}
 
+\subsection{Condizioni di ottimalità}
+Sono 3
+
+\begin{definition}
+    (Prima condizione - condizione necessaria di primo ordine)
+    $x^*$ è un minimo locale implica che $\implies \nabla f(x^*) = 0$. Cioè,
+    stiamo dicendo che $x^*$ è un punto stazionario. Il fatto che 
+    il gradiente sia uguale a 0 è una condizione necessaria per fare in modo che 
+    $x^*$ sia un minimo locale.
+
+    \textbf{Nota:} Se $f$ è convessa, allora ogni punto stazionario è 
+    un \textbf{minimo globale}.
+    (Pensa ad una funzione che è convessa ma ha più punti di minimo uguali)
+\end{definition}
+
+\begin{definition}
+    (Seconda condizione - condizione necessaria di secondo ordine)
+    $x^*$ è un minimo locale stretto $\implies \nabla f(x^*) = 0$ e 
+    $\nabla^2 f(x^*)$ è  positiva semidefinita. Lo definiamo dopo cosa Significa
+    positiva semidefinita
+\end{definition}
+
+\begin{definition}
+    (Terza condizione - condizione sufficiente di secondo ordine)
+    Sia $x^* \in R^n$, sia $\nabla f(x^*) = 0$ e $\nabla^2 f(x^*)$ 
+    positiva definita $\implies x^*$ è un \textbf{minimo locale stretto}.
+\end{definition}
+
+Definiamo cosa significa semidefinita ecc.
+
+Sia $A$ una matrice $R^{n \times m}$:
+\begin{itemize}
+    \item \textbf{Positiva Semidefinita}: $\forall x \in R^n, x^TAx \geq 0$
+    \item \textbf{Positiva Definita}: $\forall x \in R^n, x^TAx > 0$, con $x \neq 0$
+    \item \textbf{Negativa Semidefinita}: $\forall x \in R^n, x^TAx \leq 0$
+    \item \textbf{Negativa Definita}: $\forall x \in R^n, x^TAx < 0$, con $x \neq 0$
+\end{itemize}
+
+Negli altri casi, A è \textbf{indefinita}.
+
+Nota: Non possiamo controllare queste definizioni perché $R^n$ è infinito. Per questo motivo usiamo
+altre cose che si chiamano  \textbf{eigen values}.
+
+\section{Eigen Values e Auto Vettori}
+
+Sia $A$ una matrice, $\lambda$ uno scalare e $x$ un vettore, con $x \neq 0$, diciamo che 
+$x$ è un \textbf{autovettore} e $\lambda$ è un \textbf{autovalore}:
+
+$$
+    Ax = \lambda x
+$$
+
+Semplicemente, matrice moltiplicato per vettore da lo stesso risultato per vettore
+moltiplicato per $\lambda$
+
+\begin{domanda}
+    Come si calcolano gli Eigen Values?
+
+    Sapendo che $Ax = \lambda x$, possiamo riscriverlo come:
+
+    $$
+        Ax - \lambda x = 0
+    $$
+    Portiamo fuori $x$:
+    $$
+        (A - \lambda I)x = 0
+    $$
+    Dove $I$ è la matrice identità.
+
+    Ora, per trovare gli eigen values, dobbiamo trovare i valori di $\lambda$ tali che la matrice $(A - \lambda I)$ sia singolare. Cioè, il determinante deve essere uguale a 0.
+
+    $$
+        det(A - \lambda I) = 0
+    $$
+
+    Fatto questo, si risolve l'equazione di secondo grado per trovare i valori di $\lambda$.
+
+    \begin{esempio}
+        $$
+            A = \begin{bmatrix}
+                2 & 1 \\
+                1 & 2
+            \end{bmatrix}
+        $$
+
+        $$
+            det(A - \lambda I) = 0
+        $$
+
+        $$
+            det\begin{bmatrix}
+                2 - \lambda & 1            \\
+                1           & 2 - \lambda
+            \end{bmatrix} = 0
+        $$
+
+        $$
+            (2 - \lambda)^2 - 1 = 0
+        $$
+
+        $$
+            \lambda^2 - 4\lambda + 3 = 0
+        $$
+
+        $$
+            \lambda_1 = 1 \land \lambda_2 = 3
+        $$
+    \end{esempio}
+
+    Per calcolare il determinante di una matrice $2 \times 2$ si fa così:
+
+    $$
+        det\begin{bmatrix}
+            a & b \\
+            c & d
+        \end{bmatrix} = ad - bc
+    $$
+
+    Per calcolare il determinante di una matrice $3 \times 3$ si fa così:
+
+    $$
+        det\begin{bmatrix}
+            a & b & c \\
+            d & e & f \\
+            g & h & i
+        \end{bmatrix} = aei + bfg + cdh - ceg - bdi - afh
+    $$
+
+    \textbf{Regola di Sarrus}: Se si ha una matrice $3 \times 3$, si può calcolare il determinante
+    in un modo particolare.
+
+    Si ripete la matrice 3x3 in fila. Si calcolano queste cose:
+    \begin{itemize}
+        \item Somma dei prodotti delle prime 3 diagonali a partire da sinistra, verso destra
+        \item Somma dei prodotti delle prime 3 diagonali a partire da destra, verso sinistra
+        \item Sottraggo le due somme
+    \end{itemize}
+
+    \begin{esempio}
+        $$
+            det\begin{bmatrix}
+                1 & 2 & 3 & 1 & 2 & 3 \\
+                4 & 5 & 6 & 4 & 5 & 6 \\
+                7 & 8 & 9 & 7 & 8 & 9
+            \end{bmatrix} = 1 \cdot 5 \cdot 9 + 2 \cdot 6 \cdot 7 + 3 \cdot 4 \cdot 8 - 3 \cdot 5 \cdot 7 - 2 \cdot 4 \cdot 9 - 1 \cdot 6 \cdot 8 = 0
+        $$
+    \end{esempio}
+\end{domanda}
+
+\textbf{Nota}: Se la matrice $A$ è una \textit{matrice diagonale}, cioé
+una matrice in cui tutti gli elementi, tranne la diagonale, sono $0$, allora
+gli \textit{eigen values} sono gli elementi sulla diagonale.
+
+$$
+    A = \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 3
+    \end{bmatrix}
+$$
+
+$$
+    det(A - \lambda I) = 0
+$$
+
+$$
+    det\begin{bmatrix}
+        1 - \lambda & 0            & 0            \\
+        0           & 2 - \lambda  & 0            \\
+        0           & 0            & 3 - \lambda
+    \end{bmatrix} = 0
+$$
+
+$$
+    (1 - \lambda)(2 - \lambda)(3 - \lambda) = 0
+$$
+
+$$
+    \lambda_1 = 1 \land \lambda_2 = 2 \land \lambda_3 = 3
+$$
+
+Per quanto riguarda i segni delle matrici:
+
+\begin{itemize}
+    \item $A$ è una matrice \textbf{positiva semidefinita} $\iff$ Eigen Values $\geq 0$
+    \item $A$ è una matrice \textbf{positiva definita} $\iff$ Eigen Values $> 0$
+    \item  $A$ è una matrice \textbf{negativa semidefinita} $\iff$ Eigen Values $\leq 0$    
+    \item $A$ è una matrice \textbf{negativa definita} $\iff$ Eigen Values $< 0$
+\end{itemize}
+
+
+
 
 \section{Approcci di classificazione}
 \label{sec:approcci-di-classificazione}
