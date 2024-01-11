@@ -1,0 +1,140 @@
+\section{Ottimizzazione senza vincoli}
+
+
+$$
+2x_1^3 - 3x_1^2 -6x_1^2x_2 +6x_1x_2^2 +6x_1x_2
+$$
+
+Calcoliamo il gradiente e la matrice hessiana
+
+$$
+\nabla f(x) = \begin{bmatrix}
+6x_1^2 - 6x_1 - 12x_1x_2 + 6x_2^2 + 6x_2 \\
+-6x_1^2 + 6x_1^2 + 12x_1x_2 + 6x_1 
+\end{bmatrix}
+$$
+
+Ora calcoliamo la matrice hessiana
+
+$$
+\nabla^2 f(x) = \begin{bmatrix}
+12x_1 - 6 - 12x_2 & -12x_1 + 12x_2 + 6 \\
+-12x_1 + 12x_2 + 6 & 12x_1
+\end{bmatrix}
+$$
+
+Spieghiamo i passaggi per il calcolo della Hessiana
+
+$$
+\frac{\partial^2 f}{\partial x_1^2} = 12x_1 - 6 - 12x_2
+$$
+
+$$
+\frac{\partial^2 f}{\partial x_1 \partial x_2} = -12x_1 + 12x_2 + 6
+$$
+
+Qui il $-12x_1 + 12x_2 + 6$ viene fuori dal seguente passaggio
+
+In parole povere, prima si calcola la derivata parziale di f rispetto a x1, e poi si calcola la derivata di quel risultato rispetto a x2.
+$$
+f(x1, x2) = 2x1^3 - 3x1^2x2 + 6x1x2^2 + x2^2 + 6x1x2
+$$
+
+$$
+= 6x1^2 - 6x1x2 + 6x2^2 + 6x2
+$$
+
+$$
+= -12x1 + 12x2 + 6
+$$
+
+
+$$
+\frac{\partial^2 f}{\partial x_2 \partial x_1} = -12x_1 + 12x_2 + 6
+$$
+
+$$
+\frac{\partial^2 f}{\partial x_2^2} = 12x_1
+$$
+
+Quindi, per spiegare ocme funziona.
+
+Data una funzione, bisogna calcolare inizialmente il \textbf{gradiente}.
+
+Applicando la \textbf{condizione necessaria di primo ordine} troviamo i punti stazionari, ovvero quelli in 
+cui il $\nabla f(x) = 0$. Cioé, calcoli il gradiente e lo poni uguale a zero.
+
+Ponendo il gradiente uguale a zero bisogna risolvere il sistema di equazioni per trovare 
+i possibili punti stazionari. Una volta trovati, nel nostro esempio erano $4$, 
+bisogna esaminare i punti utilizzando la \textbf{condizione sufficiente di secondo ordine} e \textbf{la condizione necessaria di secondo ordine}.
+
+Per farlo, si calcola l'Hessiana della funzione \textbf{in un punto}, per ogni punto. Ricorda bene 
+come si calcola l'Hessiana, sopratutto quando compaiono due variabili.
+
+Dopo aver calcolato l'hessiana e sostituito con il punto, 
+bisogna \textbf{porre} il determinante della hessiana moltiplicata per l'identità con $\lambda$ uguale a zero.
+
+Calcolando il determinante e ponendolo uguale a zero si risolve l'equazione per trovare gli autovalori $\lambda$. In base 
+al segno degli autovalori si può dire il "segno", della matrice. Controllando le 
+condizioni necessarie e sufficienti di secondo ordine si può dire se il punto è un minimo locale, minimo locale stretto, massimo locale, massimo locale stretto, o punto sella.
+
+\section{Ottimizzazione con vincoli}
+In Ottimizzazione con vincoli abbiamo due tipi di vincoli:
+\begin{itemize}
+    \item Uguaglianza - $g(x) = 0$ - E
+    \item Disuguaglianza - $g(x) \geq 0$ - I
+\end{itemize}
+
+\textbf{Nota sui programmi quadratici}: Se la funzione obiettivo è del tipo $f(x) = \frac{1}{2}x^TMx+c^Tx$, con $M$ una matrice simmetrica
+che significa che $M = M^T$, e tutti i vincoli $g_i$ sono funzioni lineari (sia di Uguaglianza che di Disuguaglianza), allora il problema è un \textbf{programma quadratico}.
+
+Se invece la funzione è $f(x) = c^Tx$, il problema quadratico diventa un programma lineare.
+
+\begin{definition}
+    (Vincoli attivo)
+
+    Dato un punto $\bar{x} \in X$, un vincolo $g_i(\bar{x}) = 0$ si dice \textbf{vincolo attivo}.
+    
+    \textbf{Nota:} Indichiamo $\mathcal{A}(\bar{x})$ l'insieme dei vincoli attivi in $\bar{x}$.
+\end{definition}
+
+\subsection{KKT Conditions}
+Sono condizioni di ottimalità di primo ordinep per i programmi con vincoli. 
+
+Vediamo in particolare cosa ci interessa:
+
+\begin{definition}
+    (LICQ - Linear Independence Constraint Qualification)
+
+    Dato un punto $\bar{x} \in X$, LICQ regge in $\bar{x}$ se l'insieme $\{\nabla g_i(\bar{x}), i \in \mathcal{A}(\bar{x})\}$ 
+    cioè l'insieme dei vincoli attivi per $\bar{x}$, deve essere costituito solamente da vettori linearmente indipendenti.
+\end{definition}
+
+\begin{definition}
+    (Funzione Lagrangiana)
+
+    Dato uno vettore $\lambda \in R^{|E|+|I|}$ chiamato vettore dei moltiplicatori Lagrangiani, diciamo che la funzione lagrangiana di $P$ è:
+
+    $$
+    \mathcal{L}(x,\lambda) = f(x) - \sum_{i \in E} \lambda_i g_i(x) - \sum_{i \in I} \lambda_i g_i(x)   
+    $$
+    con $\lambda \geq 0 \ \forall i \in I$. 
+\end{definition}
+
+Se vogliamo fare un esempio, ecco la spiegazione di come si lavora.
+
+Data una regione ammissibile, quindi un insieme di vincoli, analizziamo prendendo un punto $\bar{x}$
+come si comportano i vincoli.
+
+Controlliamo quali sono i vincoli che si attivano, ovvero quando la funzione $g_i(\bar{x}) = 0$.
+
+Prendiamo questi vincoli e calcoliamo il gradiente del vincolo, ovvero $\nabla g_i(\bar{x})$.
+Se abbiamo ancora delle variabili dopo aver fatto il gradiente, sostituiamo alla $x$ che 
+compare nel gradiente il punto $\bar{x}$.
+
+Poi, dopo aver calcolato questi valori, inseriamo tutti i gradienti in una matrice, chiamata $B$. 
+Bisogna controllare che i gradienti siano linearmente indipendenti, e per comodità
+possiamo calcolare il \textbf{determinante} della matrice e controllare che sia $\neq 0$.
+
+Se ad occhio si vede che dei gradienti sono linearmente dipendenti, allora si può dire 
+direttamente che $LICQ$ non reggono.
