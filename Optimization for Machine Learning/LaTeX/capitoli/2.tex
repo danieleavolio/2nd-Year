@@ -138,3 +138,86 @@ possiamo calcolare il \textbf{determinante} della matrice e controllare che sia 
 
 Se ad occhio si vede che dei gradienti sono linearmente dipendenti, allora si può dire 
 direttamente che $LICQ$ non reggono.
+
+\subsection{Teoremi delle KKT Conditions}
+
+Ci sono delle condizioni da rispettare:
+
+Sia $x^*$ un minimo locale per il problema $P$ e che le LICQ reggono. Allora possiamo dire che 
+$\exists \lambda^*$ tale che:
+$$
+KKT-Conditions = \begin{cases}
+    \nabla_x \mathcal{L}(x^*, \lambda^*) & = 0 \\
+    g_i(x^*) & = 0 \ \forall i \in E \\
+    g_i(x^*) & \geq 0 \ \forall i \in I \\
+    \lambda_i^* & \geq 0 \ \forall i \in I \\
+    \lambda_i^* g_i(x^*) & = 0 \ \forall i \in E \cup I \\
+\end{cases}
+$$
+
+Una nota, che non sappiamo a cosa serve ma è importante.
+
+$$
+\mathcal{L}(x, \lambda) = f(x) - \sum_{i \in E} \lambda_i g_i(x) - \sum_{i \in I} \lambda_i g_i(x)
+$$
+Questa formula ci dice che la funzione lagrangiana è la funzione obiettivo meno la sommatoria dei vincoli moltiplicati per i moltiplicatori lagrangiani.
+
+Quando applichiamo il gradiente rispetto ad $x$:
+
+$$
+\nabla_x \mathcal{L}(x^*, \lambda^*) = \nabla f(x^*) - \sum_{i \in E} \lambda_i^* \nabla g_i(x^*) - \sum_{i \in I} \lambda_i^* \nabla g_i(x^*)
+$$
+
+Ora, \textbf{nota} importante: Se $g_i(x^*) = 0$, allora serve che $\lambda^*=0$, questo torna utile 
+per l'ultima condizione di prima, ovvero $\lambda_i^* g_i(x^*) = 0 \ \forall i \in E \cup I$.
+Perché questo implica che:
+
+\begin{equation}
+    \begin{aligned}
+        \implies \nabla_x \mathcal{L}(x^*, \lambda^*) & = \nabla f(x^*) - \sum_{i \in \mathcal{A}(x^*)} \lambda_i^* \nabla g_i(x^*) = 0 \\
+        \implies \nabla f(x^*) & = \sum_{i \in \mathcal{A}(x^*)} \lambda_i^* \nabla g_i(x^*) \\
+    \end{aligned}
+\end{equation}
+
+In questo modo possiamo trovare il valore dei $\lambda_i^*$.
+
+Solitamente, quando si lavora con un esempio, possiamo avere\textit{ diversi punti.} Si parte \textbf{verificando le LICQ} e, successivamente,
+si verificano le \textbf{KKT Conditions}. Partiamo dalle LICQ perché le KKT conditions 
+hanno bisogno di avere le LICQ che reggono per quel punto per trovare il $\lambda^*$.
+
+Per le \textbf{LICQ}:
+
+Dato un punto controlliamo quali sono i vincol vincoli $g_i(x) \in \mathcal{A}(x)$ che si attivano, ovvero quando la funzione $g_i(x) = 0$.
+Trovato questo insieme si calcola il gradiente per ogni vincolo attivo. Successivamente si controlla che i vincoli siano 
+linearmente indipendenti tra loro e, se lo sono, allora le LICQ reggono.
+
+Per le \textbf{KKT Conditions}:
+Si calcola inizialmente la funzione lagrangiana. Questo è dato dalla formula che abbiamo visto prima, con 
+la funzione obiettivo meno la sommatoria dei vincoli moltiplicati per i moltiplicatori lagrangiani.
+
+Successivamente calcoliamo il gradiente della funzione lagrangiana rispetto ad $x$ e lo poniamo uguale a zero. Ci ritroveremo 
+ad avere un sistema di equazioni con $\lambda_i$ come incognita. Per trovare il valore di $\lambda_i$ bisogna
+risolvere il sistema di equazioni.
+
+Dopo aver trovato il valore di $\lambda^*$ si controlla che ogni valore di $\lambda_i^*$ sia maggiore o uguale a zero, 
+solamente per i vincoli di disuguaglianza.
+
+\textbf{Nota importante per tanti $\lambda$}: Se in una regione ammissibile abbiamo tanti vincoli, 
+il $\lambda^*$ da trovare avrà tanti valori quanti i vincoli. Abbiamo però modo di semplificare 
+il calcolo di questi. Per la proprietà della \textbf{complementarietà} abbiamo che:
+$$\lambda_i * g_i(x^*) = 0 \ \forall i \in E \cup I$$. Ora, se sappiamo già che 
+$g_i(x^*) >0$, allora $\lambda_i^*$ deve \textbf{PER FORZA} essere uguale a zero. 
+
+Ad esempio, se su $5$ vincoli solo $2$ sono attivi, al calcolo della funzione lagrangiana
+avremo $5$ moltiplicatori lagrangiani, ma solamente $2$ saranno diversi da zero perché
+i restanti $3$ vincoli non sono attivi. Possiamo rimuovere dall'equazione per 
+semplificare i calcoli. 
+
+\textbf{Implicazione diretta}: Se le LCIQ reggono:
+
+\begin{itemize}
+    \item $x^*$ è un minimo locale $\implies$ le KKT Reggono
+    \item Se le KKT non reggono $\implies$ $x^*$ non è un minimo locale
+\end{itemize}
+
+Notiamo che le KKT sono \textbf{condizioni necessarie} ma non sufficienti.
