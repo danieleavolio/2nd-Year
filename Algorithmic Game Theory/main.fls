@@ -608,6 +608,12 @@ INPUT chapters\l6.tex
 INPUT .\chapters\l7.tex
 INPUT .\chapters\l7.tex
 INPUT chapters\l7.tex
+INPUT .\chapters\l8.tex
+INPUT .\chapters\l8.tex
+INPUT chapters\l8.tex
+INPUT .\chapters\l9.tex
+INPUT .\chapters\l9.tex
+INPUT chapters\l9.tex
 OUTPUT main.loe
 INPUT main.aux
 INPUT .\main.out

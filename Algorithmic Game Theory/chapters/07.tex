@@ -240,6 +240,40 @@ Definiamo delle notazioni e proprietà per risolvere i problemi come quello prec
     \item $O$: Insieme finito di risultati con $|O| \geq 3$
     \item $L$: L'insieme di tutte le preferenze di ordinamento stretto su $O$.
     \item $[\succ]$: Un elemento dell'insieme $L^n$ (Un ordinamento di preferenza per ogni agente. L'input della nostra funzione di welfare sociale)
-    \item $\succ_w$
+    \item $\succ_w$: L'ordine di preferenza selezionato dalla funzione di benessere sociale $W$
+    \begin{itemize}
+        \item Quando l'input a $W$ è ambiguo lo scriviano nel subscript. L'ordine sociale selezionato da $W$
+        è scritto come $\succ_{w}([\succ'])$.
+    \end{itemize}
 \end{itemize}
+
+\begin{definition}
+    (Efficienza di Pareto)
+
+    $W$ è \textbf{Pareto efficiente} se per qualsiasi $o_1, o_2 \in O$,
+    $\forall i o_1 \succ_i o_2$ implica che $o_1 \succ_w o_2$.
+
+    Cioè, se tutti gli agenti preferiscono $o_1$ a $o_2$, allora $W$ deve scegliere $o_1$ a $o_2$.
+\end{definition}
+
+\begin{definition}
+    (Non dittatorialità)
+
+    $W$ non ha un \textbf{dittatore} se $\lnot \exists i forall o_1, o_2 (o_1 \succ_i o_2 \implies o_1 \succ_w o_2)$.
+
+    Cioé, non esiste un singolo agente le quali preferenze determinano 
+    sempre l'ordine sociale. Altrimenti, diciamo che $W$ è \textbf{dittatoriale}.
+\end{definition}
+
+\begin{definition}
+    (Arrow Theorem)
+
+    Una qualsiasi funzione di ordine sociale $W$ che è Pareto Efficiente e indipendente 
+    da relative irrilevanti è dittatoriale.
+
+\end{definition}
+
+La dimostrazione mi rifiuto di farla.
+
+
 \newpage

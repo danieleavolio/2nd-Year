@@ -56,44 +56,47 @@
 \contentsline {subsection}{\numberline {10.2}Sistema di voto con ranking}{50}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Fun Game}{50}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}Sensitivita' al candidato perdente}{51}{subsection.10.4}%
-\contentsline {section}{\numberline {11}Introduzione alla teoria dell'utilità e decision making}{53}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Concetti di base}{53}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}ALTERNATIVE}{53}{subsubsection.11.1.1}%
-\contentsline {subsubsection}{\numberline {11.1.2}PREFERENZE}{53}{subsubsection.11.1.2}%
-\contentsline {subsubsection}{\numberline {11.1.3}Relazione di Preferenza}{53}{subsubsection.11.1.3}%
-\contentsline {subsubsection}{\numberline {11.1.4}Rappresentare le preferenze come \textbf {utilità}}{54}{subsubsection.11.1.4}%
-\contentsline {subsection}{\numberline {11.2}Le lotterie}{54}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Utilità di Von Neumann-Morgenstern}{55}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Atteggiamento verso il rischio}{56}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Applicazioni: Condivisione del rischio}{57}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Applicazione: Assicurazione}{57}{subsection.11.6}%
-\contentsline {section}{\numberline {12}Teoria dei giochi coalizionali}{58}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Superadditività}{59}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Core o Nucleo}{59}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Shapley Value}{59}{subsection.12.3}%
-\contentsline {section}{\numberline {13}Problemi computazionali nella teoria dei giochi coalizionali}{61}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Limitazioni dell'approccio Naive}{61}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Strategie per i problemi di computazione}{62}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Gioco del'aereoporto | Airport Game}{62}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Approssimazione di Montecarlo}{63}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Rappresentazioni compatte}{64}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Reti di contribuzione marginale |MC-Nets}{67}{subsection.13.6}%
-\contentsline {section}{\numberline {14}Non-cooperative Games}{70}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Giochi strategia puri}{71}{subsection.14.1}%
-\contentsline {subsubsection}{\numberline {14.1.1}Dilemma del prigioniero}{71}{subsubsection.14.1.1}%
-\contentsline {subsubsection}{\numberline {14.1.2}Pure Coordination}{71}{subsubsection.14.1.2}%
-\contentsline {subsubsection}{\numberline {14.1.3}Battle of the Sexes}{71}{subsubsection.14.1.3}%
-\contentsline {subsubsection}{\numberline {14.1.4}Matching Pennies}{72}{subsubsection.14.1.4}%
-\contentsline {subsection}{\numberline {14.2}Strategie e strategie miste}{72}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Nash Equilibria}{73}{subsection.14.3}%
-\contentsline {subsubsection}{\numberline {14.3.1}Giochi a Somma-Zero}{74}{subsubsection.14.3.1}%
-\contentsline {section}{\numberline {15}Tree Decompositions Lab}{77}{section.15}%
-\contentsline {subsection}{\numberline {15.1}Maximum Independent Set (MIS)}{77}{subsection.15.1}%
-\contentsline {subsubsection}{\numberline {15.1.1}L'algoritmo di programmazione dinamica}{79}{subsubsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.2}Cops e Robber}{83}{subsection.15.2}%
-\contentsline {subsection}{\numberline {15.3}Calcolare la tree decomposition}{87}{subsection.15.3}%
-\contentsline {section}{\numberline {16}Tree Decomposition e programmazione dinamica}{91}{section.16}%
-\contentsline {subsection}{\numberline {16.1}MIS sui grafi con treewidth limitata}{91}{subsection.16.1}%
-\contentsline {section}{\numberline {17}Lab: Computational Social Choice}{93}{section.17}%
-\contentsline {subsection}{\numberline {17.1}Proprietà desiderate per il sistema di voto}{94}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}Sistemi di voto}{95}{subsection.17.2}%
+\contentsline {section}{\numberline {11}Introduzione alla teoria dell'utilità e decision making}{54}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Concetti di base}{54}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}ALTERNATIVE}{54}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}PREFERENZE}{54}{subsubsection.11.1.2}%
+\contentsline {subsubsection}{\numberline {11.1.3}Relazione di Preferenza}{54}{subsubsection.11.1.3}%
+\contentsline {subsubsection}{\numberline {11.1.4}Rappresentare le preferenze come \textbf {utilità}}{55}{subsubsection.11.1.4}%
+\contentsline {subsection}{\numberline {11.2}Le lotterie}{55}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Utilità di Von Neumann-Morgenstern}{56}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Atteggiamento verso il rischio}{57}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Applicazioni: Condivisione del rischio}{58}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Applicazione: Assicurazione}{58}{subsection.11.6}%
+\contentsline {section}{\numberline {12}Teoria dei giochi coalizionali}{59}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Superadditività}{60}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Core o Nucleo}{60}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Shapley Value}{60}{subsection.12.3}%
+\contentsline {section}{\numberline {13}Problemi computazionali nella teoria dei giochi coalizionali}{62}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Limitazioni dell'approccio Naive}{62}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Strategie per i problemi di computazione}{63}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Gioco del'aereoporto | Airport Game}{63}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Approssimazione di Montecarlo}{64}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Rappresentazioni compatte}{65}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Reti di contribuzione marginale |MC-Nets}{68}{subsection.13.6}%
+\contentsline {section}{\numberline {14}Non-cooperative Games}{71}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Giochi strategia puri}{72}{subsection.14.1}%
+\contentsline {subsubsection}{\numberline {14.1.1}Dilemma del prigioniero}{72}{subsubsection.14.1.1}%
+\contentsline {subsubsection}{\numberline {14.1.2}Pure Coordination}{72}{subsubsection.14.1.2}%
+\contentsline {subsubsection}{\numberline {14.1.3}Battle of the Sexes}{72}{subsubsection.14.1.3}%
+\contentsline {subsubsection}{\numberline {14.1.4}Matching Pennies}{73}{subsubsection.14.1.4}%
+\contentsline {subsection}{\numberline {14.2}Strategie e strategie miste}{73}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Nash Equilibria}{74}{subsection.14.3}%
+\contentsline {subsubsection}{\numberline {14.3.1}Giochi a Somma-Zero}{75}{subsubsection.14.3.1}%
+\contentsline {section}{\numberline {15}Tree Decompositions Lab}{78}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Maximum Independent Set (MIS)}{78}{subsection.15.1}%
+\contentsline {subsubsection}{\numberline {15.1.1}L'algoritmo di programmazione dinamica}{80}{subsubsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.2}Cops e Robber}{84}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Calcolare la tree decomposition}{88}{subsection.15.3}%
+\contentsline {section}{\numberline {16}Tree Decomposition e programmazione dinamica}{92}{section.16}%
+\contentsline {subsection}{\numberline {16.1}MIS sui grafi con treewidth limitata}{92}{subsection.16.1}%
+\contentsline {section}{\numberline {17}Lab: Computational Social Choice}{94}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Proprietà desiderate per il sistema di voto}{95}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Sistemi di voto}{96}{subsection.17.2}%
+\contentsline {section}{\numberline {18}Stable Matching}{98}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Problema del matrimonio stabile}{98}{subsection.18.1}%
+\contentsline {section}{\numberline {19}Appunti VCG}{100}{section.19}%
