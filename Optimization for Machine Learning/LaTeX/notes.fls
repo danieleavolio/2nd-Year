@@ -289,6 +289,8 @@ INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\rerunfilecheck\rerunfilech
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\cancel\cancel.sty
+INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\cancel\cancel.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\danie\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
@@ -422,11 +424,18 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT .\capitoli\2.tex
 INPUT .\capitoli\2.tex
 INPUT capitoli\2.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
 INPUT .\capitoli\3.tex
 INPUT .\capitoli\3.tex
 INPUT capitoli\3.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvro7t.tfm
+INPUT .\images\tosta.png
+INPUT .\images\tosta.png
+INPUT .\images\tosta.png
+INPUT .\images\tosta.png
+INPUT .\images\tosta.png
+INPUT .\images\tosta.png
+INPUT .\images\tosta.png
 INPUT .\notes.bbl
 INPUT .\notes.bbl
 INPUT notes.bbl
@@ -453,6 +462,8 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb

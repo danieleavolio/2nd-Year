@@ -41,8 +41,8 @@ tipo:
     $$
     con:
     \begin{itemize}
-        \item $v \in R^n$ è un vettore
-        \item $\gamma \in R$ è uno scalare
+        \item $v \in R^n$ è un vettore, la normale del piano
+        \item $\gamma \in R$ è uno scalare, il bias
         \item $v \neq 0$
     \end{itemize}
 
@@ -92,4 +92,125 @@ stesso. $ X\ convesso \implies conv(X) = X $
         erroneamente} se $$ v^T b_j - \gamma + 1 > 0 $$
 
     L'errore di $b_j$ è dato da: $$ \max\{0, v^T b_j - \gamma + 1\} \geq 0 $$
+
+    La funzione errore totale che ci viene da: $min_{v,\gamma} f(v,\gamma)$ è:
+
+    $$
+    \min_{v,\gamma} f(v,\gamma) = \frac{1}{m} \sum_{i=1}^{m} \max\{0, -v^T a_i + \gamma + 1\} + \frac{1}{k} \sum_{j=1}^{k} \max\{0, v^T b_j - \gamma + 1\}
+    $$
+
+    Cioè, la media degli errori di classificazione dei punti di $A$ e $B$.
+
+    Questa funzioen è \textbf{non smooth e convessa}. Possiamo trasformare questo in un programma lineare.
+
+    Consideriamo:
+    \begin{itemize}
+        \item $\xi  = \max{0, -v^T a_i + \gamma + 1}$ per $i = 1, \dots, m$
+        \item $\psi_j = \max{0, v^T b_j - \gamma + 1}$ per $j = 1, \dots, k$
+    \end{itemize}
+
+    Possiamo riscrivere il problema nel seguente modo:
+
+    $$
+    LP = \begin{cases}
+        \min_{v,\gamma, \xi, \psi} \frac{1}{m} \sum_{i=1}^{m} \xi_i + \frac{1}{k} \sum_{j=1}^{k} \psi_j \\
+
+        \xi_i \geq -v^T a_i + \gamma + 1 \quad \forall i = 1, \dots, m \\
+        \psi_j \geq v^T b_j - \gamma + 1 \quad \forall j = 1, \dots, k \\
+        \xi_i, \psi_i \geq 0 \quad \forall i = 1\\
+    \end{cases}
+    $$
 \end{definition}
+
+\section{Separazione Poliedrale}
+La separazione poliedrale è un'estensione della separazione lineare. In questo caso
+consideriamo un problema che ha almeno $h > 1$ iperpiani di separazione $H(v^j, \gamma_j)$ tale che:
+\begin{enumerate}
+    \item Per ogni punto positivo $a_i \in A$ e ogni iperpiano $j = 1, \dots, h$ vale che:
+    $$
+        v^{jT} a_i \geq \gamma_j - 1
+    $$
+
+    Cioé il punto è "dentro" l'iperpiano.
+
+    \item Per ogni punto negativo $b_i \in B$ esiste almeno 1 iperpiano $j \in \{1, \dots, h\}$ tale che:
+    $$
+        v^{jT} b_i \geq \gamma_j + 1
+    $$
+
+    Cioé il punto è "fuori" almeno 1 iperpiano.
+\end{enumerate}
+
+\textbf{Nota:} $A$ è h-pliedricamente separabile da $B$ $\iff$ $conv(A) \cap B = \emptyset$.
+
+\textbf{Nota 2:} Se h = 1 $\rightarrow$ problema lineare.
+
+\begin{definition}
+    Funzione errore nel caso poliedrico:
+
+    Un punto $a_i \in A$ è classificato correttamente se:
+
+    $$
+        v^{jT} a_i \leq \gamma_j -1 \quad \forall j = 1, \dots, h
+    $$
+
+    $$
+        v^{jT} a_i - \gamma_j + 1 \leq 0 \quad \forall j = 1, \dots, h
+    $$
+
+    $$
+        \max_{j=1, \dots, h} \{v^{jT} a_i - \gamma_j + 1\} \leq 0 \quad \forall j = 1, \dots, h
+    $$
+
+    Ed è classificato erroneamente se:
+
+    $$
+    \max_{j=1, \dots, h} \{v^{jT} a_i - \gamma_j + 1\} > 0 \quad \forall j = 1, \dots, h
+    $$
+
+    In totale, l'errore di $a_i$ è dato da:
+
+    $$
+        \max_{j=1, \dots, h} \{0, v^{jT} a_i - \gamma_j + 1\}
+    $$
+
+    Per quanto riguarda i punti negativi $b_j \in B$, viene classificato 
+    correttamente se $\exists j \in \{1, \dots, h\}$ tale che:
+
+    $$
+    v^{jT} b_i \geq \gamma_j + 1 \rightarrow v^{jT} b_i - \gamma_j - 1 \geq 0 \rightarrow -v^{jT} b_i + \gamma_j + 1 \leq 0
+    $$
+
+    Analogamente, viene classificato erroneamente se:
+
+    $$
+    -v^{jT} b_i + \gamma_j + 1 > 0 \quad \forall j = 1, \dots, h
+    $$
+
+    Cioè, se $\min_{j=1, \dots, h} \{-v^{jT} b_i + \gamma_j + 1\} > 0$.
+
+    L'errore di $b_i$ è dato da:
+
+    $$
+    \max_{j=1, \dots, h} \{0, -v^{jT} b_i + \gamma_j + 1\}
+    $$    
+
+    Notiamo che questa funzione è \textbf{più difficile da minimizzare}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/tosta.png}
+        \caption{Funzione di errore nel caso poliedrico}
+        \label{fig:3-1}
+    \end{figure}
+    
+    La funzione di errore 
+    totale è data da:
+
+    $$
+        f ( v^1, v^2, \dots, v^; \gamma_1, \gamma_2, \dots, \gamma_h ) = \frac{1}{m} \sum_{i=1}^{m} \max_{j=1, \dots, h} \{0, v^{jT} a_i - \gamma_j + 1\} + \frac{1}{k} \sum_{j=1}^{k} \max_{j=1, \dots, h} \{0, -v^{jT} b_i + \gamma_j + 1\}
+    $$
+
+    Questa funzione è \textbf{non convessa}.
+\end{definition}
+

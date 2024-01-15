@@ -221,3 +221,225 @@ semplificare i calcoli.
 \end{itemize}
 
 Notiamo che le KKT sono \textbf{condizioni necessarie} ma non sufficienti.
+
+\newpage
+
+\section{Approcci di soluzione}
+
+Quando partiamo da un punto iniziale $x^{0}$ possiamo avere più casi di problemi.
+\begin{itemize}
+    \item Caso senza vincoli $\rightarrow \in R^n$
+    \item Caso con vincoli. Questo caso si divide in due:
+    \begin{itemize}
+        \item $x$ potrebbe non appartenere alla regione ammissibile $x \notin X$
+        \item $x$ appartiene alla regione ammissibile $x \in X$
+    \end{itemize}
+\end{itemize}
+
+\begin{domanda}
+    Quando cerchiamo un nuovo punto, quando ci fermiamo?
+
+    Questo dipende dal tipo di problema che stiamo risolvendo. 
+
+    \begin{itemize}
+        \item Caso senza vincoli: Ci fermiamo quando troviamo un punto stazionario, ovvero quando 
+        dato un punto $x$, il gradiente della funzione nel punto è uguale a 0 $\nabla f(x) = 0$.
+        \item Caso con vincoli: Ci fermiamo quando troviamo un punto che soddisfa le KKT Conditions.
+    \end{itemize}
+\end{domanda}
+
+Abbiamo due metodi di soluzione: \textbf{Metodi di ricerca lineari} che possonoe essere a loro volta \textbf{esatti} e \textbf{inesatti},
+oppure il \textbf{Metodo della regione di confidenza}.
+
+\begin{definition}
+    Metodi di ricerca lineari
+
+    Un nuovo punto $x^{k+1}$ viene calcolato usando $x^k + \alpha_k d^k$, con $\alpha_k$
+    un passo di ricerca e $d^k$ una direzione di ricerca.
+
+    Nota: $\alpha \in R > 0$ e $d \in R^n$.
+
+    Ad esempio, il \textit{simplesso} è un metodo di ricerca lineare.
+\end{definition}
+
+\begin{domanda}
+    Qual è la differenza tra esatto e inesatto?
+
+    Il calcolo del nuovo punto $x^{k+1}$ può essere esatto o inesatto. Se è esatto, è risolto esattamente,
+    se è inesatto è calcolato in modo approssimato.
+\end{domanda}
+
+\begin{definition}
+    Regione di confidenza
+
+    In quesot metodo un nuovo punto $x^{k+1}$ è calcolato usando il vecchio punto e una direzione.
+
+    La direzione $d^k$ è calcolata risolvendo un sotto problema del tipo:
+
+    $$
+    P_{TR} = \begin{cases}
+        \min_{d} m_k(x^k + d^k) \\
+        x^k + d \in X
+    \end{cases}
+    $$
+
+    Dove si indica con $m_k$ la funzione modello.
+
+    Quando si approssima per $d$, diciamo che è approssimata bene se la 
+    la differenza tra la funzione originale e la funzione modello, nel punto nuovo calcolato 
+    è bassa. Altrimenti, è una cattiva approssimazione.
+\end{definition}
+
+
+\begin{definition}
+    Norma di un vettore
+
+    Si indica con norma del vettore un mapping tra $R^n \rightarrow R^+$ che soddisfa le seguenti proprietà:
+    \begin{itemize}
+        \item $||x|| = 0 \iff \vec{x} = 0$
+        \item $||\vec{x}+\vec{y}|| \leq ||\vec{x}|| + ||\vec{y}|| \ \forall x,y \in R^n$
+        \item $||\alpha \vec{x}|| = |\alpha| ||\vec{x}|| \ \forall \alpha \in r \land x \in R^n$
+    \end{itemize}
+\end{definition}
+
+Ci sono varie norme, ma a noi interessa la norma $L_2$
+
+$$
+||x||_2 = \sqrt{\sum_{i=1}^n x_i^2}
+$$
+
+\textbf{Nota:} Se $x \in R$, allora $||x|| = |x|$.
+
+\textbf{Nota 2:} La norma non è differenziabile perché la radice quadrata non è differenziabile in $0$.
+
+\textbf{Nota 3:} Possiamo scrivere $||x||_2^2 = x^Tx$.
+
+
+\subsection*{Caso senza vincoli}
+
+$$
+P = \begin{cases}
+    \min{x}  f(x)\\
+    f:R^n  \rightarrow R\\
+    f  \in C^2
+\end{cases}
+$$
+
+\begin{definition}
+    (Direzione di discesa)
+
+    Dato un $\bar{x} \in R^n$, il vettore $\bar{d}$ è una direzione di discesa di $f$ al
+    punto $\bar{x}$ se esiste un $\bar{\alpha} > 0$ tale che:
+
+    $$f(\bar{x} + \alpha \bar{d}) < f(\bar{x}) \ \forall \alpha \in (0, \bar{\alpha})$$
+
+    \textbf{Nota:} Se questa $\bar{d}$ essiste e $\nabla f(\bar{x})^T \bar{d} < 0$, allora la direzione è una direzione di discesa. Se 
+    siamo nel caso in cui $f$ è convessa, allora l'inverso è vero.
+    $$\nabla f(\bar{x})^T \bar{d} < 0 \iff \bar{d} \text{ è una direzione di discesa}$$
+\end{definition}
+
+\begin{definition}
+    (Direzione di steepest descent)
+
+    Dal teorema di Taylor sappiamo che possiamo approssimare $f(x^k + d)$ con $f(x^k) + \nabla f(x^k)^T d$. 
+    Vogliamo $minimizzare$ questa approssimazione, per $d$.
+
+    $$
+    P_K = \begin{cases}
+        \min_{d} \cancel{f(x^k)} + \nabla f(x^k)^T d \\
+        \frac{1}{2}||d||_2^2 = \frac{1}{2}
+    \end{cases}
+    $$
+
+    Ma la prima parte possiamo semplificare perché non compare la $d$.
+
+    Il nostro obiettivo è trovare $d$. Come facciamo? Possiamo usare il metodo dei moltiplicatori lagrangiani.
+
+    $$
+    \mathcal{L}(d, \lambda) = \nabla f(x^k)^T d - \lambda(\frac{1}{2}||d||_2^2 - \frac{1}{2}) 
+    $$
+
+    $$\nabla_{d} \mathcal{L}(d, \lambda) = \nabla f(x^k) - \lambda d = 0$$
+
+    $$\nabla f(x^k) = \lambda d$$
+
+    Si assume che $\lambda \neq 0$ perché se fosse zero, allora $\nabla f(x^k) = 0$ e quindi
+    $x^k$ sarebbe un punto stazionario.
+
+    $$d = \frac{\nabla f(x^k)}{\lambda}$$
+
+    Ora, dal vincolo sappiamo che $||d||^2 = 1$, quindi:
+    $$\frac{||\nabla f(x^k)||^2}{\lambda^2} = 1$$
+
+    Da qui troviamo i moltiplicatori lagrangiani. 
+
+    $$\lambda^2 = ||\nabla f(x^k)||^2 \rightarrow \lambda = \pm ||\nabla f(x^k)||$$
+    
+    Siccome siamo in un contesto di minimizzazione, prendiamo il valore negativo.
+
+    $$d^* = -\frac{\nabla f(x^k)}{||\nabla f(x^k)||}$$
+
+
+    \textbf{Nota:} $\nabla f(x^k)^T d^*$ = $\frac{-\nabla f(x^k)^T \nabla f(x^k)}{||\nabla f(x^k)||} = -||\nabla f(x^k)|| < 0$.
+
+\end{definition}
+
+Quando hai un esempio svolto, per capire se effettivamente la \textbf{step size} cioé $\alpha$ è buono, 
+controlli se effettivamente il nuovo punto ha un valore inferiore.
+
+$$ 
+f(x^k + \alpha d^k) < f(x^k)
+$$
+
+\begin{definition}
+    Metodo di Newton
+
+    Il problema è sempre del tipo:
+
+    $$
+    P = \begin{cases}
+        \min_{x} f(x) \\
+        f: R^n \rightarrow R \\
+        f \in C^2
+    \end{cases}
+    $$
+
+    Sempre dal teorema di Taylor, possiamo approssimare:
+    $$
+    f(x^k + d) \approx f(x^k) + \nabla f(x^k)^T d + \frac{1}{2} d^T \nabla^2 f(x^k) d
+    $$
+
+    Assumiamo che $\nabla^2 f(x^k)$ sia definita positiva.
+
+    Il problema che vogliamo risolvere è:
+
+    $$
+    P_K = \begin{cases}
+        \min_{d} m_k(d)\\
+    \end{cases}
+    $$
+
+    Risolviamo il problema:
+
+    $$\nabla_d m_k(d) = \nabla f(x^k) + \nabla^2 f(x^k) d = 0$$
+    
+    $$\nabla f(x^k) = - \nabla^2 f(x^k) d$$ che è positiva definita 
+
+    $$d = -(\nabla^2 f(x^k))^{-1} \nabla f(x^k)$$ che è la direzione di Newton
+
+    $$\nabla f(x^k)^T d = \nabla f(x^k)^T [ -\nabla^2 f(x^k)]^{-1} \nabla f(x^k)$$
+
+    $$=-\nabla f(x^k)^T  \nabla^2 f(x^k)^{-1} \nabla f(x^k) < 0$$ è una direzione di discesa
+
+    \textbf{Nota:} La parte interna senza il $-$ deve essere $>0$
+
+    \textbf{Note 2:}
+    \begin{itemize}
+        \item $m_k(0) = f(x^k)$
+        \item $\nabla m_k(0) = \nabla f(x^k)$
+        \item $\nabla^2 m_k(0) = \nabla^2 f(x^k)$
+    \end{itemize}
+\end{definition}
+
+
+\newpage
