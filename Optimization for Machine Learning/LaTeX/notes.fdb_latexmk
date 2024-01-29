@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex notes"] 1705335491 "notes.aux" "notes.bbl" "notes" 1705335495 0
+["bibtex notes"] 1705337671 "notes.aux" "notes.bbl" "notes" 1705337675 0
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/bibtex/bib/feupphdteses/references.bib" 1366808100 2206 985e03fb36d872d306e76cfacc160693 ""
-  "notes.aux" 1705335494 3264 afedbb153839d6349fd54651de261839 "pdflatex"
+  "notes.aux" 1705337674 3383 2a3165ebc382363d2d5cb0e00216d589 "pdflatex"
   (generated)
   "notes.bbl"
   "notes.blg"
   (rewritten before read)
-["pdflatex"] 1705335492 "d:/Lovaion/University/2nd Year/Optimization for Machine Learning/LaTeX/notes.tex" "notes.pdf" "notes" 1705335495 0
+["pdflatex"] 1705337672 "d:/Lovaion/University/2nd Year/Optimization for Machine Learning/LaTeX/notes.tex" "notes.pdf" "notes" 1705337675 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768654 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768654 4484 b828043cbd581d289d955903c1339981 ""
@@ -238,19 +238,19 @@
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1625494067 48833 3b7b4cfab1a3d15596bfd3772a77ab65 ""
   "capitoli/1.tex" 1704984419 14555 8b26bbed75532e9648c658ff4945225d ""
   "capitoli/2.tex" 1705330259 16339 a7dad37cde24594f48dfabc403725caf ""
-  "capitoli/3.tex" 1705335487 7655 273a0a7b133cf0df58cb40b53e055c10 ""
+  "capitoli/3.tex" 1705337664 7690 066ed92b4aad4deda6b71c9dcd5d92d3 ""
   "common.tex" 1705328024 3465 348f77e061c7104672a7699fb82ee612 ""
   "d:/Lovaion/University/2nd Year/Optimization for Machine Learning/LaTeX/notes.tex" 1704984426 1396 6a1c25a6bf15b27f23ef6efac7d599d7 ""
   "images/funz conv.png" 1704823368 46380 289890d697842d89da8b4497ad5da9f2 ""
   "images/minimo locale.png" 1704822838 51341 80a0e05fd04a6d4d26dd575b7c015016 ""
   "images/non conv.png" 1704823393 32651 12d956545248955576d0e3396c457b8e ""
   "images/tosta.png" 1705335441 73174 c15133f55556894005cf430a12aef917 ""
-  "notes.aux" 1705335494 3264 afedbb153839d6349fd54651de261839 "pdflatex"
-  "notes.bbl" 1705335492 52 0eba253fc001332e731e8aba3f23127b "bibtex notes"
-  "notes.lof" 1705335494 411 14c02bb6368b67abc4357a7ebda730dc "pdflatex"
-  "notes.out" 1705335494 2225 701525d635769e86cbe06eedf6e42339 "pdflatex"
+  "notes.aux" 1705337674 3383 2a3165ebc382363d2d5cb0e00216d589 "pdflatex"
+  "notes.bbl" 1705337672 52 0eba253fc001332e731e8aba3f23127b "bibtex notes"
+  "notes.lof" 1705337674 411 14c02bb6368b67abc4357a7ebda730dc "pdflatex"
+  "notes.out" 1705337674 2368 a7fda2346db59b3f12966d064843d9e3 "pdflatex"
   "notes.tex" 1704984426 1396 6a1c25a6bf15b27f23ef6efac7d599d7 ""
-  "notes.toc" 1705335494 1091 0759fb82c14cccbccef2c57d4c7cfa64 "pdflatex"
+  "notes.toc" 1705337674 1169 474c78121acf93e51291c2bcc9c07e46 "pdflatex"
   (generated)
   "notes.aux"
   "notes.lof"

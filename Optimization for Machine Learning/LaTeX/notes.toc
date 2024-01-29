@@ -11,3 +11,4 @@
 \contentsline {section}{\numberline {7}Approcci di classificazione}{19}{section.7}%
 \contentsline {section}{\numberline {8}Separazione Lineare}{20}{section.8}%
 \contentsline {section}{\numberline {9}Separazione Poliedrale}{21}{section.9}%
+\contentsline {section}{\numberline {10}Separazione Sferica}{23}{section.10}%
