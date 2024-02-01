@@ -474,20 +474,7 @@ public static class ImportMapper2 extends Mapper<LongWritable, Text, ImmutableBy
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             String[] values = value.toString().split(",");
             String rowKey = values[0];
-
-            // Put put = new Put(Bytes.toBytes(rowKey));
-            // put.addColumn(Bytes.toBytes("info"), Bytes.toBytes("fare_amount"), Bytes.toBytes(fareAmount));
-            // put.addColumn(Bytes.toBytes("pickup"), Bytes.toBytes("pickup_datetime"), Bytes.toBytes(pickupDatetime));
-            // put.addColumn(Bytes.toBytes("pickup"), Bytes.toBytes("pickup_longitude"), Bytes.toBytes(pickupLongitude));
-            // put.addColumn(Bytes.toBytes("pickup"), Bytes.toBytes("pickup_latitude"), Bytes.toBytes(pickupLatitude));
-            // put.addColumn(Bytes.toBytes("dropoff"), Bytes.toBytes("dropoff_longitude"),
-            //         Bytes.toBytes(dropoffLongitude));
-            // put.addColumn(Bytes.toBytes("dropoff"), Bytes.toBytes("dropoff_latitude"), Bytes.toBytes(dropoffLatitude));
-            // put.addColumn(Bytes.toBytes("info"), Bytes.toBytes("passenger_count"), Bytes.toBytes(passengerCount));
-
-            // context.write(new ImmutableBytesWritable(Bytes.toBytes(rowKey)), put);
-            // follow this schema
-
+s
             Put put = new Put(Bytes.toBytes(rowKey));
             put.addColumn(CF_SONG, Q_SONG, Bytes.toBytes(values[1]));
 
