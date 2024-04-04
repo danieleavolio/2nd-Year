@@ -1,9 +1,0 @@
-\contentsline {section}{\numberline {1}Teoria}{3}{section.1}%
-\contentsline {section}{\numberline {2}}{4}{section.2}%
-\contentsline {section}{\numberline {3}Lezioni di Laboratorio}{5}{section.3}%
-\contentsline {section}{\numberline {4}Domande: Big Data Introduction}{7}{section.4}%
-\contentsline {section}{\numberline {5}Domande: GoodBye SQL}{9}{section.5}%
-\contentsline {section}{\numberline {6}Domande: Google Stack e Hadoop}{12}{section.6}%
-\contentsline {section}{\numberline {7}Domande: Column and in Memory database}{15}{section.7}%
-\contentsline {section}{\numberline {8}Domande: MapReduce Introduction}{17}{section.8}%
-\contentsline {section}{\numberline {9}Domande: MapReduce Hadoop Basics}{21}{section.9}%
