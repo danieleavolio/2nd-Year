@@ -1,0 +1,137 @@
+\section{Cos'è la Game Theory | Teoria dei giochi}
+\label{sec:cos_e_la_game_theory_teoria_dei_giochi}
+
+La \textbf{teoria dei giochi} è una disciplina che studia il comportamento
+decisionale multi-persona, usato per fare predizioni su come \textbf{agenti
+    razionali multipli} interagiscono o si comportano in situazioni di
+\textit{cooperazione} o in situazione di \textit{conflitto}.
+
+Alcune definizioni di termini:
+%use 
+\begin{itemize}
+    \item \textbf{Conflitto}: le azioni dei giocatori hanno effetto sugli Algorithmic
+    \item \textbf{Cooperazione}: I giocatori possono collaborare per raggiungere un obiettivo
+    \item \textbf{Comportamento razionale}: I giocatori vogliono massimizzare la loro \textit{utilità attesa | expected utility}
+    \item \textbf{Predizione}: Il nostro obiettivo è sapere cosa faranno i giocatori, utilizzando \textit{solution concepts - concetti di soluzione}
+\end{itemize}
+
+\subsection{E cosa significa Algorithmic Game Theory?}
+\label{sub:e_cosa_significa_algorithmic_game_theory}
+
+Possiamo dire che algorithmic game theory è un punto d'incontro tra
+\textbf{game theory} e \textbf{algorithm design} che punta a
+\textit{\textbf{progettare algoritmi} che permettono deglle strategie in
+    specifici ambienti}.
+
+\subsection{Coalition Games}
+\label{sub:coalition_game_theory}
+
+La \textbf{coalition game theory} è una branca della game theory che studia le
+interazioni tra gruppi di giocatori, che \textbf{collaborano} per
+\textit{raggiungere un obiettivo comune}.
+
+\textbf{Nota - Shapley Values:} Il concetto di \textbf{Shapley Values} è un concetto che permette di \textit{spiegare}, circa,
+come un algoritmo di \textbf{machine learning} ha preso una decisione. Ad esempio, mostra
+le \textit{feature} che hanno avuto un impatto maggiore nella decisione finale della predizione. In pratica mostra i vari
+\textit{Join | Coalizioni} di features.
+
+\textbf{Quali sono le domande più importanti in questa sezione?}
+\begin{itemize}
+    \item Quale coalizione è più probabile che venga formata?
+    \item In che modo i giocatori devono dividere il premio? \textit{(Payoff)}
+\end{itemize}
+
+\subsection{Non-Cooperative Games}
+\label{sub:non_cooperative_games}
+
+In questo tipo di giochi, i giocatori \textbf{non hanno coalizioni} o comunque
+non ne hanno bisogno.
+
+Alcuni giochi che fanno parte di questa categoria:
+\begin{itemize}
+    \item Scacchi
+    \item Sasso-Carta-Forbice
+    \item \textit{Il dilemma del prigioniero}
+\end{itemize}
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c|cc}
+            \multicolumn{1}{c}{} & \multicolumn{2}{c}{Giocatore 1}            \\
+            \cline{2-3}
+            Giocatore 2          & Collabora                       & Tradisci \\
+            \cline{1-3}
+            Collabora            & (-1,-1)                         & (-5,0)   \\
+            Tradisci             & (0,-5)                          & (-3,-3)  \\
+            \cline{1-3}
+        \end{tabular}
+    \end{center}
+    \caption{Esempio di dilemma del prigioniero}
+\end{figure}
+
+In questo gioco, la \textbf{strategia} migliore per il singolo è quella di
+\textbf{tradire} l'altro giocatore, in quanto è quella che massimizza la sua
+utilità, precisamente andrebbe a \textbf{perdere 0 punti}, mentre l'altro
+giocatore ne perderebbe 5.
+
+\subsection{Tree Decomposition}
+\label{sub:tree_decomposition}
+
+Alcuni problemi sui grafi hanno una complessità di \textbf{NP-HARD} su dei
+grafi arbitrari, e hanno bisogno di alcune soluzioni che avranno
+implementazioni complesse e \textbf{programmazione dinamica.}
+
+\subsection{Computational Social Choice}
+\label{sub:computational_social_choice}
+
+Questa sezione parla di computazione di risultati risultanti da \textbf{regole
+    di voto | voting rules} e quali problemi ci possono essere nel rappresentare le
+preferenze dei giocatori. \
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}{c|ccc}
+            \multicolumn{1}{c}{} & \multicolumn{3}{c}{Verdetto}                         \\
+            \cline{2-4}
+                                 & Evidenza1                    & Evidenza2 & Colpevole \\
+            \cline{1-4}
+            Giudice1             & 1                            & 0         & Innocente \\
+            Giudice2             & 0                            & 1         & Innocente \\
+            Giudice3             & 1                            & 1         & Colpevole \\
+            \cline{1-4}
+        \end{tabular}
+    \end{center}
+    \caption{Esempio di votazione}
+\end{figure}
+
+\begin{quote}
+    \textit{Maggiore è il numero di persone che votano, maggiore è la probabilità che
+        il risultato sia corretto.}
+\end{quote}
+
+\subsection{Mechanism Design}
+
+E' un tipo di \textbf{reverse game theory}. Invece di analizzare come i
+giocatori si comportano in un gioco, lo scopo del \textit{mechanism design} è
+quello di \textbf{creare un gioco} per portare i giocatori a
+\textbf{\textit{comportarsi in un modo specifico}} che \textit{vogliamo noi.}
+Un esempio molto semplice è il \textit{maccanismo di asta di Ebay}. Altro
+esempio è quello dei \textit{carrelli dei supermecati.} Il fatto di dover
+utilizzare una moneta per utilizzare il carrello \textbf{porta la persona} a
+dover riportare il carrello nello stesso posto, invece di lasciarlo in un luogo
+qualsiasi del supermercato.
+
+\subsection{Fair Division of Indivisible Goods}
+\label{sub:fair_division_of_indivisible_goods}
+
+In questa sezione si parla di come dividere delle risorse in modo \textbf{fair}
+tra i giocatori. Ok?
+
+\subsection{Cake Cutting}
+\label{sub:cake_cutting}
+
+In questa sezione si parla di come dividere dei \textbf{beni continui} in bsae alle \textit{preferenze dei giocatori}.
+\begin{enumerate}
+    \item Fairness
+    \item Proportionality
+    \item Envy-freeness
+\end{enumerate}

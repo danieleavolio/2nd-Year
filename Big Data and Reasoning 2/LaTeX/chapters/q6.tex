@@ -1,0 +1,306 @@
+\section{Domande: MapReduce Hadoop Basics}
+
+\begin{domanda}
+    I data types di Hadoop
+\end{domanda}
+
+Hadoop non ammette qualsiasi tipo di dati, poiche' per essere mandati i valori,
+devono essere \textbf{serializzati}.
+
+\begin{definition}(Serializzazione)
+    La serializzazione e' il processo di conversione di un oggetto
+    in un formato che puo' essere memorizzato (ad esempio, in un file
+    o in un buffer di memoria) o trasmesso (ad esempio, attraverso
+    una connessione di rete) e ripristinato in un oggetto con le
+    stesse caratteristiche dell'originale.
+\end{definition}
+
+Ci sono diverse interfacce che devono essere implementate per le
+\textbf{chiavi} e per i \textbf{valori}.
+
+\begin{itemize}
+    \item Valori: I valori devono implementare l'interfaccia \textbf{Writable}
+    \item Chiavi: Le chiavi devono implementare l'interfaccia
+          \textbf{WritableComparable$\langle T \rangle$}. C'e' bisogno di questo
+          comparable perche' successivamente si andra' a fare un sort sulle chiavi.
+\end{itemize}
+
+%tabella con i vari tipi  di clase e descrizione 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Classe}          & \textbf{Descrizione}                                 \\
+        \hline
+        \textbf{BooleanWritable} & Valore booleano                                      \\
+        \hline
+        \textbf{ByteWritable}    & Valore byte                                          \\
+        \hline
+        \textbf{DoubleWritable}  & Valore double                                        \\
+        \hline
+        \textbf{FloatWritable}   & Valore float                                         \\
+        \hline
+        \textbf{IntWritable}     & Valore intero                                        \\
+        \hline
+        \textbf{LongWritable}    & Valore long                                          \\
+        \hline
+        \textbf{Text}            & Valore stringa formato UTF8                          \\
+        \hline
+        \textbf{NullWritable}    & Valore nullo usato quando la chiave non e' richiesta \\
+        \hline
+    \end{tabular}
+    \caption{Tipi di classe di Hadoop}
+    \label{tab:my_label}
+\end{table}
+
+\begin{domanda}
+    Si possono creare classi personalizzate?
+\end{domanda}
+
+La risposta e; \textbf{si}. Bisogna fare l'override dei metodi:
+\begin{itemize}
+    \item readFields(DataInput in)
+    \item write(DataOutput out)
+    \item compareTo(T o)
+\end{itemize}
+
+\begin{domanda}
+    Cosa fa la classe MAPPER?
+\end{domanda}
+
+La classer Mapper e' una classe astratta che deve essere estesa per
+implementare il metodo \textbf{map}.
+
+public class \textbf{Mapper}$\langle KEYIN,VALUEIN,KEYOUT,VALUEOUT \rangle$
+
+%aggiungi linea di codice
+\begin{lstlisting}[language=Java]
+    public class TokenCounterMapper extends Mapper<Object, Text, Text, IntWritable>
+\end{lstlisting}
+
+Esistono gia' dei \textbf{mappers standard}.
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Classe}           & \textbf{Descrizione}                                                      \\
+            \hline
+            \textbf{IdentityMapper}   & Mapper che emette le coppie chiave-valore in input senza modificarle.     \\
+            \hline
+            \textbf{InvertMapper}     & Mapper che inverte le coppie chiave-valore in input.                      \\
+            \hline
+            \textbf{RegexMapper}      & Mapper che emette coppie chiave-valore in base a un'espressione regolare. \\
+            \hline
+            \textbf{TokenCountMapper} & Mapper che emette coppie chiave-valore in base a un'espressione regolare. \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{domanda}
+    Cosa fa la classe REDUCER?
+\end{domanda}
+
+La classe reducer e' una classe astratta che deve essere estesa per
+implementare il metodo \textbf{reduce}.
+
+Dato un insieme di dati che condividono la \textbf{stessa chiave}, riduce
+l'insieme ad un numero inferiore di elementi.
+
+\begin{itemize}
+    \item Shuffle and sort: Prende i valori dai mapper con delle \textbf{richieste http}
+          ed effettua un merge sort sulle chiavi
+    \item Sort Secondario: Estende la chiave con la chiave seocndaria e definisce un
+          comparatore di gruppo
+\end{itemize}
+
+public clas Reducer$<KEYIN,VALUEIN,KEYOUT,VALUEOUT>$
+
+\begin{lstlisting}[language=Java]
+    public class IntSumReducer<Key> extends Reducer<Key,
+                            IntWritable, Key,IntWritable>
+\end{lstlisting}
+
+Ci sono anche reducer standard:
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{IdentityReducer} & Reducer che emette le coppie chiave-valore in input senza modificarle. \\
+            \hline
+            \textbf{LongSumReducer}  & Reducer che somma i valori in input.                                   \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{domanda}
+    Cosa sono i Combiner?
+\end{domanda}
+
+I \textbf{Combiner} non sono altro che dei \textbf{reducer locali}. In parole
+povere, sono dei worker che diminuiscono il lavoro a carico dei
+\textbf{reducer}. \textit{Implementa la stessa interfaccia} \textbf{Reducer}
+Quando ci sono molti dati, possono diminuire il traffico di rete. Non e' sempre
+possibile applicarlo, attenzione!
+
+Come fanno a sapere dove prendere i dati, pero'? Gli viene detto dal
+\textbf{master.}
+
+\begin{domanda}
+    Cosa sono i Partitioner?
+\end{domanda}
+
+I partitioner determinano dove vanno mandate le coppie chiave-valore che
+vengono sputate fuori dall'output dei mapper. \textbf{Attenzione}: I
+partitioner esistono solamente quando \textbf{c'e' piu' di un reducer!}
+
+Di default, c'e' \textbf{HashParitioner} come classe di Hadoop.
+
+\begin{domanda}
+    InputFormat classe e interfaccia
+\end{domanda}
+
+L'interfaccia definisce come l'input viene diviso e letto in Hadoop. Esistono
+diverse implementazioni e puoi fartene quante ne vuoi .
+
+La classe descrive come specificare i dati di input per un lavoro di MapReduce.
+Divide i file di input in \textbf{InputSplits} che vengono assegnati ai Mapper
+individuali. Viene utilizzato un'implementazione chiamata \textbf{RecordReader}
+per estrarre i record di input dagli InputSplits.
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            \textbf{Classe}                  \\
+            \hline
+            \textbf{TextInputFormat}         \\
+            \hline
+            \textbf{KeyValueTextInputFormat} \\
+            \hline
+            \textbf{SequenceFileInputFormat} \\
+            \hline
+            \textbf{NLineInputFormat}        \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{domanda}
+    Come si crea un custom input format
+\end{domanda}
+
+Per farlo, la funzione InputFormat deve identificare tutti i file usati come
+dati di input e dividerli in splits.
+
+Bisogna fornire un oggetto \textit{RecordReader} dove bisogna iterare sui
+record e restituire la chiave e il valore.
+
+\begin{lstlisting}[language=Java]
+    public classe CustomRecordReader extends RecordReader {
+        @Override
+        public void initialize(InputSplit split, TaskAttemptContext context) throws IOException, InterruptedException {
+            //inizializza il record reader
+        }
+
+        @Override
+        public boolean nextKeyValue() throws IOException, InterruptedException {
+            //itera sui record e restituisci la chiave e il valore
+        }
+
+        @Override
+        public Object getCurrentKey() throws IOException, InterruptedException {
+            //restituisci la chiave corrente
+        }
+
+        @Override
+        public Object getCurrentValue() throws IOException, InterruptedException {
+            //restituisci il valore corrente
+        }
+
+        @Override
+        public float getProgress() throws IOException, InterruptedException {
+            //restituisci il progresso
+        }
+
+        @Override
+        public void close() throws IOException {
+            //chiudi il record reader
+        }
+    }
+\end{lstlisting}
+
+\begin{domanda}
+    Formati di output
+\end{domanda}
+
+Gli output file di mapreduce usano la classe \textbf{OutputFormat}. Non ha
+nesusno split e ogni reducer scrive un singolo file di output. L'oggetto
+\textbf{RecordWriter} formatta l'output.
+
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|c|c|}
+            \hline
+            \textbf{Classe}                   & \textbf{Descrizione}                                                                                 \\
+            \hline
+            \textbf{TextOutputFormat}         & Scrive i file di testo.                                                                              \\
+            \hline
+            \textbf{SequenceFileOutputFormat} & Custom separator \\
+            \hline
+            \textbf{NullOutputFormat}         & Non scrive alcun output.                                                                             \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{domanda}
+    La classe Configuration
+\end{domanda}
+
+Questa classe permette l'accesso ai parametri di configurazione.
+\begin{lstlisting}[language=java]
+    public class Configuration extends Object 
+    implements iterable<Map.Entry<String,String>>, Writable
+\end{lstlisting}
+
+\begin{domanda}
+    Cosa sono i job?
+\end{domanda}
+
+I job sono le unita' di lavoro di Hadoop. L'utente crea l'applicazione e descrive come deve essere eseguita tramite i \textbf{Job}. Manda poi i job ad essere eseguiti.
+
+\begin{lstlisting}[language=Java]
+    public class Job extends JobContextImpl
+     implements JobContext, AutoCloseable
+\end{lstlisting}
+
+Dei job si possono modificare:
+\begin{itemize}
+    \item Il nome 
+    \item Il jar che contiene il codice da eseguire 
+    \item Configurare input e output
+    \item Configurare mapper(s) e reducer(s)
+\end{itemize}
+
+Per eseguire e controllare l'esecuzione: \textit{job.waitForCompletion(true)}
+
+\begin{lstlisting}[language=Java]
+    //Create il job 
+    Job job = Job.getInstance();
+    job.setJarByClass(MyJob.class);
+
+    //Settare alcuni parametri
+    job.setName("JobProva");
+
+    job.setInputPath(new Path("input"));
+    job.setOutputPath(new Path("output"));
+    
+    job.setMapperClass(MyJob.MyMapper.class);
+    job.setReducerClass(MyJob.MyReducer.class);
+
+    //Mandare il job e pullare i risultati fino alla fine del job
+    job.waitForCompletion(true);
+\end{lstlisting}

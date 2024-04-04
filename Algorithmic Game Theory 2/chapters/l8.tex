@@ -1,0 +1,90 @@
+\section{Stable Matching}
+\begin{definition}
+    (Matching)
+
+    Matching riguarda agenti che hanno preferenze su altri agenti. Questo si 
+    applica a tante situazioni, per esempio:
+    \begin{itemize}
+        \item Dottori match negli ospedali
+        \item Studenti match nelle università
+        \item Persone alle task
+        \item Membri del team 
+        \item Kidney exchange
+    \end{itemize}
+\end{definition}
+
+\textbf{Matching a 2 lati}: Ci sono 2 gruppi i agenti che hanno preferenze 
+sui membri dell'altro gruppo. L'obiettivo è di trovare un matching stabile.
+
+\subsection{Problema del matrimonio stabile}
+
+Dati $n$ uomini e $n$ donne. Ogni agente ha una preferenza lineare 
+sull'altro sesso. L'obiettivo è:
+
+\textbf{Matching stabile} tra uomini e donne. Nessun uomo vuole divorziare
+il partner assegnato. Non possiamo ri-assegnare una coppia per 
+migliorare la situazione di una coppia senza peggiorare quella di un'altra.
+
+\begin{definition}
+    (Gale-Shapley Algorithm)
+
+    Esiste un matching stabile in ogni combinazione di preferenze tra uomini e donne.
+
+    Il funzionamento è il seguente:
+    \begin{enumerate}
+        \item In ogni round ogni uomo che non è fidanzato si propone alla donna che favorisce tra le donne a cui non si ancora proposta
+        \item In ogni donna, ogni donna sceglie il suo favorito tra i suoi pretendenti e quello a cui è legata
+    \end{enumerate}
+\end{definition}
+
+Un esempio dell'algoritmo:
+
+\begin{equation}
+    \begin{aligned}
+        A & = [X,Y,Z]\\
+        B & = [Z,X,Y]\\
+        C & = [Z,Y,C]\\
+        X & = [A,B,C]\\
+        Y & = [B,C,A]\\
+        Z & = [A,C,B]\\
+    \end{aligned}
+\end{equation}
+
+Il flow è il seguente:
+
+\begin{enumerate}
+    \item A si propona a X
+    \item B si propone a Z
+    \item C si propone a Z
+    \begin{itemize}
+        \item Z accetta C perché lo preferisce a B
+        \item Z rifiuta B e rimane con C
+    \end{itemize}
+    \item B si propone a X
+    \begin{itemize}
+        \item X rifiuta B e rimane con A
+    \end{itemize}
+    \item B si propone a Y
+\end{enumerate}
+
+L'algoritmo termina con un matching stabile. Diciamo anche delle piccole proprietà:
+
+\begin{itemize}
+    \item Termina sempre 
+    \item Ritorna sempre un matching stabile
+    \item Ha una complessità $quadratica$ : $O(n^2)$
+\end{itemize}
+
+\begin{definition}
+    M-Optimal e W-Optimanl Matchings
+
+    Un matching stable viene chiamato \textbf{M-Optimal} se ogni uomo è contento almeno quanto in ogni altro matching stabile.
+
+    Un matching stabile viene chiamato \textbf{W-Optimal} se ogni donna è contenta almeno quanto in ogni altro matching stabile.
+\end{definition}
+
+Il matching di Gale-Shapley è M-Optimal e non W-Optimal. Perché? Perché
+gli uomini si propongono alle donne e quindi hanno la possibilità di
+scegliere. Le donne invece non hanno questa possibilità.
+
+\newpage

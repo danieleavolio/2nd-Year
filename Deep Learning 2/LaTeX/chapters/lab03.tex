@@ -1,0 +1,95 @@
+\section{TensorFlow e Keras}
+
+Onestamente non so cosa scrivere in questo capitolo. Se trovo qualcosa di
+interessante la scrivo.
+
+La lezione è fatta su un notebook. Quindi scriverò le notebook
+
+\subsection{One Hot Encoding}
+
+Sulle categoriche lo si fa quando si ha \textbf{una classificazione di classe}.
+Ad esempio, se abbiamo una categorica che viene rappresentata numericamente,
+\textbf{overall condition of the house}, se ha una scala da 1 a 10, in questo
+caso \textbf{NON SERVE} il one hot encoding.
+
+Se invece fosse stato qualcosa del tipo \textbf{House Color = 1,2,3}, in questo
+caso si.
+
+Diciamo che serve quando \textbf{NON ABBIAMO UNA SCALA NUMERICA o ORDINE}
+
+\subsection{Variabili correlate}
+
+Se abbiamo due variabili correlate, ad esempio \textbf{Overall Condition} e
+\textbf{Overall Quality}, in questo caso \textbf{una delle due deve sparire.}
+Le motivazioni sono due:
+\begin{itemize}
+    \item Ridurre la complessità del modello
+    \item Evitare che la rete neurale NON RIESCA a dare il peso corretto alla variabile,
+          poiché potrebbe dividere il peso in 50\% tra le due.
+\end{itemize}
+
+\subsection{Accuracy come loss}
+
+Non usiamo l'accuracy come loss function perché dobbiamo usare una funzione che
+sia \textbf{differenziabile}, e l'accuracy non lo è.
+
+Nel nostro esempio usiamo \textbf{la binary cross entropy}.
+
+\subsection{Epoche e batch size}
+
+Capiamo questa cosa: ad ogni \textbf{epoca} dobbiamo scorrere l'intero dataset.
+Ma ad ogni \textbf{iterazione di training NON CI SERVE l'intero dataset}.
+Quindi, ad ogni epoca, dobbiamo scorrere il dataset \textbf{numero di
+    iterazioni} volte.
+
+Ad esempio, se abbiamo una batch size di 32, e abbiamo 1000 dati, allora
+abbiamo 32 iterazioni per epoca.
+
+\subsection{Overfitting e come evitarlo}
+
+La definizione migliore di overfitting sentita: \textbf{dobbiamo imparare la
+    distribuzione dei dati e non i dati stessi.}
+
+Il nostro modello deve essere capace di \textbf{generalizzare}. In un grafico
+dove abbiamo una validation loss, se la validation comincia a risalire dopo un
+certo periodo di tempo non è capace di generalizzazione e vuol dire che non ha
+imparato bene dai dati la loro distribuzione.
+
+\subsection{Migliorare le performance di un modello}
+
+Ci sono varie tecniche per migliorare le performance.
+
+\begin{itemize}
+    \item Aumentare il numero di epoche
+    \item Aumentare il numero di neuroni
+    \item Aumentare il numero di layer
+    \item Cambiare la funzione di attivazione
+\end{itemize}
+
+\textbf{Attenzione:} Se si esagera con questi valori si può andare in overfitting.
+
+Una tecnicha è quella della \textbf{regolarizzazione}. L'abbiamo vista anche in
+\textbf{figura \ref{fig:regularization}}.%cita regolarizzazione in fig:regularization
+
+\begin{lstlisting}[language=Python]
+    model_3 = Sequential([
+    Dense(1000, activation='relu', kernel_regularizer=regularizers.l2(0.01), input_shape=(10,)),
+    Dropout(0.3),
+    Dense(1000, activation='relu', kernel_regularizer=regularizers.l2(0.01)),
+    Dropout(0.3),
+    Dense(1000, activation='relu', kernel_regularizer=regularizers.l2(0.01)),
+    Dropout(0.3),
+    Dense(1000, activation='relu', kernel_regularizer=regularizers.l2(0.01)),
+    Dropout(0.3),
+    Dense(1, activation='sigmoid', kernel_regularizer=regularizers.l2(0.01)),
+])
+\end{lstlisting}
+
+Nel notebook si vedono 3 grafici:
+\begin{itemize}
+    \item La rete normale: si comporta bene
+    \item La rete più complessa: si comporta male perché overfitta 
+    \item La rete più complessa regolarizzata: è la migliore
+\end{itemize}
+
+\newpage

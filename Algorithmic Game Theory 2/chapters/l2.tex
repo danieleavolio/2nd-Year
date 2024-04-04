@@ -1,0 +1,146 @@
+\section{Teoria dei giochi coalizionali}
+
+\begin{definition}[Giochi coalizionali]
+
+\end{definition}
+Un gioco coalizionale (cioè con utilità trasferibile) è una coppia
+del tipo $G = (N,v)$ con:
+\begin{itemize}
+    \item N = \{1,\dots, n\} l'insieme dei giocatori
+    \item $\nu: 2^N \rightarrow \mathbb{R}$ la funzione caratteristica
+\end{itemize}
+
+Per ogni sotto-insieme di giocatori $C$, $\nu(C)$ è la quantità che i membri di
+$C$ possono ottenere se \textit{lavorassero insieme}.
+
+\begin{definition}[Funzione caratteristica]
+\end{definition}
+
+La funzione caratteristica è un mapping tra \textit{ogni coalizione} $C
+    \subseteq N$ o il suo rispettivo valore (\textit{cioè l'utilità}).
+
+\begin{esempio}[Gelati]
+\end{esempio}
+
+Insieme dei giocatori $N$:
+\begin{itemize}
+    \item A: 6\$
+    \item B: 3\$
+    \item C: 3\$
+\end{itemize}
+
+Insieme degli assets: Gelati
+\begin{itemize}
+    \item 500g: 7\$
+    \item 750g: 9\$
+    \item 1000g: 11\$
+\end{itemize}
+
+Ora, abbiamo i $\nu$ che sono i valori di ogni coalizione:
+
+\begin{itemize}
+    \item Cardinalità 1: $\nu(\emptyset) = \nu(\{A\}) = \nu(\{B\}) = \nu(\{C\}) = 0$
+    \item Cardinalità 2: $\nu(\{A,B\}) = 750; \nu(\{A,C\}) = 750; \nu(\{B,C\}) = 0$
+    \item Cardinalità 3: $\nu(\{A,B,C\}) = 1000$
+\end{itemize}
+
+\subsection{Superadditività}
+
+Un gioco a funzione di caratteristica $G(N,\nu)$ è detto \textbf{superadditivo}
+se soddisfa:
+\[
+    \nu(C_1 \cup C_2) \geq \nu(C_1) + \nu(C_2) \forall C_1,C_2 \subset N \text{ t.c. } C_1 \cap C_2 = \emptyset
+\]
+
+Cioè, in italiano, significa che,
+
+\begin{definition}[Superadditività]
+    Dato un gruppo di giocatori $C_1$ e un gruppo di giocatori $C_2$, se dovessero unirsi, il
+    valore della coalizione risultante è maggiore o uguale alla somma dei valori
+    delle due coalizioni.
+\end{definition}
+
+\begin{itemize}
+    \item Cardinalità 1: $\nu(\emptyset) = \nu(\{A\}) = \nu(\{B\}) = \nu(\{C\}) = 0$
+    \item Cardinalità 2: $\nu(\{A,B\}) = 750; \nu(\{A,C\}) = 750; \nu(\{B,C\}) = 0$
+    \item Cardinalità 3: $\nu(\{A,B,C\}) = 1000$
+\end{itemize}
+
+Prendiamo per esempio $\nu(\{A,B\})$.
+
+\begin{equation}
+    \nu(\{A,B\}) \geq \nu(\{A\}) + \nu(\{B\}) \implies 750 \geq 0
+\end{equation}
+
+Questo vale anche per $\nu(\{A,C\})$:
+
+\begin{equation}
+    \nu(\{A,C\}) \geq \nu(\{A\}) + \nu(\{C\}) \implies 750 \geq 0
+\end{equation}
+
+E anche per $\nu(\{B,C\})$:
+
+\begin{equation}
+    \nu(\{B,C\}) \geq \nu(\{B\}) + \nu(\{C\}) \implies 0 \geq 0
+\end{equation}
+
+\subsection{Core o Nucleo}
+
+Il core o nucleo è definito come:
+
+\begin{equation}
+    Core(G) = X \text{t.c} \begin{cases}
+        x_i \geq 0 \forall i \in N     \\
+        \sum_{i \in N} x_i \leq \nu(N) \\
+        \sum_{i \in C} x_i \geq \nu(C) \forall C \subseteq N
+    \end{cases}
+\end{equation}
+
+
+\subsection{Shapley Value}
+
+Lo shapleu value di un giocatore $i$ è la contribuzione marginale media del
+player $i$ su tutte le possibili coalizioni.
+
+\begin{equation}
+    \phi(i,\nu) = \frac{1}{|N|!} \sum_{\pi \in \prod_N} \nu(B(\pi, i)) \cup \{i\} - \nu(B(\pi, i))
+\end{equation}
+
+con:
+\begin{itemize}
+    \item $\prod_N$ è l'insieme di tutte le possibili permutazioni di N
+    \item $B(\pi, i)$ è l'insieme di tutti i predecessori di $i$ nella perutazione $\pi$.
+\end{itemize}
+
+\begin{esempio}[Shapley value con giocatore A]
+\end{esempio}
+
+\begin{itemize}
+    \item Cardinalità 1: $\nu(\{A\}) = \nu(\{B\}) = \nu(\{C\}) = 0$
+    \item Cardinalità 2: $\nu(\{A,B\}) = 750; \nu(\{A,C\}) = 750; \nu(\{B,C\}) = 0$
+    \item Cardinalità 3: $\nu(\{A,B,C\}) = 1000$
+\end{itemize}
+
+Ora, calcoliamo le computazioni per \textbf{A}.
+
+\begin{itemize}
+    \item $\pi_1 = (A,B,C) \implies \nu(\{A\}) - \nu(\emptyset) = 0-0 = 0$
+    \item $\pi_2 = (A,C,B) \implies \nu(\{A\}) - \nu(\emptyset) = 0-0 = 0$
+    \item $\pi_3 = (B,A,C) \implies \nu(\{A,B\}) - \nu(\{B\}) = 750-0 = 750$
+    \item $\pi_4 = (B,C,A) \implies \nu(\{A,B,C\})  - \nu(\{B,C\}) = 1000-0 = 1000$
+    \item $\pi_5 = (C,A,B) \implies \nu(\{A,C\}) - \nu(\{C\}) = 750-0 = 750$
+    \item $\pi_6 = (C,B,A) \implies \nu(\{A,B,C\}) - \nu(\{B,C\}) = 1000-0 = 1000$
+\end{itemize}
+
+In totale, allora, abbiamo:
+\[
+    \phi(A,\nu) = \frac{1}{6}(0+0+750+1000+750+1000) = 583.\overline{33}
+\]
+
+\textbf{Nota:} Lo shapley value può essere anche calcolato utilizzando questa formula:
+
+\[
+    \shapleyval
+\]
+
+\newpage

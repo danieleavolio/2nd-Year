@@ -1,0 +1,20 @@
+In order to import data into mysql the csv file must be put into the folder /var/lib/mysql
+
+sudo cp raw-data/product.csv /var/lib/mysql
+sudo chmod ugo=rwx /var/lib/mysql/product.csv
+
+sudo cp raw-data/orders.csv /var/lib/mysql
+sudo chmod ugo=rwx /var/lib/mysql/orders.csv
+
+sudo cp raw-data/ordered_items.csv /var/lib/mysql
+sudo chmod ugo=rwx /var/lib/mysql/ordered_items.csv
+
+create table products(product_id varchar(255) primary key, product_category_name varchar(255));
+
+create table orders(order_id varchar(255) primary key,customer_id varchar(255),status varchar(255),order_purchase_timestamp varchar(255));
+
+create table items(order_id varchar(255),order_item_id varchar(255),product_id varchar(255),price varchar(255));
+
+LOAD DATA INFILE '/var/lib/mysql/product.csv' INTO TABLE products FIELDS TERMINATED BY ','
+LOAD DATA INFILE '/var/lib/mysql/orders.csv' INTO TABLE orders FIELDS TERMINATED BY ','
+LOAD DATA INFILE '/var/lib/mysql/ordered_items.csv' INTO TABLE items FIELDS TERMINATED BY ','

@@ -1,0 +1,535 @@
+\section{Giochi di Coalizione e Concetti di Soluzione}
+\label{sec:coalition}
+
+Spesso la \textbf{teoria dei giochi} fa riferimento a tipologie di giochi in
+cui gli agenti \textbf{non collaborano}, ma \textbf{competono} tra loro. In
+questi casi si parla di \textbf{gioco non cooperativo}.
+
+Parliamo di un ambiente in cui degli agenti interagiscono tra loro, e ogni
+agente ha un suo \textbf{obiettivo} da raggiungere.
+
+\begin{definition}[Gioco non cooperativo]
+    Un gioco non cooperativo è un gioco in cui gli agenti non collaborano tra loro.
+    \begin{itemize}
+        \item Un set di agenti $N = \{1, \dots, n\}$.
+        \item Ogni agente $i \in N$ ha un set di azioni $S$
+        \item Ogni agnete $i \in N$ ha una funzione di utilità $u_i: S_1 \times S_2 \cdots
+                  S_n \rightarrow \mathcal{R}$
+    \end{itemize}
+\end{definition}
+
+\begin{definition}[Gioco cooperativo]
+    Il contrario di giochi non cooperativi sono, banalmente, \textbf{i giochi cooperatvi}, in cui gli agenti \textbf{collaborano} tra loro.
+\end{definition}
+
+\textbf{Domanda:} In quale caso le coalizioni appaiono nella teoria dei giochi cooperativi?
+\begin{itemize}
+    \item Allocazioni di task
+    \item Allocazione di risorse
+    \item Esperienza degli agenti complementare tra loro
+\end{itemize}
+
+\textbf{Esempio di gioco cooperativo}: Immaginiamo di avere 9 agenti. Ora, gli agenti devono sceliere:
+\begin{itemize}
+    \item Con chi allearsi
+    \item Come agire
+    \item Come dividere il premio
+\end{itemize}
+
+Immaginiamo di avere $p_1, p_2, p_3, c_1,c_2,c_3,e_1,e_2,e_3$. Immaginiamo
+queste 3 coalizioni:
+\begin{itemize}
+    \item $C_1 \{c_1,e_3,p_3\}$
+    \item $C_2 \{c_3,e_2,p_2\}$
+    \item $C_3 \{c_2,e_1,p_1\}$
+\end{itemize}
+Una \textbf{struttura di coalizione} è del tipo: $CS = <C_1, C_2, C_3>$.
+
+Definiamo anche \textbf{il vettore azioni} $a = <a_{c_1}, a_{c_2}, a_{c_3}>$.
+
+Allora possiamo avere un'\textbf{allocazione di risorse}
+\begin{equation}
+    u(C_3|a_{c_3})=30 \implies Allocazione:<p_1=12,c_2=3,e_1=15>
+\end{equation}
+
+Quindi, diciamo che nei giochi collaborativo:
+\begin{itemize}
+    \item I giocatori \textbf{formano coalizioni}
+    \item Ogni coalizione ha associato un \textbf{worth}
+    \item Alla fine c'è un \textbf{total worth} da distribuire
+\end{itemize}
+\subsubsection{Tassonomia dei giochi cooperativi}
+
+Quando parliamo di giochi cooperativi parliamo di giochi in cui i giocatori tra
+loro collaborano, fanno azioni insiee, e si formano dei vincoli tra loro. Ma
+dobbiamo differenziare due tipi di \textbf{utility games}
+
+\begin{definition}[Transferable Utility Games]
+    La paga viene data al gruppo e si divide tra loro.
+\end{definition}
+
+\begin{definition}[Non Transferable Utility Games ]
+    L'azione del gruppo fornisce la paga ai singoli giocatori in modo individuale.
+\end{definition}
+
+\textbf{Esempio di Transferable Utility Games}:
+
+Hai N bambini, ognuno dei quali ha una certa quantità di denaro: il bambino
+$i$-esimo ha $b_i$ dollari.
+
+Sono in vendita tre tipi di vaschette di gelato:
+\begin{itemize}
+    \item Tipo 1 costa \$7 e contiene 500g.
+    \item Tipo 2 costa \$9 e contiene 750g.
+    \item Tipo 3 costa \$11 e contiene 1kg.
+\end{itemize}
+
+I bambini hanno una preferenza per il gelato e non si preoccupano del denaro.
+
+Il risultato ottenuto da ciascun gruppo è la quantità massima di gelato che i
+membri del gruppo possono acquistare unendo il loro denaro. Il gelato può
+essere condiviso liberamente all'interno del gruppo.
+
+\textbf{Formalizzazione dei giochi cooperativi:}
+
+Un gioco di utilità trasferibile è una coppia $(N, v)$, dove:
+\begin{itemize}
+    \item $N = \{1, \ldots, n\}$ è l'insieme dei giocatori (anche chiamato coalizione grandiosa).
+    \item $v: 2^N \rightarrow \mathbb{R}$ è la funzione caratteristica.
+    \item Per ogni sottoinsieme di giocatori $C$, $v(C)$ è l'importo che i membri di $C$
+          possono guadagnare lavorando insieme.
+\end{itemize}
+
+Facciamo delle assunzioni. Solitamente diciamo che $v$ è \textbf{normalizzato},
+cioé $v(\emptyset) = 0$. Ci sono altri due casoi però:
+\begin{itemize}
+    \item \textbf{Non-negativo}: $v(C) \geq 0$ per ogni $C \subseteq N$.
+    \item \textbf{Monotono}: $v(C) \leq v(D)$ per ogni $C,D$ t.c $C \subseteq D$.
+\end{itemize}
+
+Tutto questo non è sempre uguale e dipende sempre dallo scenario.
+
+\textbf{Esempio del gioco dl gelato}: Abbiamo tre giocatori:
+\begin{enumerate}
+    \item C con 6 $€$
+    \item M con 4 $€$
+    \item P con 4 $€$
+\end{enumerate}
+
+Ora, abbiamo 3 tipi di gelato con :
+\begin{itemize}
+    \item Gelato 1: w = 500 e p = 7 $€$
+    \item Gelato 2: w = 750 e p = 9 $€$
+    \item Gelato 3: w = 1000 e p = 11 $€$
+\end{itemize}
+
+Cosa possiamo dire? Innanzitutto, \textbf{nessuno può comprare niente da solo.}
+Quindi, se vogliamo che qualcuno compri qualcosa, dobbiamo formare una
+coalizione. Le domande da fare sono: \textit{Quali azioni dobbiamo compiere? In
+    quale modo ci dividiamo il premio?}.
+
+\begin{align*}
+    v(\emptyset)   & = v(\{C\}) = v(\{M\}) = v(\{P\}) = 0 \\
+    v(\{C, M\})    & = 750                                \\
+    v(\{C, P\})    & = 750                                \\
+    v(\{M, P\})    & = 500                                \\
+    v(\{C, M, P\}) & = 1000
+\end{align*}
+
+\begin{definition}[Outcome]
+    Un outcome (o risultato) di un gioco di utilità trasferibile $G = (N, v)$ è una coppia $(CS, x)$, in cui:
+    \begin{itemize}
+        \item $CS = (C_1, \ldots, C_k)$ è una struttura di coalizione, cioè una partizione di $N$.
+        \item $\bigcup_i C_i = N$, $C_i \cap C_j = \emptyset$ per $i \neq j$.
+        \item $x = (x_1, \ldots, x_n)$ è un vettore di pagamento che distribuisce il valore di ciascuna coalizione in $CS$.
+        \item $\sum_{i \in C} x_i = v(C)$ per ogni $C$ in $CS$ (Efficienza).
+    \end{itemize}
+
+    Supponiamo che $v(\{1, 2, 3\}) = 9$ e $v(\{4, 5\}) = 4$.
+
+    Quindi, $(({1, 2, 3}, {4, 5}), (3, 3, 3, 3, 1))$ è un \textbf{risultato}.
+
+    Invece, $(({1, 2, 3}, {4, 5}), (2, 3, 2, 3, 3))$ non è un risultato.
+
+    I \textbf{trasferimenti tra coalizioni} non sono consentiti. Un risultato $(CS,
+        \underbar{x})$ è chiamato \textbf{imputazione} se soddisfa la
+    \textbf{razionalità individuale}: $x_i \geq v(\{i\})$ per tutti $i \in N$.
+
+\end{definition}
+
+\begin{definition}[Giochi superaddittivi]
+    Un gioco di utilità trasferibile $G = (N, v)$ è chiamato superadditivo se $v(C \cup D) \geq v(C) + v(D)$ per qualsiasi due coalizioni disgiunte $C$ e $D$.
+
+    Esempio: $v(C) = |C|^2$; $v(C \cup D) = (|C| + |D|)^2 \geq |C|^2 + |D|^2 = v(C)
+        + v(D)$.
+
+    Nei \textbf{giochi superadditivi}, due coalizioni possono sempre fondersi senza
+    perdere denaro; quindi, possiamo assumere che i giocatori formino la coalizione
+    grandiosa.
+
+    Praticamente, quando due coalizioni collaborando ottengono un risultato che è
+    almeno pari alla somma dei risultati che avrebbero ottenuto se avessero agito
+    da sole.
+
+    Un \textit{esempio} è il seguente:
+
+    \begin{align*}
+        v(\emptyset)   & = v(\{C\}) = v(\{M\}) = v(\{P\}) = 0 \\
+        v(\{C, M\})    & = 750                                \\
+        v(\{C, P\})    & = 750                                \\
+        v(\{M, P\})    & = 500                                \\
+        v(\{C, M, P\}) & = 1000
+    \end{align*}
+
+    In questo caso si vede che è un gioco superadditivo perché la collaborazione
+    porta ad un risultato migliore.
+\end{definition}
+
+\subsection{Concetti di soluzione}
+
+Assumiamo che la grande coalizione \textbf{N} sia formata. Quindi:
+\[x = (x_1, x_2, \dots, c_n)\]
+\[x_i \geq 0 \forall i \in N\]
+\[x_1 + x_2 + \dots x_n = v(N)\]
+
+Considera il gioco del gelato con la seguente funzione caratteristica. Si
+tratta di un gioco superadditivo in cui gli esiti sono vettori di pagamento
+(modi per dividere 1000).
+
+Come dovrebbero i giocatori condividere il gelato?
+
+Se lo dividono come (200, 200, 600), Charlie e Marcie possono ottenere più
+gelato acquistando una vaschetta da 750g da soli e dividendo equamente. L'esito
+(200, 200, 600) \textbf{non è stabile}!
+
+\begin{definition}[Core O Nucleo]
+    Il nucleo o core di un gioco è l'insieme di tutti gli \textbf{esiti che sono stabili}, cioé quegli
+    esiti che no vengono scartati da nessuna coalizione.
+    \[
+        core(G) = \{(CS,\underbar{x}) | \sum_{i \in C} x_i \geq v(C) \ for \ any \ C \subseteq N\}\]
+\end{definition}
+
+\textbf{Nota}: $\textbf{x(c)}$ si identifica come la somma dei valori $\sum_{i \in C} x_i$.
+
+\textit{Possiamo accorciare} in:
+
+\begin{itemize}
+    \item  $x \in R^n$ è un nucleo se $x(c) \geq v(c) \forall  C \subseteq N$ \\
+    \item x(N) = v(N)
+\end{itemize}
+
+Torniamo al nostro esempio. Ora vediamo il concetto di \textbf{nucleo}
+applicato
+
+\begin{itemize}
+    \item (200, 200, 600) \textbf{non è} nel nucleo:
+    \item $v(\{C, M\}) > x_C + x_M$
+    \item (500, 250, 250) \textbf{è nel} nucleo:
+\end{itemize}
+
+\textit{
+    nessun sottogruppo di giocatori può deviare in modo che ciascun membro del sottogruppo ottenga di più.
+}
+Un vettore $(x_C, x_M, x_P)$ è nel nucleo se e solo se soddisfa le seguenti condizioni:
+\begin{itemize}
+    \item $x_C + x_M \geq v(\{C, M\})$ (stabilità)
+    \item $x_C + x_P \geq v(\{C, P\})$ (stabilità)
+    \item $x_P + x_M \geq v(\{P, M\})$ (stabilità)
+    \item $x_C \geq v(\{C\})$ (razionalità individuale)
+    \item $x_P \geq v(\{P\})$ (razionalità individuale)
+    \item $x_M \geq v(\{M\})$ (razionalità individuale)
+    \item $x_C + x_P + x_M = v(\{C, M, P\})$ (efficienza)
+\end{itemize}
+
+Queste \textbf{3 proprietà} sono importanti.
+
+\begin{definition}[Giochi con nucleo vuoto]
+    Il concetto di nucleo è molto attraente come concetto di soluzione. Purtroppo, ci sono alcuni giochi che
+    hanno \textbf{un nucleo vuoto}.
+
+    Consideriamo il gioco $G = (\{1, 2, 3\}, v)$ con la seguente funzione
+    caratteristica $v$:
+
+    $$
+        v(C) =
+        \begin{cases}
+            1 & \text{se } |C| > 1 \\
+            0 & \text{altrimenti}
+        \end{cases}
+    $$
+\end{definition}
+
+Considera un risultato $(CS, \underbar{x})$:
+
+Supponi che \textbf{$CS = (\{1\}, \{2\}, \{3\})$.}
+\begin{itemize}
+    \item In questo caso, la coalizione grandiosa può deviare.
+    \item $x_1 + x_2 + x_3 = v(\{1\}) + v(\{2\}) + v(\{3\}) < v(\{1, 2, 3\})$.
+\end{itemize}
+
+Cioè, \textbf{non è stabile}. Guarda la disequazione.
+
+Supponi che \textbf{$CS = (\{1,2\}, \{3\})$.}
+\begin{itemize}
+    \item In questo caso, o 1 o 2 ottengono meno di 1, quindi possono deviare con 3.
+    \item $x_1 + x_3 = x_1 + 0 < 1 < v(\{1, 3\})$.
+\end{itemize}
+
+Collaborando devono \textbf{dividere} questo \textbf{1} che ottengono. Quindi,
+1 o 2 prenderò meno dell'altro e l'altro potrebbe deviare con il 3.
+
+Supponi che \textbf{$CS = (\{1,2,3\})$}.
+\begin{itemize}
+    \item In questo caso, $x_i > 0$ vale per alcuni $i$, diciamo $i=3$.
+    \item Quindi, $x(\{1,2\}) < 1$, ma $v(\{1,2\}) = 1$.
+\end{itemize}\textbf{}
+
+Quindi in ogni caso \textit{qualcuno potrebbe cercare una coalizione migliore
+    di quella in cui si trova attualmente}. Questo porta ad avere un \textbf{nucleo
+    vuoto}.
+
+\subsubsection{Cosa fare quando il nucleo è vuoto?}
+
+Questa situazione prende il nome di $\epsilon-Core$. In questo casi si vuole
+approssimare un esito stabile.
+
+Bisogna \textit{rilassare} il concetto di nucleo:
+
+\begin{itemize}
+    \item Nucleo: $(CS, x): x(C) \geq v(C)$ per ogni $C \subseteq N$
+    \item \(\epsilon\)-nucleo: $(CS, x): x(C) \geq v(C) - \epsilon$ per ogni $C \subseteq N$
+\end{itemize}
+
+Solitamente questa nozione è definita solo per giochi superadditivi.
+
+Per esempio, consideriamo il gioco \(G = (\{1, 2, 3\}, v)\), con \(v(C) = 1\)
+se \(|C| > 1\), \(v(C) = 0\) altrimenti:
+\begin{itemize}
+    \item Il \(\frac{1}{3}\)-nucleo non è vuoto: \((\frac{1}{3}, \frac{1}{3},
+          \frac{1}{3}) \in \frac{1}{3}\)-nucleo
+    \item Il \(\epsilon\)-nucleo è vuoto per qualsiasi \(\epsilon < \frac{1}{3}\):
+    \item \begin{itemize}
+              \item \(x_i \geq \frac{1}{3}\) per qualche \(i = 1, 2, 3\); quindi \(x(N\{i\}) \leq \frac{2}{3}\), ma \(v(N\{i\}) = 1\).
+          \end{itemize}
+\end{itemize}
+
+\begin{definition}[Nucleo minimo]
+
+    Definiamo $\epsilon^*(G)$ come $\inf \{\epsilon | \epsilon$-core di $G$ non è
+    vuoto$\}$.
+    \begin{itemize}
+        \item Si può dimostrare che $\epsilon^*(G)$-core non è vuoto.
+    \end{itemize}
+    La definizione di $\epsilon^*(G)$-core è il nucleo minimo di $G$.
+    \begin{itemize}
+        \item $\epsilon^*(G)$ è chiamato il valore del nucleo minimo.
+    \end{itemize}
+\end{definition}
+
+Nel contesto del gioco $G = (\{1, 2, 3\}, v)$ con la funzione caratteristica
+$v(C)$ definita come segue:
+\begin{itemize}
+    \item $v(C) = 1$ se $|C| > 1$
+    \item $v(C) = 0$ altrimenti
+\end{itemize}
+
+\begin{itemize}
+    \item Il 1/3-core non è vuoto: $(1/3, 1/3, 1/3) \in 1/3$-core
+    \item Il $\epsilon$-core è vuoto per qualsiasi $\epsilon < 1/3$:
+          \begin{itemize}
+              \item $x_i \geq 1/3$ per qualche $i = 1, 2, 3$, quindi $x(N\{i\}) \leq 2/3$, ma $v(N\{i\}) = 1$.
+          \end{itemize}
+\end{itemize}
+
+\subsection{Concetti di soluzione avanzati}
+Ci sono in particolare due che sono molto importanti: \textbf{shapy value} e il
+\textbf{Nucleolus}
+
+\textbf{Più sofisticate considerazioni sulla stabilità}
+\begin{itemize}
+    \item \textbf{Nucleolus}: Il nucleolus è un concetto utilizzato nella teoria dei giochi cooperativi per valutare la giustizia nella distribuzione dei guadagni tra i giocatori.
+    \item \textbf{Bargaining set}: L'insieme di contrattazione è un concetto che si riferisce agli insiemi di risultati in cui i giocatori trovano equo e ragionevole partecipare, dati i poteri di contrattazione.
+    \item \textbf{Kernel}: Il nucleo è un sottoinsieme del nucleo in cui i giocatori non possono migliorare il proprio risultato cooperando in modo diverso.
+\end{itemize}
+
+\textbf{Concetto di fairness}
+\begin{itemize}
+    \item \textbf{Shapley value}: Il valore di Shapley è una soluzione per assegnare un valore a ciascun giocatore in modo equo, tenendo conto del loro contributo marginale a ogni possibile coalizione.
+    \item \textbf{Banzhaf index}: L'indice di Banzhaf è una misura del potere di voto di ciascun giocatore in un gioco di voto ponderato.
+\end{itemize}
+
+\subsubsection{Nucleolus}
+
+Definiamo ora il concetto di \textit{eccesso}
+
+\begin{definition}[Eccesso]
+    E' una misura che indica quanto la coalizione \textbf{è insoddisfatta.}
+
+    \begin{equation}
+        e(S,x) = v(S) - x(S)
+    \end{equation}
+\end{definition}
+
+Facciamo un esempio numerico:
+
+\begin{itemize}
+    \item v(\{1\}) = v(\{2\}) = v(\{3\}) = 0
+    \item v(\{1,2\}) = v(\{1,3\}) = v(\{2,3\}) = 1
+    \item v(\{1,2,3\}) = 3
+\end{itemize}
+
+Minimizzare la insoddisfazione di ogni possibile coalizione. Applichiamo
+
+\begin{itemize}
+    \item x = (0,0,3) $\implies e(\{1,2\}, x) = v(\{1,2\}) - (x_1+x_2) = 1-0=1$
+    \item x = (1,2,0) $\implies e(\{1,2\}, x) = v(\{1,2\}) - (x_1+x_2) = 1-3=-2$
+\end{itemize}
+
+Ritorniamo alla definizione di Nucleolus.
+
+\textbf{Definizione da Schmeidler}: Il nucleolus $\mathcal{N}(\mathcal{G})$ di un gioco $\mathcal{G}$ è l'insieme:
+
+\[
+    \mathcal{N}(\mathcal{G}) = \{x \in \mathcal{X}(\mathcal{G})|\nexists y \in \mathcal{X}(\mathcal{G}) \ t.c\ \theta(y) \prec  \theta(X) \}
+\]
+
+Che significa proprio che non esiste un altro vettore di pagamento che è
+preferito da tutti i giocatori rispetto a $x$. Quindi, il nucleolus è un
+concetto di soluzione che è \textbf{stabile}.
+
+\subsection{Shapley Value}
+
+\textbf{Stability vs Fairness}
+
+Consideriamo il gioco $G = (\{1, 2\}, v)$ con le seguenti caratteristiche:
+\begin{itemize}
+    \item $v(\emptyset) = 0$
+    \item $v(\{1\}) = v(\{2\}) = 5$
+    \item $v(\{1, 2\}) = 20$
+\end{itemize}
+
+Nel nucleo del gioco, abbiamo l'allocazione $(15, 5)$. In altre parole, il
+giocatore 1 riceve 15 e il giocatore 2 riceve 5. È importante notare che il
+nucleo rappresenta una situazione in cui nessun giocatore può ottenere un
+risultato migliore deviando unilateralmente. In questo caso, il giocatore 2 non
+può ottenere un risultato migliore deviando.
+
+La domanda principale è: l'allocazione (15, 5) è equa? La giustizia in un
+contesto di gioco può essere soggettiva e dipendere dalle aspettative e dagli
+accordi tra i giocatori. Quindi, se l'allocazione è considerata equa o meno
+potrebbe variare in base al contesto e alle aspettative dei giocatori.
+
+No! Poiché 1 e 2 sono risultati simmetrici nel core possono essere ingiusti!
+Come facciamo a dividere i pagamenti in modo equo?
+
+\textit{Pensiamo a questo.} Un risultato equo dovrebbe premiare ciascun agente in base al loro contributo.
+Nel primo tentativo, dato un gioco $G = (N, v)$, impostiamo $x_i = v(\{1,
+    \ldots, i-1, i\}) - v(\{1, \ldots, i-1\})$. In altre parole, il pagamento per
+ciascun giocatore è il loro contributo marginale alla coalizione dei loro
+predecessori. Otteniamo $x_1 + \ldots + x_n = v(N)$; $x$ è un vettore di
+pagamento.
+
+Tuttavia, questo metodo non funziona poiché il pagamento di ciascun giocatore
+dipende dall'ordine. Ad esempio, consideriamo il gioco $G = (\{1, 2\}, v)$, con
+$v(\emptyset) = 0$, $v(\{1\}) = v(\{2\}) = 5$, e $v(\{1, 2\}) = 20$. In questo
+caso, $x_1 = v(1) - v(\emptyset) = 5$ e $x_2 = v(\{1, 2\}) - v(\{1\}) = 15$.
+
+Notiamo che i risultati non sono gli stessi, indipendentemente dall'ordine.
+Pertanto, questa formulazione non produce risultati equi.
+
+\textbf{Un'idea} per eliminare la dipendenza dall'ordine è quella di calcolare una media su tutte le possibili permutazioni degli ordini di arrivo.
+
+Ad esempio, consideriamo il gioco $G = (\{1, 2\}, v)$, con $v(\emptyset) = 0$,
+$v(\{1\}) = v(\{2\}) = 5$, e $v(\{1, 2\}) = 20$. Iniziamo calcolando i
+pagamenti per due ordini diversi:
+\begin{itemize}
+    \item Per l'ordine (1, 2): $x_1 = v(1) - v(\emptyset) = 5$ e $x_2 = v(\{1, 2\}) -
+              v(\{1\}) = 15$.
+    \item Per l'ordine (2, 1): $y_2 = v(2) - v(\emptyset) = 5$ e $y_1 = v(\{1, 2\}) -
+              v(\{2\}) = 15$.
+\end{itemize}
+
+Ora, calcoliamo i pagamenti mediando tra i due ordini:
+\begin{itemize}
+    \item $z_1 = (x_1 + y_1) / 2 = (5 + 15) / 2 = 10$
+    \item $z_2 = (x_2 + y_2) / 2 = (15 + 5) / 2 = 10$
+\end{itemize}
+
+Il risultato ottenuto è equo, poiché ciascun giocatore riceve 10,
+indipendentemente dall'ordine in cui sono considerati.
+
+Una permutazione di $\{1, \ldots, n\}$ è una corrispondenza uno a uno da $\{1,
+    \ldots, n\}$ a se stessa.
+
+Denotiamo con $P(N)$ l'insieme di tutte le permutazioni di $N$.
+
+Denotiamo con $S_{\pi}(i)$ l'insieme dei predecessori di $i$ in una
+permutazione $\pi \in P(N)$.
+
+Per $C \subseteq N$, definiamo $\delta_i(C) = v(C \cup \{i\}) - v(C)$ come il
+contributo marginale del giocatore $i$ a $C$.
+
+Il valore di Shapley del giocatore $i$ in un gioco $G = (N, v)$ con $|N| = n$ è
+dato da:
+\[
+    \varphi_i(G) = \frac{1}{n!} \sum_{\pi: \pi \in P(N)} \delta_i(S_{\pi}(i))
+\]
+
+Supponiamo di scegliere una permutazione dei giocatori in modo uniforme e
+casuale tra tutte le possibili permutazioni di $N$. In questo contesto, il
+valore di Shapley $\varphi_i$ rappresenta il contributo marginale atteso del
+giocatore $i$ alla coalizione dei suoi predecessori.
+
+\subsubsection{Proprietà del valore di Shapley}
+\begin{definition}[Proprietà 1]
+
+    In qualsiasi gioco $G$, la somma dei valori di Shapley di tutti i giocatori,
+    ossia $\varphi_1 + \ldots + \varphi_n$, è uguale al valore totale del gioco
+    $v(N)$.
+
+\end{definition}
+
+\begin{definition}[Proprietà 2]
+
+    Un giocatore $i$ è definito un giocatore fittizio (dummy) se $v(C) = v(C \cup
+        \{i\})$ per qualsiasi insieme $C \subseteq N$.
+
+    \textbf{Proposizione:} Se un giocatore $i$ è un giocatore fittizio, allora il suo valore di Shapley $\varphi_i$ è uguale a 0.
+
+\end{definition}
+
+\begin{definition}[Proprietà 3]
+
+    Due giocatori $i$ e $j$ sono definiti simmetrici se $v(C \cup \{i\}) = v(C \cup
+        \{j\})$ per qualsiasi insieme $C \subseteq N \setminus \{i, j\}$.
+
+    \textbf{Proposizione:} Se $i$ e $j$ sono giocatori simmetrici, allora i loro valori di Shapley $\varphi_i$ e $\varphi_j$ sono uguali.
+
+\end{definition}
+
+\begin{definition}[Proprietà 4]
+
+    Siano $G1 = (N, u)$ e $G2 = (N, v)$ due giochi con lo stesso insieme di
+    giocatori. Allora $G = G1 + G2$ è il gioco con l'insieme di giocatori $N$ e la
+    funzione caratteristica $w$ definita come $w(C) = u(C) + v(C)$ per tutti gli
+    insiemi $C \subseteq N$.
+
+    \textbf{Proposizione:} Il valore di Shapley di un giocatore $i$ nel gioco $G1 + G2$ è uguale alla somma dei valori di Shapley di $i$ nei giochi $G1$ e $G2$, ossia $\varphi_i(G1 + G2) = \varphi_i(G1) + \varphi_i(G2)$.
+
+\end{definition}
+
+\textbf{Proprietà riassunte:}
+\begin{enumerate}
+    \item \textbf{Efficienza:} $\varphi_1 + \ldots + \varphi_n = v(N)$
+    \item \textbf{Dummy:} Se $i$ è un giocatore fittizio, allora $\varphi_i = 0$
+    \item \textbf{Simmetria:} Se $i$ e $j$ sono giocatori simmetrici, allora $\varphi_i = \varphi_j$
+    \item \textbf{Additività:} $\varphi_i(G1+G2) = \varphi_i(G1) + \varphi_i(G2)$
+\end{enumerate}
+
+\textbf{Teorema:} Il valore di Shapley è l'unico schema di distribuzione dei pagamenti che soddisfa le proprietà 1-4.
+
+E' possibile scrivere la formula anche in questo modo:
+\[
+    \phi(i, \nu) = \sum_{C \subseteq N} \frac{(|N|-|C|)! \times (|C| -1)!}{|N|!}(\nu(C) - \nu(C\setminus \{i\}))
+\]
+
