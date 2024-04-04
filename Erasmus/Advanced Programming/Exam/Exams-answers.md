@@ -635,5 +635,154 @@ The order of operand evaluation can be important when the operands have side eff
 
 
 # Exam 10 
+
+*1. (1.0) Explain and exemplify the concept of computational meta-system*
+
+A computational meta system is a system that can reason about another system. Clearly speaking, it's a running program that analyzes and modifies another running program. An example can be a debugger, that runs over a program and can analyze his runtime behavior.
+
+*2. (1.0) Explain and exemplify the concept of reﬂective system.*
+A reflective system is a system that can reason and change it's behavior at runtime. An example can be a program that can inspect and modify its own structure and behavior during execution. An example can be a meta-circular evaluator.
+
+
+*3. (1.0) Explain and exemplify the concept of reiﬁcation*
+The term reification defines a concept of *creating an entity of a system* making possible the access to the structure. More specific, the creation of an entity that resemble the object system. An example is the reification of classes in java. You can get the class of an object and inspect it.
+
+
+*4. (1.0) There are many languages providing introspection mechanisms but only some of them also provide intercession mechanisms. Why? Explain.*
+Because it is harder to deﬁne the semantics of a program that can change while it runs, it is difﬁcult to debug a program whose source code is not stable, and it is difﬁcult to optimize a program that does not has a static form.
+
+*5. (1.0) The Lisp language invented the backquote syntax. For what purpose? Explain.*
+Backquote in LISP is a particular operator that don't evaluate the expression passed as argument. Instead, to actually evaluate the expression you can use the comma operator that given something inside the expression, it evaluates it. For example:
+` 1 2 ,(3+1) 4` will return `1 2 4 4` 
+It simplifies metaprogramming to generate new code parts at runtime.
+
+*6. (1.0) What is the purpose of Javassist? Explain*
+Javassist is a java extension that permtis to add intercession capabilities to java. It allows to inspect and modify the structure of a program at runtime. It's used in metaprogramming, debugging, and other tasks that require dynamic code generation and manipulation.
+
+*8. (1.0) Regarding method calls, Java uses dynamic dispatch for the receiver and static dispatch for the arguments. What are the advantages and disadvantages of this approach when compared to multiple dispatch? Explain*
+Performance
+Unexpected results
+
+
+*11.  (1.0) In the context of CLOS, explain the concept of effective method.*
+A generic function can have many different methods. Given speciﬁc arguments to the generic functions, the applicable methods are selec- ted, sorted, and ﬁnally combined in the effective method, that is, the method that is actually applied to those arguments.
+
+
+*12. (1.0) CLOS provides the concept of metaclass. Explain its purpose and responsibilities.*
+The metaclass of an object is the class of the class of the object.
+The MetaClass Responsibilities are:
+- Determines the inheritance process that is used by the classes that are its instances.
+- Determines the representation of the instances of the classes that are its instances.
+- Determines the access to the slots of the instances of the classes that are its instances.
+
+*14. (1.0) The meta-circular evaluator implemented in this course provided macros. Explain this concept.*
+It makes programmer able to extend a program. It's a transformation starting from an expression and generating another expression. It's used in metaprogramming, where you write code that generates code.
+
+*15. (1.0) What is the difference between direct style and continuation-passing style? Explain.*
+Direct style it's the standard way of programming in an imperative language. It's a style where the program is written in a way that the evaluation of an expression is done in a direct way
+Continuation passing style it's based on continuation, that's what it remains to be done after the evaluation of some expressions.
+In continuation passing style you need to pass the continuation as an argument to all the function calls.
+
+
+*16. (1.0) Suppose that you invented a tree-based data structure and you want to provide an iterator for its leaves. Do you prefer to provide an internal iterator or an external interator? Why?*
+
+An Internal Iterator is a higher-order function that applies a function to each element of a collection.
+An External Iterator is an accessor of the current element of a collection, and, potentially, of the next one.
+
+Looks like the internal iterator is the correct choice for this problem because you don;t need to save the value.
+
+*18. (1.0) Julia is a recently proposed programming language that supports higher-order functions. As an example, the following fragment deﬁnes the map of a function over a list.*
+```julia
+map(f, list::Nil) = list
+map(f, list::Cons) = cons(f(head(list)), map(f, tail(list)))
+```
+*Do you think Julia provides different namespaces for functions and variables or, instead, a common namespace? Explain.*
+Given that the parameter f is being used in function position, Julia must use a common namespace for functions and variables.
+
+
+
 # Exam 11
+
+I am skipping some repetitive af questions
+
+*3. (1.0) Self-modiﬁcation is a extremely powerful capability that is provided by certain programming languages. However, this capability also causes certain problems. Discuss two of those problems.*
+
+One of the problems is that compilation becomes very difficult because the program does not have a stable form.
+Another problem is that debugging is also greatly hindered by the fact that the program where the error was triggered may already be very different from the one written by the programmer.
+
+*10. (b) The presence of higher-order functions in a dynamically scoped language can lead to two serious problems. Which ones?*
+
+The downward funarg problem occurs when a function is passed as an argument. In dynamically scoped languages, the function may reference variables from its caller's scope. However, if that caller's scope changes before the function is invoked, the function may behave unexpectedly due to accessing outdated variables.
+
+The upward funarg problem arises when a function is returned as a result. Similar to the downward funarg problem, dynamically scoped languages allow functions to capture variables from their enclosing scope. If a function is returned from another function and executed in a different scope, it may unintentionally access variables from its original scope, leading to unexpected behavior.
+
+These problems occur under dynamic scoping conditions, where variable bindings are determined by the calling context rather than lexical structure. Dynamic scoping can make it challenging to reason about variable scope and behavior, especially when higher-order functions are involved.
+
+*(c) What is a macro.*
+A macro is a function that takes syntactic forms as arguments and computes a syntactic form as a result, which is evaluated in place of the macro invocation.
+
+The purpose of a macro is to define syntactic transformations, allowing programmers to create new control structures or language constructs using existing ones. For example, macros enable the definition of custom control flow structures that may not be directly supported by the language syntax. By providing a mechanism for metaprogramming, macros enhance the expressiveness and flexibility of a programming language, enabling developers to create domain-specific abstractions and improve code readability and maintainability.
 # Exam 12
+
+*5. (1.0) Recent versions of the Java language provide annotations. Explain this feature and discuss its usefulness for Javassist*.
+Annotations in Java are a form of metadata that can be added to Java source code elements such as classes, methods, variables, and packages. They provide additional information about the code to the compiler or runtime environment, which can be used by tools or frameworks to generate code, perform static analysis, or configure runtime behavior.
+Javassist is a Java library that provides a means of manipulating Java bytecode at runtime. It allows developers to dynamically modify classes, create new classes, and inject code into existing classes. Annotations play a crucial role in Javassist by providing a mechanism for identifying which classes, methods, or fields to modify or enhance.
+
+In this way there is no need to over engineer the code to find the methods that needs to be modified or enhanced, and makes the code more readable and maintainable.
+
+*7. (1.0) In many object-oriented languages, every value is a member of a class. In some of those languages, a class is also a value. What consequences do you extract from these two ideas? Explain.*
+
+If every value is a member of a class, it means all data in the language is represented as objects, promoting a consistent object-oriented model.
+
+If a class itself is also a value, it means classes can be treated as first-class entities, allowing for powerful metaprogramming capabilities like creating classes dynamically at runtime or passing classes as arguments to methods.
+
+These two ideas promote a more uniform and flexible object-oriented programming model, but they can also add complexity and overhead compared to languages where classes are not first-class values.
+
+*9. (1.0) The Java language does not provide multiple dispatch. What alternatives to multiple dispatch can you use in Java? Explain them.*
+
+- Double Dispatching: This technique involves creating a separate method in the receiver object that dispatches the request to another method in the argument object. This second method then performs the desired operation based on the types of both objects. This approach can be cumbersome and can lead to code duplication
+
+- Java's reflection API can be used to dynamically inspect the types of the arguments and dispatch the appropriate method at runtime. This approach can be flexible but can also be less efficient and more complex than static dispatching.
+Instance specialization in CLOS (Common Lisp Object System) can be useful in situations where you need to define specialized behavior for specific instances of a class, rather than just based on the types of the arguments.
+
+*10. (1.0) In CLOS, generic functions can be specialized not only on the types of the arguments, but also on speciﬁc arguments. This is known as instance specialization. Describe a situation where instance specialization is useful.*
+
+Instance specialization in CLOS (Common Lisp Object System) can be useful in situations where you need to define specialized behavior for specific instances of a class, rather than just based on the types of the arguments.
+
+One scenario where instance specialization can be beneficial is when dealing with objects that represent specific entities or resources, and you need to define custom behavior or operations for those specific instances.
+
+Another use case for instance specialization could be in a gaming environment, where you might have a move generic function that handles the movement of game characters. You could define a specialized move method for a specific instance of a character, such as the player's character, to apply special rules or behaviors only for that instance.
+
+# Exam 13
+
+*2. (1.0) Explain the concept of short-circuit evaluation. Which operators are usually implemented using this form of evaluation? Why?*
+Short-circuit evlauation is a form of evaluation where the evaluation of an expression stops as soon as the result is determined. This is particularly useful for logical operators like AND and OR, where the second operand may not need to be evaluated if the result can be determined from the first operand
+For example, imagine having to divide a number by zero. In this case, if you already know that the first operand is zero, you don't need to evaluate the second operand, since the result will be zero anyway.
+
+*3. (2.0) Different programming languages adopt different strategies regarding scoping. The two main approaches are named lexical scope and dynamic scope.*
+
+What are the main differences between these two scoping strategies?
+
+- lexical scoping: the scope of a variable is determined by its location in the source code. Variables are resolved based on the program's structure, and the scope of a variable is determined by where it is declared in the code. 
+- dynamic scoping: the scope of a variable is determined by the order of function calls at runtime. Variables are resolved based on the order in which functions are called, and the scope of a variable is determined by the call stack.
+
+
+
+*(a) (1.0) Under what circumstances would these two scoping strategies produce different results?*
+
+When we are deadling with high order functions, that are functions that can receive other functions as arguments or return functions as results. In this case, the scope of the variables can be different depending on the scoping strategy used. Another case is when we are dealing with free variables, that are variables that are not defined in the function but are used in the function. In this case, the scope of the variables can be different depending on the scoping strategy used.
+
+*(b) (1.0) What changes must be done in a meta-circular evaluator that provides dynamic scope so that it provides lexical scope instead?*
+Functions become associated with the environment where they were created. The application of functions extends this environment (with the associations between formal and actual parameters) instead of the dynamic environment.
+
+*5. (1.0) Some programming languages specify the evaluation order of the argument expressions of a function call, while other programming languages leave that order unspecified. Under what circumstances is one of the options preferable to the other? Explain.*
+
+When a language promotes the use of side effects, it is generally preferable for the programmer to be able to rely on a left-to-right evaluation order.
+
+*7. (1.0) Consider a meta-circular evaluator that provides functions and macros. Describe the diffe- rences between the implementation of function calls and macro calls.*
+
+Function calls evaluate the argument expressions, bind parameters to the corresponding values, and evaluate the body of the function. 
+Macro calls do not evaluate the argument expressions, bind parameters to these non-evaluated expressions, evaluate the body of the macro, and evaluate the result of the previous evaluation
+
+Function call: evaluate arguments -> bind parameters -> evaluate body
+Macro call: don;t evaluate expr -> bind parameters -> evaluate body -> evaluate result
