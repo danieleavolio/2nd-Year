@@ -1,0 +1,53 @@
+# Created by Octave 6.4.0, Fri Dec 10 13:46:59 2021 GMT <unknown@LAPTOP-AKB7TAJ0>
+# name: X
+# type: matrix
+# rows: 20
+# columns: 2
+ 2 6
+ 4 4
+ 6 5
+ 8 4
+ 5 6
+ 7 7
+ 6 7
+ 8 8
+ 5 9
+ 10 10
+ -1 0
+ -3 7
+ -4 12
+ 2 13
+ 0 14
+ 8 15
+ 14 6
+ 10 1
+ 0 1
+ 2 -2
+
+
+# name: y
+# type: matrix
+# rows: 20
+# columns: 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ 1
+ -1
+ -1
+ -1
+ -1
+ -1
+ -1
+ -1
+ -1
+ -1
+ -1
+
+
