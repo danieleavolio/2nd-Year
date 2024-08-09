@@ -1,11 +1,22 @@
-function plotMetrics(metrics,labels,t="Metrics")
+function plotMetrics(metrics,labels,t="Metrics", color="blue")
     figure;
-    bar(metrics);
+    h = bar(metrics);
+
+    % Set colors of the bars
+    set(h, 'FaceColor', color);
+    % set labels 45 degrees rotated
     set(gca, 'xticklabel', labels);
     title(t);
     xlabel('Metric');
     ylabel('Value');
-    % save the figure as png with t as name
-    saveas(gcf, t+".png");
+    xtickangle(45);
+    % save the figure as png
+    filename = strcat(t, '.png');
+    
+    if ~exist('output', 'dir')
+        mkdir('output');
+    end
+    output_path = fullfile('output', filename);
+    saveas(gcf, output_path);
     
 end

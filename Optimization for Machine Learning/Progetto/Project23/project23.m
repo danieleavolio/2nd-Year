@@ -3,16 +3,21 @@ pkg load statistics;
 
 load dataset23.mat;
 
+% check if output folder
+if ~exist('output', 'dir')
+    mkdir('output');
+end
+
 % Numero di fold per la cross validation
 numFold = 10;
 
 %C deve essere >= 1/2r
 %con r = min{|POS|, |NEG|}
 possible_C = [0.01; 0.05; 0.1; 0.5; 0.9; 1; 2; 5; 10];
-sigm = 50;
+sigm = 5;
 
+% Array per C, correttezza, fold durante i second level fold
 c_values = [];
-
 
 %array per tenere conto di fold,c,correttezza, sensibilità, specificità, precisione e f-score
 final_values = [];
@@ -300,12 +305,15 @@ end
 % C, Correttezza, Fold
 
 headers_1 = 'C,Correttezza,Fold\n';
-writeCsv(headers_1, c_values, 'c_values.csv');
 
-
+output_path = fullfile('output', 'c_values.csv');
+writeCsv(headers_1, c_values, output_path);
 
 headers_2 = 'Fold,C,Training Correctness,Training Sensitivity,Training Specificity,Training Precision,Training F-Score,Testing Correctness,Testing Sensitivity,Testing Specificity,Testing Precision,Testing F-Score\n';
-writeCsv(headers_2, final_values, 'final_values.csv');
+
+output_path = fullfile('output', 'final_values.csv');
+writeCsv(headers_2, final_values, output_path);
+
 
 average_training_correctness = average_training_correctness / numFold;
 average_training_sensitivity = average_training_sensitivity / numFold;
@@ -331,23 +339,32 @@ printf("Average Testing Specificity: %f\n", average_testing_specificity);
 printf("Average Testing Precision: %f\n", average_testing_precision);
 printf("Average Testing F-Score: %f\n", average_testing_f_score);
 
+% Crea un csv che contiene i valori medi delle metriche
+average_metrics = [average_training_correctness, average_training_sensitivity, average_training_specificity, average_training_precision, average_training_f_score, average_testing_correctness, average_testing_sensitivity, average_testing_specificity, average_testing_precision, average_testing_f_score];
+headers_3 = 'Average Training Correctness,Average Training Sensitivity,Average Training Specificity,Average Training Precision,Average Training F-Score,Average Testing Correctness,Average Testing Sensitivity,Average Testing Specificity,Average Testing Precision,Average Testing F-Score\n';
 
+output_path = fullfile('output', 'average_metrics.csv');
+writeCsv(headers_3, average_metrics, output_path);
+
+
+% PLOTTING
 labels = {'Correctness', 'Sensitivity', 'Specificity', 'Precision', 'F-Score'};
 metrics = [average_training_correctness, average_training_sensitivity, average_training_specificity, average_training_precision, average_training_f_score];
 
-plotMetrics(metrics, labels, 'Training Metrics');
+plotMetrics(metrics, labels, 'Training Metrics', "#D62828");
 
-% bar plot delle metriche
-% Testing
 metrics = [average_testing_correctness, average_testing_sensitivity, average_testing_specificity, average_testing_precision, average_testing_f_score];
-plotMetrics(metrics, labels, 'Testing Metrics');
+plotMetrics(metrics, labels, 'Testing Metrics', "#003049");
 
-% Definisci i dati
 labels = {'Correctness', 'Sensitivity', 'Specificity', 'Precision', 'F-Score'};
 metrics_training = [average_training_correctness, average_training_sensitivity, average_training_specificity, average_training_precision, average_training_f_score];
 metrics_testing = [average_testing_correctness, average_testing_sensitivity, average_testing_specificity, average_testing_precision, average_testing_f_score];
 
-% Combina i dati in una matrice
 metrics_combined = [metrics_training; metrics_testing];
+plotMetricsCombined(metrics_combined', labels, 'Combined Metrics', "#003049", "#D62828");
 
-plotMetricsCombined(metrics_combined, labels, 'Training vs Testing Metrics');
+
+
+
+
+

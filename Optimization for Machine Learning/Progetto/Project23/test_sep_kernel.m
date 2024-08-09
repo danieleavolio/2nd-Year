@@ -186,6 +186,6 @@ printf("F-score: %f\n", f);
 
 plotDataset(posPoints, negPoints, x0, "Test dataset");
 metrics = [corr, sens, spec, prec, f];
-labels = ["Correctness", "Sensitivity", "Specificity", "Precision", "F-score"];
+labels={"Correctness", "Sensitivity", "Specificity", "Precision", "F-score"};
 
-plotMetrics(metrics, labels, "Metrics");
+plotMetrics(metrics, labels, "Metrics", "#FF5733");
