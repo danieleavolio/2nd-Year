@@ -1,0 +1,1904 @@
+  dataset object with properties:
+
+         A: [200x3 double]
+         B: [200x3 double]
+         X: [400x3 double]
+      data: [400x4 double]
+         n: [1x1 double]
+         y: [400x1 double]
+
+rows: 400, columns: 4
+   29.4934   28.3397   35.5962    1.0000
+   51.8300   57.0378   37.1828    1.0000
+   20.3409   22.4276   55.5329    1.0000
+   31.8569   56.8538   33.8464    1.0000
+   67.9759   46.9785   38.4463    1.0000
+...
+   33.9672   48.1345   38.4309    1.0000
+   56.1607   66.7412   44.0133    1.0000
+   41.3083   45.6728   28.0447    1.0000
+    9.8201   29.8759   46.9647   -1.0000
+
+   29.4934   28.3397   35.5962    1.0000
+   51.8300   57.0378   37.1828    1.0000
+   20.3409   22.4276   55.5329    1.0000
+   31.8569   56.8538   33.8464    1.0000
+   67.9759   46.9785   38.4463    1.0000
+
+MaxIter = 1000
+
+Fold 1
+	train (+) (181/360) 
+	test  (+) ( 19/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.666667
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.766667
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.652778
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.625000
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.708333
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.625000
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.708333
+
+	Mean bilevel accuracy: 0.738889
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.194444
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.694444
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.333333
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.694444
+
+	Mean bilevel accuracy: 0.477778
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.625000
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.569444
+
+	Mean bilevel accuracy: 0.566667
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.500000
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.541667
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.444444
+
+	Mean bilevel accuracy: 0.575000
+
+	Best C for fold 1: 0.010000
+	with accuracy: 0.766667
+
+	Train accuracy:    0.750000
+	Train recall:      0.867403
+	Train specificity: 0.631285
+	Train precision:   0.704036
+	Train f_score:     0.777228
+	Test  accuracy:    0.900000
+	Test  recall:      0.842105
+	Test  specificity: 0.952381
+	Test  precision:   0.941176
+	Test  f_score:     0.888889
+
+Fold 2
+	train (+) (181/360) 
+	test  (+) ( 19/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+	Mean bilevel accuracy: 0.794444
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+	Mean bilevel accuracy: 0.797222
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+	Mean bilevel accuracy: 0.802778
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.652778
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.708333
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.513889
+
+	Mean bilevel accuracy: 0.613889
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.597222
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.652778
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.680556
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.402778
+
+	Mean bilevel accuracy: 0.583333
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (147/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.444444
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 4
+			train (+) (140/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.513889
+
+		Bilevel fold 5
+			train (+) (148/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.569444
+
+	Mean bilevel accuracy: 0.538889
+
+	Best C for fold 2: 1.000000
+	with accuracy: 0.802778
+
+	Train accuracy:    0.769444
+	Train recall:      0.867403
+	Train specificity: 0.670391
+	Train precision:   0.726852
+	Train f_score:     0.790932
+	Test  accuracy:    0.650000
+	Test  recall:      0.736842
+	Test  specificity: 0.571429
+	Test  precision:   0.608696
+	Test  f_score:     0.666667
+
+Fold 3
+	train (+) (183/360) 
+	test  (+) ( 17/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (149/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 3
+			train (+) (147/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 5
+			train (+) (150/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.777778
+
+	Mean bilevel accuracy: 0.797222
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (149/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 3
+			train (+) (147/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (150/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.777778
+
+	Mean bilevel accuracy: 0.797222
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (149/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 3
+			train (+) (147/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 5
+			train (+) (150/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.777778
+
+	Mean bilevel accuracy: 0.744444
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (149/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.500000
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 3
+			train (+) (147/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.527778
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 5
+			train (+) (150/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.527778
+
+	Mean bilevel accuracy: 0.608333
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (149/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.416667
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.541667
+
+		Bilevel fold 3
+			train (+) (147/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.402778
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.486111
+
+		Bilevel fold 5
+			train (+) (150/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.516667
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (149/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.555556
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.541667
+
+		Bilevel fold 3
+			train (+) (147/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.555556
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.416667
+
+		Bilevel fold 5
+			train (+) (150/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.416667
+
+	Mean bilevel accuracy: 0.497222
+
+	Best C for fold 3: 0.010000
+	with accuracy: 0.797222
+
+	Train accuracy:    0.783333
+	Train recall:      0.879781
+	Train specificity: 0.683616
+	Train precision:   0.741935
+	Train f_score:     0.805000
+	Test  accuracy:    0.725000
+	Test  recall:      0.705882
+	Test  specificity: 0.739130
+	Test  precision:   0.666667
+	Test  f_score:     0.685714
+
+Fold 4
+	train (+) (177/360) 
+	test  (+) ( 23/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (143/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 4
+			train (+) (136/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 5
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.766667
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (143/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.708333
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.680556
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 4
+			train (+) (136/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.763889
+
+	Mean bilevel accuracy: 0.755556
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (143/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (136/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.766667
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (143/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.597222
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.666667
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.638889
+
+		Bilevel fold 4
+			train (+) (136/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.513889
+
+		Bilevel fold 5
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.513889
+
+	Mean bilevel accuracy: 0.586111
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (143/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.597222
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.611111
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.694444
+
+		Bilevel fold 4
+			train (+) (136/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.375000
+
+		Bilevel fold 5
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.416667
+
+	Mean bilevel accuracy: 0.538889
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (143/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.569444
+
+		Bilevel fold 2
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.611111
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 36/ 72)
+			accuracy: 0.569444
+
+		Bilevel fold 4
+			train (+) (136/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 5
+			train (+) (144/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.527778
+
+	Mean bilevel accuracy: 0.550000
+
+	Best C for fold 4: 0.010000
+	with accuracy: 0.766667
+
+	Train accuracy:    0.747222
+	Train recall:      0.836158
+	Train specificity: 0.661202
+	Train precision:   0.704762
+	Train f_score:     0.764858
+	Test  accuracy:    0.750000
+	Test  recall:      0.913043
+	Test  specificity: 0.529412
+	Test  precision:   0.724138
+	Test  f_score:     0.807692
+
+Fold 5
+	train (+) (182/360) 
+	test  (+) ( 18/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 4
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 5
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.791667
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 4
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 5
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.766667
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 4
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.772222
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.569444
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 4
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.402778
+
+		Bilevel fold 5
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.611111
+
+	Mean bilevel accuracy: 0.558333
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.500000
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.347222
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.361111
+
+		Bilevel fold 4
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.430556
+
+		Bilevel fold 5
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.472222
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.513889
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.458333
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.444444
+
+		Bilevel fold 4
+			train (+) (141/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 5
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.333333
+
+	Mean bilevel accuracy: 0.502778
+
+	Best C for fold 5: 0.010000
+	with accuracy: 0.791667
+
+	Train accuracy:    0.794444
+	Train recall:      0.884615
+	Train specificity: 0.702247
+	Train precision:   0.752336
+	Train f_score:     0.813131
+	Test  accuracy:    0.800000
+	Test  recall:      0.833333
+	Test  specificity: 0.772727
+	Test  precision:   0.750000
+	Test  f_score:     0.789474
+
+Fold 6
+	train (+) (180/360) 
+	test  (+) ( 20/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 4
+			train (+) (139/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.763889
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.680556
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 4
+			train (+) (139/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.750000
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.611111
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 4
+			train (+) (139/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.833333
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.733333
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.569444
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.625000
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 4
+			train (+) (139/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.680556
+
+	Mean bilevel accuracy: 0.688889
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.458333
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.236111
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.333333
+
+		Bilevel fold 4
+			train (+) (139/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.694444
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.458333
+
+	Mean bilevel accuracy: 0.436111
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.486111
+
+		Bilevel fold 3
+			train (+) (141/288) 
+			val   (+) ( 39/ 72)
+			accuracy: 0.347222
+
+		Bilevel fold 4
+			train (+) (139/288) 
+			val   (+) ( 41/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.527778
+
+	Mean bilevel accuracy: 0.538889
+
+	Best C for fold 6: 0.010000
+	with accuracy: 0.763889
+
+	Train accuracy:    0.766667
+	Train recall:      0.872222
+	Train specificity: 0.661111
+	Train precision:   0.720183
+	Train f_score:     0.788945
+	Test  accuracy:    0.825000
+	Test  recall:      0.850000
+	Test  specificity: 0.800000
+	Test  precision:   0.809524
+	Test  f_score:     0.829268
+
+Fold 7
+	train (+) (180/360) 
+	test  (+) ( 20/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 43/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+	Mean bilevel accuracy: 0.777778
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.708333
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 43/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.780556
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.708333
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.694444
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 43/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.694444
+
+	Mean bilevel accuracy: 0.725000
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.513889
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.638889
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 43/ 72)
+			accuracy: 0.847222
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.541667
+
+	Mean bilevel accuracy: 0.602778
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.333333
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 43/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.486111
+
+	Mean bilevel accuracy: 0.527778
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.500000
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.430556
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 43/ 72)
+			accuracy: 0.430556
+
+		Bilevel fold 5
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.569444
+
+	Mean bilevel accuracy: 0.480556
+
+	Best C for fold 7: 0.100000
+	with accuracy: 0.780556
+
+	Train accuracy:    0.733333
+	Train recall:      0.838889
+	Train specificity: 0.627778
+	Train precision:   0.692661
+	Train f_score:     0.758794
+	Test  accuracy:    0.775000
+	Test  recall:      0.900000
+	Test  specificity: 0.650000
+	Test  precision:   0.720000
+	Test  f_score:     0.800000
+
+Fold 8
+	train (+) (174/360) 
+	test  (+) ( 26/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (140/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 3
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 5
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+	Mean bilevel accuracy: 0.769444
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (140/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 3
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 5
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.769444
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (140/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 2
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 3
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.666667
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.625000
+
+		Bilevel fold 5
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+	Mean bilevel accuracy: 0.700000
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (140/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.527778
+
+		Bilevel fold 2
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 3
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.458333
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 5
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.541667
+
+	Mean bilevel accuracy: 0.605556
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (140/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.583333
+
+		Bilevel fold 2
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.541667
+
+		Bilevel fold 3
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.569444
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 5
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.652778
+
+	Mean bilevel accuracy: 0.563889
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (140/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 2
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.430556
+
+		Bilevel fold 3
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.347222
+
+		Bilevel fold 4
+			train (+) (137/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.361111
+
+		Bilevel fold 5
+			train (+) (141/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.486111
+
+	Mean bilevel accuracy: 0.419444
+
+	Best C for fold 8: 0.010000
+	with accuracy: 0.769444
+
+	Train accuracy:    0.402778
+	Train recall:      0.149425
+	Train specificity: 0.639785
+	Train precision:   0.279570
+	Train f_score:     0.194757
+	Test  accuracy:    0.250000
+	Test  recall:      0.153846
+	Test  specificity: 0.428571
+	Test  precision:   0.333333
+	Test  f_score:     0.210526
+
+Fold 9
+	train (+) (180/360) 
+	test  (+) ( 20/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.833333
+
+	Mean bilevel accuracy: 0.797222
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.819444
+
+	Mean bilevel accuracy: 0.788889
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.750000
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.680556
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.805556
+
+	Mean bilevel accuracy: 0.750000
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.652778
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.638889
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.819444
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.652778
+
+	Mean bilevel accuracy: 0.697222
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.555556
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.444444
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.486111
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.638889
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.777778
+
+	Mean bilevel accuracy: 0.580556
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (146/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.597222
+
+		Bilevel fold 2
+			train (+) (147/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.694444
+
+		Bilevel fold 3
+			train (+) (143/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.361111
+
+		Bilevel fold 4
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.416667
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.555556
+
+	Mean bilevel accuracy: 0.525000
+
+	Best C for fold 9: 0.010000
+	with accuracy: 0.797222
+
+	Train accuracy:    0.783333
+	Train recall:      0.883333
+	Train specificity: 0.683333
+	Train precision:   0.736111
+	Train f_score:     0.803030
+	Test  accuracy:    0.675000
+	Test  recall:      0.750000
+	Test  specificity: 0.600000
+	Test  precision:   0.652174
+	Test  f_score:     0.697674
+
+Fold 10
+	train (+) (182/360) 
+	test  (+) ( 18/ 40)
+
+	C = 0.010000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.736111
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 4
+			train (+) (144/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.763889
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 40/ 72)
+			accuracy: 0.736111
+
+	Mean bilevel accuracy: 0.755556
+
+	C = 0.100000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.791667
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.680556
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.777778
+
+		Bilevel fold 4
+			train (+) (144/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.805556
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 40/ 72)
+			accuracy: 0.777778
+
+	Mean bilevel accuracy: 0.766667
+
+	C = 1.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.680556
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.597222
+
+		Bilevel fold 4
+			train (+) (144/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.722222
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 40/ 72)
+			accuracy: 0.777778
+
+	Mean bilevel accuracy: 0.700000
+
+	C = 10.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.402778
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.666667
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.513889
+
+		Bilevel fold 4
+			train (+) (144/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.472222
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 40/ 72)
+			accuracy: 0.638889
+
+	Mean bilevel accuracy: 0.538889
+
+	C = 100.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.555556
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.555556
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.402778
+
+		Bilevel fold 4
+			train (+) (144/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.569444
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 40/ 72)
+			accuracy: 0.722222
+
+	Mean bilevel accuracy: 0.561111
+
+	C = 1000.000000
+		Bilevel fold 1
+			train (+) (148/288) 
+			val   (+) ( 34/ 72)
+			accuracy: 0.652778
+
+		Bilevel fold 2
+			train (+) (149/288) 
+			val   (+) ( 33/ 72)
+			accuracy: 0.486111
+
+		Bilevel fold 3
+			train (+) (145/288) 
+			val   (+) ( 37/ 72)
+			accuracy: 0.527778
+
+		Bilevel fold 4
+			train (+) (144/288) 
+			val   (+) ( 38/ 72)
+			accuracy: 0.638889
+
+		Bilevel fold 5
+			train (+) (142/288) 
+			val   (+) ( 40/ 72)
+			accuracy: 0.638889
+
+	Mean bilevel accuracy: 0.588889
+
+	Best C for fold 10: 0.100000
+	with accuracy: 0.766667
+
+	Train accuracy:    0.666667
+	Train recall:      0.780220
+	Train specificity: 0.550562
+	Train precision:   0.639640
+	Train f_score:     0.702970
+	Test  accuracy:    0.725000
+	Test  recall:      0.888889
+	Test  specificity: 0.590909
+	Test  precision:   0.640000
+	Test  f_score:     0.744186
+
+
+Train accuracy:    0.719722
+Train recall:      0.785945
+Train specificity: 0.651131
+Train precision:   0.669809
+Train f_score:     0.719964
+
+Test  accuracy:    0.707500
+Test  recall:      0.757394
+Test  specificity: 0.663456
+Test  precision:   0.684571
+Test  f_score:     0.712009
+
+
+Done!

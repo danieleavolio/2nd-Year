@@ -1,0 +1,17 @@
+# Created by Octave 7.3.0, Sun Nov 19 21:36:16 2023 CET <salvatore@debian.msi-ge73>
+# name: best_Cs
+# type: matrix
+# rows: 10
+# columns: 1
+ 0.01
+ 1
+ 0.01
+ 0.01
+ 0.01
+ 0.01
+ 0.10000000000000001
+ 0.01
+ 0.01
+ 0.10000000000000001
+
+
